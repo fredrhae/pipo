@@ -1,0 +1,314 @@
+html {
+	height: 100%;
+}
+
+body {
+	height: 100%;
+	width: 100%;
+	padding-top: 60px;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+.flex-grow {
+    flex: 1 0 auto;
+}
+
+.container-fluid {
+	padding: 0px;
+}
+
+@media (orientation: portrait) {
+	.full {
+	  background-size: 200% auto;
+	  background-position: top right;
+	}
+}
+
+/* Style para os botoes */
+
+body .btn {
+	white-space: normal;
+	border-radius: 0;	
+}
+
+body .btn-outline-secondary {
+    background-color: #ffffff00;
+    border-color: #C7C7C7;
+	color: #FDFDFD; 
+}
+
+body .btn-outline-secondary:hover {
+    background-color: #6FFF00;
+    border-color: #C7C7C7;
+    color: #3B8A00;
+}
+
+body .btn-outline-secondary-lg-yellow, 
+body .btn-outline-secondary-lg-yellow:hover,
+body .btn-outline-secondary-lg-green, 
+body .btn-outline-secondary-lg-green:hover,
+body .btn-outline-secondary-lg-gray, 
+body .btn-outline-secondary-lg-gray:hover  {
+	border: 4px solid;
+	font-family: GothamBoldRegular, sans-serif;
+	font-weight: bolder;
+}
+
+body .btn-outline-secondary-lg-yellow {
+    background-color: #ffffff00;
+	border-color: #C7C7C7;
+	color: #C7C7C7; 
+}
+
+body .btn-outline-secondary-lg-yellow:hover {
+    background-color: #FFE000;
+	border-color: #FFE000;
+	color: rgb(97, 86, 13);	
+}
+
+body .btn-outline-secondary-lg-green {
+    background-color: #ffffff00;
+	border-color: #C7C7C7;
+	color: #FDFDFD; 
+}
+
+body .btn-outline-secondary-lg-green:hover {
+    background-color: #6FFF00;
+	border-color: #C7C7C7;
+	color: #3B8A00(97, 86, 13);	
+}
+
+body .btn-outline-secondary-lg-gray {
+    background-color: #ffffff00;
+	border-color: rgb(126, 124, 124);
+	color: rgb(65, 65, 65); 
+}
+
+body .btn-outline-secondary-lg-gray:hover {
+    background-color: rgb(55, 56, 53);
+	border-color: rgb(173, 173, 173);
+	color: rgb(255, 255, 255);	
+}
+
+/* Styles para posicionamento nas paginas do site */
+.container-principal {
+	min-height: 720px;
+	position: relative;
+	opacity: 1.5;	
+}
+
+.vertical-center {
+	position: absolute;
+	top:50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+
+.full-image-background-principal-home, .full-image-background {
+	position: relative;
+	padding: 0;	
+	margin: 0 auto;	
+	background-size: cover;	
+	overflow: hidden;
+}
+
+.full-image-background-principal-home {
+	min-height: 700px;
+}
+
+.full-image-background {
+	min-height: 400px;
+}
+
+/* Styles de fonte */
+@font-face {
+    font-family: SpecialTouch;
+	src: url(../fonts/Special-Touch.ttf);
+	font-weight: normal;
+}
+
+@font-face {
+    font-family: LatoSemibold;
+	src: url(../fonts/Lato-SemiBold.ttf);
+	font-weight: bold;
+}
+
+@font-face {
+    font-family: GothamLight;
+	src: url(../fonts/Gotham-Light.otf);
+	font-weight: normal;
+}
+
+@font-face {
+    font-family: GothamExtraLight;
+	src: url(../fonts/Gotham-Extra-Light.otf);
+	font-weight: lighter;
+}
+
+@font-face {
+    font-family: GothamBoldRegular;
+	src: url(../fonts/Gotham-Bold-Regular.ttf);
+	font-weight: bolder;
+}
+
+/* Styles para o item de chamada principal da home*/
+
+.chamada-principal-link, .chamada-secundaria {
+	color: #ffffff;
+	-webkit-font-smoothing: antialiased;
+}
+
+.chamada-principal-link {
+	font-family: SpecialTouch;
+	font-size: 6.5rem;
+	text-decoration:none;
+}
+
+.chamada-secundaria {
+	font-family: GothamExtraLight, sans-serif;
+	font-size: 1.0rem;	
+}
+
+.chamada-principal-link:hover { 	
+	font-size: 6.5rem;
+	color:rgba(111,255,0,0.80);
+	text-decoration:none;	
+}
+
+/* Styles for Home Content */
+
+.image-container {
+	border: 0;
+	float: left;
+	position: relative;
+	min-height: 600px;
+}
+
+.image-restaurant-bottom, .image-restaurant-top {
+	max-height: 400px;
+}
+
+.image-restaurant-top {
+	border: 0;
+	position: absolute;
+	top: 200px;
+	right: 50px;
+}
+
+.chamada-principal-apresentacao, .chamada-apresentacao-pequeno{
+	font-family: SpecialTouch;
+	text-decoration:none;
+	color: #515151;	
+}
+
+.chamada-principal-apresentacao {
+	font-size: 4.5rem;
+}
+
+.chamada-apresentacao-pequeno {
+	font-size: 4.0rem;
+}
+
+.chamada-nome-vermelho-lg, .chamada-nome-vermelho-pequeno {
+	font-family: GothamBoldRegular, sans-serif;
+	font-weight: bold;
+	color: #D20107;	
+	letter-spacing: 0.1rem;	
+}
+
+.chamada-nome-vermelho-lg {
+	font-size: 4.0rem;
+}
+
+.chamada-nome-vermelho-pequeno {
+	font-size: 1.0rem;
+}
+
+.chamada-slogan, .chamada-texto-cinza {
+	font-family: GothamBoldRegular, sans-serif;
+}
+
+.chamada-slogan {
+	font-size: 2.2rem;
+	color: #555555;
+	font-weight: bold;	
+}
+
+.chamada-texto-cinza {
+	font-size: 1.2rem;
+	color: #606060;
+	font-weight: lighter;	
+}
+
+.chamada-nome-amarelo {
+	font-family: GothamBoldRegular, sans-serif;
+	font-weight: bold;
+	font-size: 1.5rem;
+	letter-spacing: 0.2rem;
+	color: #FFE000;
+}
+
+.chamada-texto-branco {
+	font-family: GothamBoldRegular, sans-serif;
+	font-weight: bold;
+	font-size: 1.0rem;
+	color: #FFF;
+}
+
+.chamada-nome-verde {
+	font-family: GothamBoldRegular, sans-serif;
+	font-weight: bold;
+	font-size: 1.5rem;
+	letter-spacing: 0.2rem;
+	color: #6FF000;
+}
+
+.chamada-principal-branca {
+	color: #ffffff;
+	-webkit-font-smoothing: antialiased;
+	font-family: SpecialTouch;
+	font-size: 6.5rem;
+}
+
+/* Style for forms and to send email */
+.form-nome,
+.form-email,
+.form-telefone,
+.form-data,
+.form-pessoas {
+	margin: 1rem 0;
+}
+
+.form-nome input,
+.form-email input, 
+.form-telefone input,
+.form-data input,
+.form-pessoas input {
+	width: 100%;
+	display: block;
+	font-size: 1rem;
+	padding: .5rem;
+	border: 1px solid #949494;
+	box-sizing: border-box;
+}
+
+.form-button {
+    padding: .5rem;
+    vertical-align: middle;    
+}
+
+.email-fracasso,
+.email-sucesso {
+	display: block;
+	color: #FFF;
+	padding: .5rem;
+}
+
+.email-sucesso {
+	background-color: #6FFF00;
+}
+
+.email-fracasso {
+	background-color: red;
+}

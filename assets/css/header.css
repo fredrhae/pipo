@@ -1,0 +1,42 @@
+.navbar {
+	margin-left: 0;
+	margin-right: 0;
+	background-color: black;	
+	background-color: rgba(0, 0, 0,0.15);
+}
+
+/* change navbar-toggler inside lines color (stroke) */
+.navbar-toggler-icon {
+	background-image: url(data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PScwIDAgMzIgMzInIHhtbG5zPSdodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2Zyc+PHBhdGggc3Ryb2tlPSd3aGl0ZScgc3Ryb2tlLXdpZHRoPScyJyBzdHJva2UtbGluZWNhcD0ncm91bmQnIHN0cm9rZS1taXRlcmxpbWl0PScxMCcgZD0nTTQgOGgyNE00IDE2aDI0TTQgMjRoMjQnLz48L3N2Zz4=);
+}
+
+/* change hamburger button border color */
+.navbar-toggler {
+	border: 1px solid #ffffff;
+}
+
+.nav-link {color: #ffffff;}
+.nav-link:hover {color: #59bce9;}
+
+.menu li:not(:first-child) {
+	margin-left: 3rem;
+}
+
+.menu a {
+	text-decoration: none;
+	color: #FFF;
+	letter-spacing: .05rem;
+	font-weight: 300;
+}
+
+.menu li:hover a,
+.menu .current-menu-item a {
+	font-weight: 700;
+}
+
+.menu-item-type-custom a {
+	height: 80px;
+	width: 150px;
+	text-indent: -9999px;
+	display: block;
+}
