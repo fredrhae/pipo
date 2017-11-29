@@ -6,28 +6,28 @@
 <!-- Secao inicial da home -->
 <div class="container-principal">
     <div class="d-flex flex-row">
-        <div class="col-md-3 full-image-background-principal-home" style="background-image: url(<?=$home?>/assets/imagens/pages/home/home_chamada_casa.png);
+        <div class="col-md-3 full-image-background-principal-home" style="background-image: url(<?=$home?>/assets/imagens/pages/home/home_chamada_casa.jpg);
                                                             background-position: center top">
             <div class="vertical-center">
                 <a class="mx-auto chamada-principal-link" href="#">Nossa</a>
                 <h1 class="mx-auto chamada-secundaria" align="right">CASA</h1>
             </div>
         </div>
-        <div class="col-md-3 full-image-background-principal-home" style="background-image: url(<?=$home?>/assets/imagens/pages/home/home_chamada_menus.png);
+        <div class="col-md-3 full-image-background-principal-home" style="background-image: url(<?=$home?>/assets/imagens/pages/home/home_chamada_menus.jpg);
                                                         background-position: center top">
             <div class="vertical-center">
                 <a class="mx-auto chamada-principal-link" href="#">Deliciosos</a>
                 <h1 class="mx-auto chamada-secundaria" align="right">MENUS</h1>
             </div>
         </div>
-        <div class="col-md-3 full-image-background-principal-home" style="background-image: url(<?=$home?>/assets/imagens/pages/home/home_chamada_programacao.png);
+        <div class="col-md-3 full-image-background-principal-home" style="background-image: url(<?=$home?>/assets/imagens/pages/home/home_chamada_programacao.jpg);
                                                 background-position: center top">            
             <div class="vertical-center">
                 <a class="mx-auto chamada-principal-link" href="#">Desfrute</a>
                 <h1 class="mx-auto chamada-secundaria" align="right">NOSSA PROGRAMAÇÃO</h1>
             </div>
         </div>
-        <div class="col-md-3 full-image-background-principal-home" style="background-image: url(<?=$home?>/assets/imagens/pages/home/home_chamada_drinks.png);
+        <div class="col-md-3 full-image-background-principal-home" style="background-image: url(<?=$home?>/assets/imagens/pages/home/home_chamada_drinks.jpg);
                                             background-position: right top 40px">            
             <div class="vertical-center">
                 <a class="mx-auto chamada-principal-link" href="#">Saborosos</a>
@@ -82,7 +82,7 @@
     </div>
 </div>
 <!-- Secao de eventos -->
-<div class="d-flex justify-content-center flex-column full-image-background pt-5" align="center" style="background-image: url(<?=$home?>/assets/imagens/pages/home/fachada_restaurante_2.png);">
+<div class="d-flex justify-content-center flex-column full-image-background pt-5" align="center" style="background-image: url(<?=$home?>/assets/imagens/pages/home/fachada_restaurante_2.jpg);">
     <h1 class="mx-auto chamada-principal-branca">Nossos eventos</h1>
     <h1 class="mx-auto chamada-nome-verde">SEMANAIS OU MENSAIS</h1>
     <div class="col-md-5 my-5">
@@ -115,7 +115,7 @@
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <blockquote>
-                            <div class="row">
+                            <div class="row py-4">
                                 <div class="col-sm-4 text-center">
                                     <img class="img-circle" src="<?=$home?>/assets/imagens/pages/home/cliente1.png" style="width: 150px;height:150px;">
                                 </div>
@@ -123,14 +123,14 @@
                                     <p class="mx-auto chamada-texto-cinza">In imperdiet facilisis tellus ut auctor. Vestibulum posuere lacus sit amet sapien volutpat placerat.
                                         Duis rutrum lacus et augue aliquam, at mattis nunc sollicitudin. In tincidunt magna vel justo blandit consequat. 
                                         Sed bibendum sit amet ipsum sit amet tempor. Maecenas aliquam elit eget laoreet viverra.</p>
-                                    <small>PHP- Basic Concept</small>
+                                    <small>João Victor</small>
                                 </div>
                             </div>
                         </blockquote>
                     </div>
                     <div class="carousel-item">
                         <blockquote>
-                            <div class="row">
+                            <div class="row py-4">
                                 <div class="col-sm-4 text-center">
                                     <img class="img-circle" src="<?=$home?>/assets/imagens/pages/home/cliente2.png" style="width: 150px;height:150px;">
                                 </div>
@@ -138,7 +138,7 @@
                                     <p class="mx-auto chamada-texto-cinza">In imperdiet facilisis tellus ut auctor. Vestibulum posuere lacus sit amet sapien volutpat placerat. 
                                         Duis rutrum lacus et augue aliquam, at mattis nunc sollicitudin. In tincidunt magna vel justo blandit consequat.
                                         Sed bibendum sit amet ipsum sit amet tempor. Maecenas aliquam elit eget laoreet viverra.</p>
-                                    <small>jQuery- Basic Concept</small>
+                                    <small>Maria Clara</small>
                                 </div>
                             </div>
                         </blockquote>
@@ -157,7 +157,7 @@
     </div>
 </div>
 <!-- Secao de reservas -->
-<div class="d-flex justify-content-center flex-column full-image-background py-5" align="center" style="background-image: url(<?=$home?>/assets/imagens/pages/home/fachada_restaurante_completa.png);">
+<div class="d-flex justify-content-center flex-column full-image-background py-5" align="center" style="background-image: url(<?=$home?>/assets/imagens/pages/home/fachada_restaurante_completa.jpg);">
     <h1 class="mx-auto chamada-principal-branca">Fazer uma</h1>
     <h1 class="mx-auto chamada-nome-amarelo">RESERVA</h1>
 </div>

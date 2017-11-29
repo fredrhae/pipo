@@ -32,13 +32,13 @@
                         </a>
                         <a class="px-2" href="#">
                             <img src="<?=$home?>/assets/imagens/Instagram.svg" width="30" height="30" alt="">
-                        </a>
+                        </a><!--
                         <a class="px-2" href="#">
                             <img src="<?=$home?>/assets/imagens/Instagram.svg" width="30" height="30" alt="">
                         </a>
                         <a class="px-2" href="#">
                             <img src="<?=$home?>/assets/imagens/Instagram.svg" width="30" height="30" alt="">
-                        </a>
+                        </a>-->
                     </div>
                 </div>
             </div>
