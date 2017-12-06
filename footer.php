@@ -11,13 +11,13 @@
         	<div class="col-md-3 footer-nav animated fadeInUp">
                 <a href="#"><h4>Ir para o topo —</h4></a>
                 <ul class="pages">
-                    <li><a href="<?=get_page_link_by_slug('quem-somos-nos')?>">A Casa</a></li>
+                    <li><a href="<?=home_url()?>">A Casa</a></li><!--
                     <li><a href="<?=get_page_link_by_slug('menu')?>">Nosso Menu</a></li>
                     <li><a href="<?=get_page_link_by_slug('eventos')?>">Nossos Eventos</a></li>
                     <li><a href="<?=get_page_link_by_slug('contatos')?>">Contatos</a></li>
                     <li><a href="<?=get_page_link_by_slug('blog')?>">Blog</a></li>
-                    <li><a href="<?=get_page_link_by_slug('faca-sua-reserva')?>">Faça sua reserva</a></li>
-                    <li><a href="<?=get_page_link_by_slug('faca-sua-reserva')?>">Faça seu evento</a></li>
+                    <li><a href="<?=get_page_link_by_slug('faca-sua-reserva')?>">Faça sua reserva</a></li>-->
+                    <li><a href="<?=get_page_link_by_slug('landing')?>">Faça seu evento</a></li>
                 </ul>
             </div>
         	<div class="col-md-2 footer-social animated fadeInDown">

@@ -37,16 +37,10 @@
     </div>
 </div>
 <!-- Secao de apresentar o restaurante -->
-<div class="d-flex justify-content-center flex-row my-5">
-    <div class="col-md-6">
-        <div class="image-container">
-            <img class="img-responsive image-restaurant-bottom p-4" src="<?=$home?>/assets/imagens/pages/home/fachada_restaurante.jpg" alt="">
-            <img class="img-responsive image-restaurant-top p-4" src="<?=$home?>/assets/imagens/pages/home/vista_restaurante.jpg" alt="">
-        </div>
-    </div>
-    <div class="col-md-6 align-content-left">
-        <h1 class="mx-auto chamada-principal-apresentacao">Seja Bem Vindo ao</h1>
-        <h1 class="mx-auto chamada-nome-vermelho-lg">PIPO RESTAURANTE</h1>
+<div class="d-flex justify-content-center flex-column my-5" align="center">
+    <div class="col-md-6" align="center">
+        <p class="mx-auto chamada-principal-apresentacao">Seja Bem Vindo ao</p>
+        <p class="mx-auto chamada-nome-vermelho-lg" id="titulo-pipo">PIPO RESTAURANTE</p>
         <p class="mx-auto chamada-slogan">"Vem pro Pipo, aqui é muito mais gostoso!"</p>
         <p class="mx-auto chamada-texto-cinza">Nosso restaurante conta com uma gastronomia autoral, baseada nas experiências e gosto pessoal 
             do proprietário Pipo que decidiu juntar todos os seus hobbies ao construí-lo.
@@ -56,6 +50,12 @@
             Visitou os mais diversos restaurantes nos 23 países que conheceu, sempre seguindo o guia Michelin. O Pipo 
             Restaurante conta com uma arquitetura de linhas retas, moderna e composta principalmente de concreto e vidro,
             tudo sobre um lago em um belíssimo jardim de 2400m².</p>
+    </div>
+    <div class="col-md-6" align="center">
+        <div class="image-container">
+            <img class="image-restaurant-bottom img-responsive p-4" src="<?=$home?>/assets/imagens/pages/home/fachada_restaurante.jpg" alt="">
+            <img class="image-restaurant-top img-responsive p-4" src="<?=$home?>/assets/imagens/pages/home/vista_restaurante.jpg" alt="">
+        </div>
     </div>
 </div>
 <!-- Secao da gastronomia -->
@@ -78,7 +78,7 @@
             </a>
         </div>
     </div>
-    <div class="col-md-6 full-image-background" style="background-image: url(<?=$home?>/assets/imagens/pages/home/home_chamada_casa.png)">
+    <div class="col-md-6 full-image-background" style="background-image: url(<?=$home?>/assets/imagens/pages/home/home_chamada_casa.jpg)">
     </div>
 </div>
 <!-- Secao de eventos -->

@@ -17,8 +17,13 @@ function get_page_link_by_slug($pageSlug) {
     return get_permalink($page->ID);
 }
 
-function enviar_e_checar_email($nome, $email, $telefone) {
-    return wp_mail( 'fredrhae@gmail.com', 'Cadastro arquiteto', 'Nome: ' . $nome . "\n" . 'Email: ' .  $email . "\n" . 'Telefone: ' . $telefone);
+function enviar_e_checar_email_reserva($nome, $email, $telefone, $pessoas, $data) {
+    return wp_mail( 'fredrhae@gmail.com', 'Reserva restaurante', 
+                  'Nome: ' . $nome . "\n" .
+                  'Email: ' .  $email . "\n" .
+                  'Telefone: ' . $telefone . "\n" .
+                  'Data do evento:' . $data . "\n" .
+                  'Quantidade de Pessoas:' . $pessoas . "\n");
 }
 
 function my_attachments( $attachments )
@@ -41,10 +46,10 @@ function my_attachments( $attachments )
   $args = array(
 
     // title of the meta box (string)
-    'label'         => 'Anexos de imagem',
+    'label'         => 'Anexos da pagina',
 
     // all post types to utilize (string|array)
-    'post_type'     => array( 'post', 'page' ),
+    'post_type'     => array( 'post','page', 'cardapio', 'programacao'),
 
     // meta box position (string) (normal, side or advanced)
     'position'      => 'normal',
@@ -53,17 +58,17 @@ function my_attachments( $attachments )
     'priority'      => 'high',
 
     // allowed file type(s) (array) (image|video|text|audio|application)
-    'filetype'      => array('image'),  // no filetype limit
+    'filetype'      => array('image', 'text'),  // no filetype limit
 
     // include a note within the meta box (string)
-    'note'          => 'Anexe arquivos de imagem aqui!',
+    'note'          => 'Anexe arquivos aqui!',
 
     // by default new Attachments will be appended to the list
     // but you can have then prepend if you set this to false
     'append'        => true,
 
     // text for 'Attach' button in meta box (string)
-    'button_text'   => __( 'Anexe imagens', 'attachments' ),
+    'button_text'   => __( 'Anexe imagens e textos', 'attachments' ),
 
     // text for modal 'Attach' button (string)
     'modal_text'    => __( 'Anexos', 'attachments' ),
@@ -72,7 +77,7 @@ function my_attachments( $attachments )
     'router'        => 'browse',
 
     // whether Attachments should set 'Uploaded to' (if not already set)
-	'post_parent'   => false,
+	  'post_parent'   => false,
 
     // fields array
     'fields'        => $fields,

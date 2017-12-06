@@ -33,20 +33,20 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="<?=get_page_link_by_slug('empresa')?>">HOME</a>
-                    </li>
+                        <a class="nav-link" href="<?=home_url()?>">HOME</a>
+                    </li><!--
                     <li class="nav-item">
                         <a class="nav-link" href="<?=get_page_link_by_slug('solucoes')?>">MENU</a>
-                    </li>
+                    </li>-->
                     <li class="nav-item">
-                        <a class="nav-link" href="<?=get_page_link_by_slug('arquitetos')?>">NOSSOS EVENTOS</a>
-                    </li>
+                        <a class="nav-link" href="<?=get_page_link_by_slug('landing')?>">NOSSOS EVENTOS</a>
+                    </li><!--
                     <li class="nav-item">
-                        <a class="nav-link" href="<?=get_page_link_by_slug('projetos')?>">CONTATOS</a>
+                        <a class="nav-link" href="<?=get_page_link_by_slug('contatos')?>">CONTATOS</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="<?=get_page_link_by_slug('blog')?>">BLOG</a>
-                    </li>
+                    </li>-->
                 </ul>
             </div>
         </div>

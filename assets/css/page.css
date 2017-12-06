@@ -1,0 +1,92 @@
+.chamada-principal-page, .chamada-principal-page-gray {
+    font-family: SpecialTouch;
+	font-size: 8.5rem;
+	-webkit-font-smoothing: antialiased;
+}
+
+.chamada-principal-page {
+	color: #ffffff;
+}
+
+.chamada-principal-page-gray {
+	color: #393737;
+}
+
+.chamada-secundaria-page, 
+.chamada-secundaria-page-gray,
+.chamada-orcamento-gray{
+	font-family: GothamBoldRegular, sans-serif;
+	font-size: 1.4rem;
+	-webkit-font-smoothing: antialiased;
+}
+
+.lista-vantagens {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.lista-vantagens-texto,
+.texto-caracteristicas,
+.texto-casais {
+	font-family: GothamBoldRegular, sans-serif;
+	letter-spacing: 0.2rem;
+	font-weight: bold;
+	-webkit-font-smoothing: antialiased;
+	color: #8C8989
+}
+
+.lista-vantagens-texto {
+	font-size: 1.4rem;
+}
+
+.lista-vantagens-texto::before {
+	content: "• ";
+	color: #8C8989; /* or whatever color you prefer */
+}
+
+.texto-caracteristicas {
+	font-size: 0.85rem;
+	color: #393737;
+}
+
+.texto-casais {
+	font-size: 0.85rem;
+	color: #393737;
+}
+
+.chamada-secundaria-page {
+	color: #ffffff;
+	font-weight: bold;	
+	letter-spacing: 0.4rem;	
+}
+
+.chamada-secundaria-page-gray {
+	color: #393737;
+}
+
+.chamada-orcamento-gray {
+	color: #393737;
+	font-weight: bold;
+	letter-spacing: 0.4rem;
+	font-size: 1.6rem;
+}
+
+.chamada-faqs-gray {
+	font-family: GothamBoldRegular, sans-serif;	
+	color: #393737;
+	font-weight: bold;
+	letter-spacing: 0.4rem;
+	font-size: 3.5rem;
+}
+
+.hr-gray {
+	width: 100%;
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+	border-width: 4px;
+	color: #393737;
+}
