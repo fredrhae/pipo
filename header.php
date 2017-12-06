@@ -34,10 +34,10 @@
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
                         <a class="nav-link" href="<?=home_url()?>">HOME</a>
-                    </li><!--
+                    </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="<?=get_page_link_by_slug('solucoes')?>">MENU</a>
-                    </li>-->
+                        <a class="nav-link" href="<?=get_page_link_by_slug('sobre')?>">SOBRE NÓS</a>
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link" href="<?=get_page_link_by_slug('landing')?>">NOSSOS EVENTOS</a>
                     </li><!--

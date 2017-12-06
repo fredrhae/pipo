@@ -1,6 +1,7 @@
 <?php 	
     $css_escolhido = 'index';
     require_once('header.php');
+    require_once('common_sections_site_functions.php');
     $home = get_template_directory_uri(); 
 ?>
 <!-- Secao inicial da home -->
@@ -36,28 +37,10 @@
         </div>
     </div>
 </div>
-<!-- Secao de apresentar o restaurante -->
-<div class="d-flex justify-content-center flex-column my-5" align="center">
-    <div class="col-md-6" align="center">
-        <p class="mx-auto chamada-principal-apresentacao">Seja Bem Vindo ao</p>
-        <p class="mx-auto chamada-nome-vermelho-lg" id="titulo-pipo">PIPO RESTAURANTE</p>
-        <p class="mx-auto chamada-slogan">"Vem pro Pipo, aqui é muito mais gostoso!"</p>
-        <p class="mx-auto chamada-texto-cinza">Nosso restaurante conta com uma gastronomia autoral, baseada nas experiências e gosto pessoal 
-            do proprietário Pipo que decidiu juntar todos os seus hobbies ao construí-lo.
-            <br/>
-            <br/>
-            Chef, advogado e empresário. Pipo é apaixonado por arte, música, gastronomia e arquitetura e ama viajar.
-            Visitou os mais diversos restaurantes nos 23 países que conheceu, sempre seguindo o guia Michelin. O Pipo 
-            Restaurante conta com uma arquitetura de linhas retas, moderna e composta principalmente de concreto e vidro,
-            tudo sobre um lago em um belíssimo jardim de 2400m².</p>
-    </div>
-    <div class="col-md-6" align="center">
-        <div class="image-container">
-            <img class="image-restaurant-bottom img-responsive p-4" src="<?=$home?>/assets/imagens/pages/home/fachada_restaurante.jpg" alt="">
-            <img class="image-restaurant-top img-responsive p-4" src="<?=$home?>/assets/imagens/pages/home/vista_restaurante.jpg" alt="">
-        </div>
-    </div>
-</div>
+<?php 
+get_section_present_restaurant();
+?>
+
 <!-- Secao da gastronomia -->
 <div class="d-flex justify-content-center flex-row bg-dark mt-3">
     <div class="col-md-6" align="center">
@@ -156,34 +139,7 @@
         </div>
     </div>
 </div>
-<!-- Secao de reservas -->
-<div class="d-flex justify-content-center flex-column full-image-background py-5" align="center" style="background-image: url(<?=$home?>/assets/imagens/pages/home/fachada_restaurante_completa.jpg);">
-    <h1 class="mx-auto chamada-principal-branca">Fazer uma</h1>
-    <h1 class="mx-auto chamada-nome-amarelo">RESERVA</h1>
-</div>
-<div class="d-flex justify-content-center flex-row mb-5">
-	    <div class="col-md-4" align="center">
-	    	<form method="post">
-    			<div class="form-nome">
-	    			<input id="form-nome" type="nome" placeholder="Seu nome" name="form-nome">
-                </div>
-                <div class="form-email">
-	    			<input id="form-email" type="email" placeholder="Seu email" name="form-email">
-                </div>
-                <div class="form-telefone">
-	    			<input id="form-telefone" type="telefone" placeholder="Seu telefone" name="form-telefone">
-                </div>
-                <div class="form-data">
-	    			<input id="form-data" type="datetime-local" placeholder="Data da reserva" name="form-data">
-                </div>
-                <div class="form-pessoas">
-	    			<input id="form-pessoas" type="number" min="2" max="50" value="2" placeholder="Número de pessoas" name="form-number">
-                </div>                
-    			<button type="submit" class="btn btn-block btn-outline-secondary-lg-gray">RESERVAR</button>
-	    	</form>
-        </div>
-    </div>
-</div>
+<?php get_section_restaurant_reservation()?>
 <!-- Secao de newsletter -->
 <div class="d-flex justify-content-center flex-column py-5" align="center" style="background-color: #545252">
     <h1 class="mx-auto chamada-principal-branca">Acompanhe nossas</h1>

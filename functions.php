@@ -58,7 +58,7 @@ function my_attachments( $attachments )
     'priority'      => 'high',
 
     // allowed file type(s) (array) (image|video|text|audio|application)
-    'filetype'      => array('image', 'text'),  // no filetype limit
+    'filetype'      => null,  // no filetype limit
 
     // include a note within the meta box (string)
     'note'          => 'Anexe arquivos aqui!',
@@ -88,3 +88,14 @@ function my_attachments( $attachments )
 }
 
 add_action( 'attachments_register', 'my_attachments' );
+
+function read_content_from_text_file($path_text_file)
+{
+    if(file_exists($path_text_file)){
+      return file_get_contents($robots_file);
+    } else {
+      return 'Lorem ipsum sobre chefe de cozinha 
+      Morbi quam dui, sodales a porta eget, suscipit quis lacus. Vestibulum molestie interdum lectus, nec gravida quam varius et. 
+      Nulla orci purus, aliquam eu feugiat venenatis, placerat ac urna.';
+    }
+}
