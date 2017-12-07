@@ -26,6 +26,11 @@ function enviar_e_checar_email_reserva($nome, $email, $telefone, $pessoas, $data
                   'Quantidade de Pessoas:' . $pessoas . "\n");
 }
 
+function enviar_e_checar_email_newsletter($email) {
+  return wp_mail( 'fredrhae@gmail.com', 'Assinatura newsletter', 
+                'Email do interessado: ' .  $email . "\n");
+}
+
 function my_attachments( $attachments )
 {
   $fields         = array(
@@ -91,11 +96,5 @@ add_action( 'attachments_register', 'my_attachments' );
 
 function read_content_from_text_file($path_text_file)
 {
-    if(file_exists($path_text_file)){
-      return file_get_contents($robots_file);
-    } else {
-      return 'Lorem ipsum sobre chefe de cozinha 
-      Morbi quam dui, sodales a porta eget, suscipit quis lacus. Vestibulum molestie interdum lectus, nec gravida quam varius et. 
-      Nulla orci purus, aliquam eu feugiat venenatis, placerat ac urna.';
-    }
+  return file_get_contents($path_text_file);
 }

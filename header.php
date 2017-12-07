@@ -40,10 +40,10 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="<?=get_page_link_by_slug('landing')?>">NOSSOS EVENTOS</a>
-                    </li><!--
-                    <li class="nav-item">
-                        <a class="nav-link" href="<?=get_page_link_by_slug('contatos')?>">CONTATOS</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="<?=get_page_link_by_slug('reservas')?>">RESERVAS</a>
+                    </li><!--
                     <li class="nav-item">
                         <a class="nav-link" href="<?=get_page_link_by_slug('blog')?>">BLOG</a>
                     </li>-->

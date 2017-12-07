@@ -30,6 +30,7 @@ body {
 	#remove-image {
 	  visibility: collapse;
 	}
+
 	#titulo-pipo {
 		font-size: 2.6rem;
 	}
@@ -196,21 +197,21 @@ body .btn-outline-secondary-lg-gray:hover {
 /* Styles for Home Content */
 
 .image-container {
-	border: 0;
-	float: left;
+	display: inline-block;
 	position: relative;
-	min-height: 400px;
+	min-height: 100%;
 }
 
 .image-restaurant-bottom, .image-restaurant-top {
-	max-height: 400px;
+	max-height: 350px;
 }
 
 .image-restaurant-top {
-	border: 0;
 	position: absolute;
-	top: 200px;
-	right: 50px;
+	right: 40%;
+	top: 40%;
+	width: 100%;
+	max-width:100%;
 }
 
 .chamada-principal-apresentacao, .chamada-apresentacao-pequeno{
@@ -220,7 +221,7 @@ body .btn-outline-secondary-lg-gray:hover {
 }
 
 .chamada-principal-apresentacao {
-	font-size: 4.5rem;
+	font-size: 5.5rem;
 }
 
 .chamada-apresentacao-pequeno {

@@ -139,33 +139,7 @@ get_section_present_restaurant();
         </div>
     </div>
 </div>
-<?php get_section_restaurant_reservation()?>
-<!-- Secao de newsletter -->
-<div class="d-flex justify-content-center flex-column py-5" align="center" style="background-color: #545252">
-    <h1 class="mx-auto chamada-principal-branca">Acompanhe nossas</h1>
-    <h1 class="mx-auto chamada-nome-verde">NOVIDADES:</h1>
-    <p class="mx-auto chamada-texto-branco">Assine nossa newsletter e fique por dentro de 
-        todas as novidades da Pipo Restaurante</p>
-    <div class="d-flex justify-content-center flex-column">
-	    <?php
-	    if($formularioEnviado) {
-	    	$enviou = enviar_e_checar_email($nome, $email, $mensagem);
-	    	if($enviou) { ?>
-	    		<span class="email-sucesso">Seu e-mail foi enviado com sucesso!</span>
-	    	<?php } else { ?>
-	    		<span class="email-fracasso">Desculpe, ocorreu um erro, seu e-mail não foi enviado!</span>
-	    	<?php } 
-	    }
-	    ?>
-	    </div>
-	    <div class="col-md-4" align="center">
-	    	<form method="post">
-    			<div class="form-email">
-	    			<input id="form-email" type="email" placeholder="Seu email" name="form-email">
-	    		</div>
-    			<button type="submit" class="btn btn-block btn-outline-secondary-lg-green">INSCREVER-SE</button>
-	    	</form>
-        </div>
-    </div>
-</div>
-<?php get_footer(); ?>
+<?php 
+get_section_restaurant_reservation();
+get_section_newsletter();
+get_footer(); ?>
