@@ -10,7 +10,7 @@ $data = $_POST['form-data'];
 $telefone = $_POST['form-telefone'];
 
 // Formulario newsletter
-$email = $_POST['form-email-newsletter'];
+$email_newsletter = $_POST['form-email-newsletter'];
 
 $formularioReservaEnviado = isset($nome) && isset($email) 
                          && isset($telefone) && isset($pessoas) 
@@ -26,9 +26,9 @@ if($formularioReservaEnviado) {
 	<?php } 
 }
 
-$formularioNewsletterEnviado = isset($emailNewsletter);
-if($formularioReservaEnviado) {
-	$enviou = enviar_e_checar_email_newsletter($email);
+$formularioNewsletterEnviado = isset($email_newsletter);
+if($formularioNewsletterEnviado) {
+	$enviou = enviar_e_checar_email_newsletter($email_newsletter);
 
 	if($enviou) { ?>
 		<span class="email-sucesso">Seu e-mail foi enviado com sucesso!</span>
@@ -68,7 +68,7 @@ function get_section_present_restaurant() {
 function get_section_restaurant_chef($text_about_chef, $path_foto_1, $path_foto_2) {
     global $home;
 ?>
-<div class="d-flex align-items-stretch flex-row bg-dark mt-5" style="min-height: 600px;">
+<div class="d-flex align-items-stretch flex-row bg-dark" style="min-height: 600px;">
     <div class="col-md-6" align="center">
         <h1 class="mx-auto chamada-principal-branca mt-5">Conheca nosso</h1>
         <h1 class="mx-auto chamada-nome-amarelo">CHEF DE COZINHA</h1>
@@ -211,8 +211,8 @@ function get_section_newsletter() {
             todas as novidades da Pipo Restaurante</p>
         <div class="d-flex justify-content-center flex-column">
             <?php
-            if($formularioEnviado) {
-                $enviou = enviar_e_checar_email($nome, $email, $mensagem);
+            if($formularioNewsletterEnviado) {
+                $enviou = enviar_e_checar_email_newsletter($email);
                 if($enviou) { ?>
                     <span class="email-sucesso">Seu e-mail foi cadastrado com sucesso!</span>
                 <?php } else { ?>
