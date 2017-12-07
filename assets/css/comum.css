@@ -5,9 +5,10 @@ html {
 body {
 	height: 100%;
 	width: 100%;
-	padding-top: 60px;
+	padding-top: 40px;
 	overflow-x: hidden;
 	overflow-y: auto;
+	position: absolute;
 }
 
 .flex-grow {
@@ -23,6 +24,47 @@ body {
 	  background-size: 200% auto;
 	  background-position: top right;
 	}
+}
+
+@media screen and (max-width: 600px) {
+	#remove-image {
+	  visibility: collapse;
+	}
+
+	#titulo-pipo {
+		font-size: 2.6rem;
+	}
+}
+
+/* Styles de fonte */
+@font-face {
+    font-family: SpecialTouch;
+	src: url(../fonts/Special-Touch.ttf);
+	font-weight: normal;
+}
+
+@font-face {
+    font-family: LatoSemibold;
+	src: url(../fonts/Lato-SemiBold.ttf);
+	font-weight: bold;
+}
+
+@font-face {
+    font-family: GothamLight;
+	src: url(../fonts/Gotham-Light.otf);
+	font-weight: normal;
+}
+
+@font-face {
+    font-family: GothamExtraLight;
+	src: url(../fonts/Gotham-Extra-Light.otf);
+	font-weight: lighter;
+}
+
+@font-face {
+    font-family: GothamBoldRegular;
+	src: url(../fonts/Gotham-Bold-Regular.ttf);
+	font-weight: bolder;
 }
 
 /* Style para os botoes */
@@ -121,35 +163,11 @@ body .btn-outline-secondary-lg-gray:hover {
 	min-height: 400px;
 }
 
-/* Styles de fonte */
-@font-face {
-    font-family: SpecialTouch;
-	src: url(../fonts/Special-Touch.ttf);
-	font-weight: normal;
-}
-
-@font-face {
-    font-family: LatoSemibold;
-	src: url(../fonts/Lato-SemiBold.ttf);
-	font-weight: bold;
-}
-
-@font-face {
-    font-family: GothamLight;
-	src: url(../fonts/Gotham-Light.otf);
-	font-weight: normal;
-}
-
-@font-face {
-    font-family: GothamExtraLight;
-	src: url(../fonts/Gotham-Extra-Light.otf);
-	font-weight: lighter;
-}
-
-@font-face {
-    font-family: GothamBoldRegular;
-	src: url(../fonts/Gotham-Bold-Regular.ttf);
-	font-weight: bolder;
+.container-video {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
 }
 
 /* Styles para o item de chamada principal da home*/
@@ -179,21 +197,21 @@ body .btn-outline-secondary-lg-gray:hover {
 /* Styles for Home Content */
 
 .image-container {
-	border: 0;
-	float: left;
+	display: inline-block;
 	position: relative;
-	min-height: 600px;
+	min-height: 100%;
 }
 
 .image-restaurant-bottom, .image-restaurant-top {
-	max-height: 400px;
+	max-height: 350px;
 }
 
 .image-restaurant-top {
-	border: 0;
 	position: absolute;
-	top: 200px;
-	right: 50px;
+	right: 40%;
+	top: 40%;
+	width: 100%;
+	max-width:100%;
 }
 
 .chamada-principal-apresentacao, .chamada-apresentacao-pequeno{
@@ -203,7 +221,7 @@ body .btn-outline-secondary-lg-gray:hover {
 }
 
 .chamada-principal-apresentacao {
-	font-size: 4.5rem;
+	font-size: 5.5rem;
 }
 
 .chamada-apresentacao-pequeno {

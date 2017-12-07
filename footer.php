@@ -2,25 +2,25 @@
     <footer class="py-3 footer-separator">
     </footer>
     <div class="footer-bs py-5 bg-dark">
-        <div class="d-flex justify-content-center">
+        <div class="d-flex justify-content-center flex-row">
         	<div class="col-md-2 footer-brand animated fadeInLeft">
                 <p style="">Chef, advogado e empresário. Pipo é apaixonado por arte, música, gastronomia, arquitetura e ama viajar. 
                     Visitou os mais diversos restaurantes nos 23 países que conheceu, sempre seguindo o guia Michelin.
                 </p>
             </div>
-        	<div class="col-md-3 footer-nav animated fadeInUp">
+        	<div class="col-md-3 col-sm-12 footer-nav animated fadeInUp">
                 <a href="#"><h4>Ir para o topo —</h4></a>
                 <ul class="pages">
-                    <li><a href="<?=get_page_link_by_slug('quem-somos-nos')?>">A Casa</a></li>
-                    <li><a href="<?=get_page_link_by_slug('menu')?>">Nosso Menu</a></li>
+                    <li><a href="<?=home_url()?>">A Casa</a></li><!--
                     <li><a href="<?=get_page_link_by_slug('eventos')?>">Nossos Eventos</a></li>
                     <li><a href="<?=get_page_link_by_slug('contatos')?>">Contatos</a></li>
-                    <li><a href="<?=get_page_link_by_slug('blog')?>">Blog</a></li>
-                    <li><a href="<?=get_page_link_by_slug('faca-sua-reserva')?>">Faça sua reserva</a></li>
-                    <li><a href="<?=get_page_link_by_slug('faca-sua-reserva')?>">Faça seu evento</a></li>
+                    <li><a href="<?=get_page_link_by_slug('blog')?>">Blog</a></li>-->
+                    <li><a href="<?=get_page_link_by_slug('reservas')?>">Faça sua reserva</a></li>
+                    <li><a href="<?=get_page_link_by_slug('sobre')?>">Sobre Nós</a></li>
+                    <li><a href="<?=get_page_link_by_slug('landing')?>">Faça seu evento</a></li>
                 </ul>
             </div>
-        	<div class="col-md-2 footer-social animated fadeInDown">
+        	<div class="col-md-2 col-sm-12 footer-social animated fadeInDown">
                 <div class="d-flex justify-content-center flex-column" align="center">
                     <a class="my-3" href="#" style="text-decoration: none">
 						<button type="button" class="btn btn-outline-secondary btn-block">Faça sua reserva</button>
@@ -32,17 +32,17 @@
                         </a>
                         <a class="px-2" href="#">
                             <img src="<?=$home?>/assets/imagens/Instagram.svg" width="30" height="30" alt="">
-                        </a>
+                        </a><!--
                         <a class="px-2" href="#">
                             <img src="<?=$home?>/assets/imagens/Instagram.svg" width="30" height="30" alt="">
                         </a>
                         <a class="px-2" href="#">
                             <img src="<?=$home?>/assets/imagens/Instagram.svg" width="30" height="30" alt="">
-                        </a>
+                        </a>-->
                     </div>
                 </div>
             </div>
-            <div class="col-md-2 footer-social animated fadeInLeft">
+            <div class="col-md-2 col-sm-12 footer-social animated fadeInLeft">
                 <div class="d-flex justify-content-center flex-column">
                     <p style="">Fone:(85) 3051-1340 (85) 98141-4155</p>
                     <p style="">pipoearte@gmail.com</p>
