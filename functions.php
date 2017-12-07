@@ -22,8 +22,15 @@ function enviar_e_checar_email_reserva($nome, $email, $telefone, $pessoas, $data
                   'Nome: ' . $nome . "\n" .
                   'Email: ' .  $email . "\n" .
                   'Telefone: ' . $telefone . "\n" .
-                  'Data do evento:' . $data . "\n" .
-                  'Quantidade de Pessoas:' . $pessoas . "\n");
+                  'Data do evento: ' . $data . "\n" .
+                  'Quantidade de Pessoas: ' . $pessoas . "\n");
+}
+
+function enviar_e_checar_sugestao($nome, $email, $sugestao) {
+  return wp_mail( 'fredrhae@gmail.com', 'Fale conosco', 
+                'Nome: ' . $nome . "\n" .
+                'Email: ' .  $email . "\n" .
+                'Sugestão: ' . $sugestao . "\n");
 }
 
 function enviar_e_checar_email_newsletter($email) {
