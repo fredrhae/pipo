@@ -78,68 +78,8 @@ get_section_present_restaurant();
                 dignissim aliquet..</p>
     </div>
 </div>
-<!-- Secao de testemunhos -->
-<div class="container my-5">
-    <!-- Titulo testemunhos -->
-    <div class="row">
-		<div class="col-md-12" align="center">
-            <h1 class="mx-auto chamada-apresentacao-pequeno">O que nosso cliente</h1>
-            <h1 class="mx-auto chamada-nome-vermelho-pequeno">TEM A DIZER:</h1>		
-        </div>
-	</div>
-	<!-- Slider com clientes satisfeitos -->
-	<div class="d-flex justify-content-center mb-4">
-        <div class="col-md-6">
-            <div id="myCarousel" class="carousel slide multi-item-carousel" data-ride="carousel">
-                <ol class="carousel-indicators">
-                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                    <li data-target="#myCarousel" data-slide-to="1"></li>
-                </ol>
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <blockquote>
-                            <div class="row py-4">
-                                <div class="col-sm-4 text-center">
-                                    <img class="img-circle" src="<?=$home?>/assets/imagens/pages/home/cliente1.png" style="width: 150px;height:150px;">
-                                </div>
-                                <div class="col-sm-8">
-                                    <p class="mx-auto chamada-texto-cinza">In imperdiet facilisis tellus ut auctor. Vestibulum posuere lacus sit amet sapien volutpat placerat.
-                                        Duis rutrum lacus et augue aliquam, at mattis nunc sollicitudin. In tincidunt magna vel justo blandit consequat. 
-                                        Sed bibendum sit amet ipsum sit amet tempor. Maecenas aliquam elit eget laoreet viverra.</p>
-                                    <small>João Victor</small>
-                                </div>
-                            </div>
-                        </blockquote>
-                    </div>
-                    <div class="carousel-item">
-                        <blockquote>
-                            <div class="row py-4">
-                                <div class="col-sm-4 text-center">
-                                    <img class="img-circle" src="<?=$home?>/assets/imagens/pages/home/cliente2.png" style="width: 150px;height:150px;">
-                                </div>
-                                <div class="col-sm-8">
-                                    <p class="mx-auto chamada-texto-cinza">In imperdiet facilisis tellus ut auctor. Vestibulum posuere lacus sit amet sapien volutpat placerat. 
-                                        Duis rutrum lacus et augue aliquam, at mattis nunc sollicitudin. In tincidunt magna vel justo blandit consequat.
-                                        Sed bibendum sit amet ipsum sit amet tempor. Maecenas aliquam elit eget laoreet viverra.</p>
-                                    <small>Maria Clara</small>
-                                </div>
-                            </div>
-                        </blockquote>
-                    </div>
-                </div>
-                <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
-            </div>
-        </div>
-    </div>
-</div>
-<?php 
+<?php
+get_section_testemonials_customers();
 get_section_restaurant_reservation();
 get_section_newsletter();
 get_footer(); ?>
