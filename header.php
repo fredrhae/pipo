@@ -47,6 +47,9 @@
                     <li class="nav-item px-3">
                         <a class="nav-link" href="<?=get_page_link_by_slug('contatos')?>">CONTATOS</a>
                     </li>
+                    <li class="nav-item px-3">
+                        <a class="nav-link" href="<?=get_page_link_by_slug('menu')?>">MENU</a>
+                    </li>
                     <!--
                     <li class="nav-item">
                         <a class="nav-link" href="<?=get_page_link_by_slug('blog')?>">BLOG</a>

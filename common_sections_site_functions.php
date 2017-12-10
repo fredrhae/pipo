@@ -89,7 +89,7 @@ function get_section_restaurant_chef($text_about_chef, $path_foto_1, $path_foto_
 function get_section_schedule($text_about_programacao, $path_picture_schedule) {
     global $home;
 ?>
-<div class="d-flex align-items-stretch flex-row mt-5" style="min-height: 600px;">
+<div class="d-flex align-items-stretch flex-row my-5" style="min-height: 600px;">
     <div class="col-md-6" align="center">
         <h1 class="mx-auto chamada-principal-apresentacao mt-5">Conheca nossas</h1>
         <h1 class="mx-auto chamada-nome-vermelho-pequeno">PROGRAMAÇÕES</h1>
