@@ -14,6 +14,7 @@
                     <li><a href="<?=home_url()?>">A Casa</a></li><!--
                     <li><a href="<?=get_page_link_by_slug('eventos')?>">Nossos Eventos</a></li>
                     <li><a href="<?=get_page_link_by_slug('blog')?>">Blog</a></li>-->
+                    <li><a href="<?=get_page_link_by_slug('programacao')?>">Nossa Programação</a></li>
                     <li><a href="<?=get_page_link_by_slug('contatos')?>">Fale Conosco</a></li>
                     <li><a href="<?=get_page_link_by_slug('reservas')?>">Faça sua reserva</a></li>
                     <li><a href="<?=get_page_link_by_slug('sobre')?>">Sobre Nós</a></li>
