@@ -38,6 +38,74 @@ function enviar_e_checar_email_newsletter($email) {
                 'Email do interessado: ' .  $email . "\n");
 }
 
+function registrar_depoimento_cliente() {
+  $descricao = 'Usado para listar os testemunhos de clientes do Pipo';
+  $singular = 'Depoimento de Cliente';
+  $plural = 'Depoimentos de Clientes';
+
+  $labels = array(
+      'name' => $plural,
+      'singular_name' => $singular,
+      'view_item' => 'Ver ' . $singular,
+      'edit_item' => 'Editar ' . $singular,
+      'new_item' => 'Novo ' . $singular,
+      'add_new_item' => 'Adicionar novo ' . $singular
+  );
+
+  $supports = array(
+      'title',
+      'editor',
+      'thumbnail'
+  );
+
+  $args = array(
+      'labels' => $labels,
+      'description' => $descricao,
+      'public' => true,
+      'menu_icon' => 'dashicons-format-status',
+      'supports' => $supports
+  );
+
+
+  register_post_type( 'depoimentoCliente', $args);    
+}
+
+add_action('init', 'registrar_depoimento_cliente');
+
+function registrar_depoimento_noiva() {
+  $descricao = 'Usado para listar os testemunhos de noivas que casaram no Pipo';
+  $singular = 'Depoimento de Noiva';
+  $plural = 'Depoimentos de Noivas';
+
+  $labels = array(
+      'name' => $plural,
+      'singular_name' => $singular,
+      'view_item' => 'Ver ' . $singular,
+      'edit_item' => 'Editar ' . $singular,
+      'new_item' => 'Novo ' . $singular,
+      'add_new_item' => 'Adicionar novo ' . $singular
+  );
+
+  $supports = array(
+      'title',
+      'editor',
+      'thumbnail'
+  );
+
+  $args = array(
+      'labels' => $labels,
+      'description' => $descricao,
+      'public' => true,
+      'menu_icon' => 'dashicons-format-status',
+      'supports' => $supports
+  );
+
+
+  register_post_type( 'depoimentoNoiva', $args);    
+}
+
+add_action('init', 'registrar_depoimento_noiva');
+
 function my_attachments( $attachments )
 {
   $fields         = array(
@@ -61,7 +129,7 @@ function my_attachments( $attachments )
     'label'         => 'Anexos da pagina',
 
     // all post types to utilize (string|array)
-    'post_type'     => array( 'post','page', 'cardapio', 'programacao'),
+    'post_type'     => array( 'post','page', 'cardapio', 'programacao', 'depoimentoCliente' ,'depoimentoNoiva'),
 
     // meta box position (string) (normal, side or advanced)
     'position'      => 'normal',

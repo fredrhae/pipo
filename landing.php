@@ -214,37 +214,45 @@ function get_landing_page_body_content() {
 				<div id="myCarousel" class="carousel slide multi-item-carousel" data-ride="carousel">
 					<ol class="carousel-indicators">
 						<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-						<li data-target="#myCarousel" data-slide-to="1"></li>
+						<?php 
+						$count_depoimentos = wp_count_posts('depoimentoNoiva');
+						for($i = 1; $i < $count_depoimentos; $i++) {?>
+							<li data-target="#myCarousel" data-slide-to="<?=$i?>"></li>
+						<?php
+						}?>
 					</ol>
 					<div class="carousel-inner">
-						<div class="carousel-item active">
-							<blockquote>
-								<div class="row py-4">
-									<div class="col-sm-4 text-center">
-										<img class="img-circle" src="<?=$home?>/assets/imagens/pages/landing/noiva_1.png" style="width: 150px;height:150px;">
-									</div>
-									<div class="col-sm-8">
-										<p class="mx-auto chamada-texto-cinza">Não precisei de muita coisa para deixar o ambiente bonito, o espaço já é maravilhoso.
-										Uma boa comida, um ambiente sofisticado...Só tem vantagens.</p>
-										<small>Renata Gomes, empresária</small>
-									</div>
-								</div>
-							</blockquote>
-						</div>
-						<div class="carousel-item">
-							<blockquote>
-								<div class="row py-4">
-									<div class="col-sm-4 text-center">
-										<img class="img-circle" src="<?=$home?>/assets/imagens/pages/landing/noiva_2.png" style="width: 150px;height:150px;">
-									</div>
-									<div class="col-sm-8">
-										<p class="mx-auto chamada-texto-cinza">Atendimento excelente, super atencioso. Como trabalho muito, foi bem mais prático ter espaço,
-											comida e bebida tudo ali, reunido em um único fornecedor</p>
-										<small>Marina Valentim, administradora</small>
-									</div>
-								</div>
-							</blockquote>
-						</div>
+                        <!-- Carregamento dos depoimentos cadastrados -->
+                        <?php 
+                        $args = array( 'post_type' => 'depoimentoNoiva', 'order' => 'ASC' );            
+                        $loop = new WP_Query( $args );
+                        $firstItem = true;
+                        if( $loop->have_posts() ) { 
+                            ?>
+                        <?php while( $loop->have_posts()) {
+                            $loop->the_post();
+                            $carousel_class = '';
+                            if($firstItem){
+                                $carousel_class = "carousel-item active";
+                                $firstItem = false;
+                            } else {
+                                $carousel_class = "carousel-item";                         
+                            }
+                            ?>
+                            <div class="<?=$carousel_class?>">
+                                <div class="row py-4">
+                                    <div class="col-sm-4 text-center">
+                                        <img class="img-circle" src="<?=the_post_thumbnail_url()?>" style="width: 150px;height:150px;">
+                                    </div>
+                                    <div class="col-sm-8">
+                                        <p class="mx-auto chamada-texto-cinza"><?=the_content();?></p>
+                                        <small><?=the_title();?></small>
+                                    </div>
+                                </div>
+                            </div>
+                            <?php
+                            } 
+                        } ?>
 					</div>
 					<a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
 						<span class="carousel-control-prev-icon" aria-hidden="true"></span>

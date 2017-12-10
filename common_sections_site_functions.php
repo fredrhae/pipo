@@ -233,3 +233,74 @@ function get_section_newsletter() {
     </div>
 <?php
 }
+
+function get_section_testemonials_customers() {?>
+    <!-- Secao de testemunhos -->
+    <div class="container my-5">
+        <!-- Titulo testemunhos -->
+        <div class="row">
+            <div class="col-md-12" align="center">
+                <h1 class="mx-auto chamada-apresentacao-pequeno">O que nosso cliente</h1>
+                <h1 class="mx-auto chamada-nome-vermelho-pequeno">TEM A DIZER:</h1>		
+            </div>
+        </div>
+        <!-- Slider com clientes satisfeitos -->
+        <div class="d-flex justify-content-center mb-4">
+            <div class="col-md-6">
+                <div id="myCarousel" class="carousel slide multi-item-carousel" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                        <?php 
+                        $count_depoimentos = wp_count_posts('depoimentoCliente');
+                        for($i = 1; $i < $count_depoimentos; $i++) {?>
+                            <li data-target="#myCarousel" data-slide-to="<?=$i?>"></li>
+                        <?php
+                        }?>
+                    </ol>
+                    <div class="carousel-inner">
+                        <!-- Carregamento dos depoimentos cadastrados -->
+                        <?php 
+                        $args = array( 'post_type' => 'depoimentoCliente', 'order' => 'ASC' );            
+                        $loop = new WP_Query( $args );
+                        $firstItem = true;
+                        if( $loop->have_posts() ) { 
+                            ?>
+                        <?php while( $loop->have_posts()) {
+                            $loop->the_post();
+                            $carousel_class = '';
+                            if($firstItem){
+                                $carousel_class = "carousel-item active";
+                                $firstItem = false;
+                            } else {
+                                $carousel_class = "carousel-item";                         
+                            }
+                            ?>
+                            <div class="<?=$carousel_class?>">
+                                <div class="row py-4">
+                                    <div class="col-sm-4 text-center">
+                                        <img class="img-circle" src="<?=the_post_thumbnail_url()?>" style="width: 150px;height:150px;">
+                                    </div>
+                                    <div class="col-sm-8">
+                                        <p class="mx-auto chamada-texto-cinza"><?=the_content();?></p>
+                                        <small><?=the_title();?></small>
+                                    </div>
+                                </div>
+                            </div>
+                            <?php
+                            } 
+                        } ?>
+                    </div>
+                    <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+<?php
+} 
