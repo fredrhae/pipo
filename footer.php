@@ -17,6 +17,7 @@
                     <li><a href="<?=get_page_link_by_slug('contatos')?>">Fale Conosco</a></li>
                     <li><a href="<?=get_page_link_by_slug('reservas')?>">Faça sua reserva</a></li>
                     <li><a href="<?=get_page_link_by_slug('sobre')?>">Sobre Nós</a></li>
+                    <li><a href="<?=get_page_link_by_slug('menu')?>">Nosso Menu</a></li>
                     <li><a href="<?=get_page_link_by_slug('landing')?>">Faça seu evento</a></li>
                 </ul>
             </div>

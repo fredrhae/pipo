@@ -62,7 +62,7 @@ function registrar_depoimento_cliente() {
       'labels' => $labels,
       'description' => $descricao,
       'public' => true,
-      'menu_icon' => 'dashicons-format-status',
+      'menu_icon' => 'dashicons-testimonial',
       'supports' => $supports
   );
 
@@ -96,7 +96,7 @@ function registrar_depoimento_noiva() {
       'labels' => $labels,
       'description' => $descricao,
       'public' => true,
-      'menu_icon' => 'dashicons-format-status',
+      'menu_icon' => 'dashicons-testimonial',
       'supports' => $supports
   );
 
@@ -105,6 +105,217 @@ function registrar_depoimento_noiva() {
 }
 
 add_action('init', 'registrar_depoimento_noiva');
+
+function registrar_menu_sobremesas() {
+  $descricao = 'Usado para listar as sobremesas do Pipo';
+  $singular = 'Sobremesa';
+  $plural = 'Sobremesas';
+
+  $labels = array(
+      'name' => $plural,
+      'singular_name' => $singular,
+      'view_item' => 'Ver ' . $singular,
+      'edit_item' => 'Editar ' . $singular,
+      'new_item' => 'Novo ' . $singular,
+      'add_new_item' => 'Adicionar nova ' . $singular
+  );
+
+  $supports = array(
+      'title',
+      'editor',
+      'thumbnail'
+  );
+
+  $args = array(
+      'labels' => $labels,
+      'description' => $descricao,
+      'public' => true,
+      'menu_icon' => 'dashicons-clipboard',
+      'supports' => $supports
+  );
+
+
+  register_post_type( 'sobremesa', $args);    
+}
+
+add_action('init', 'registrar_menu_sobremesas');
+
+function registrar_menu_pratos() {
+  $descricao = 'Usado para listar os pratos do Pipo';
+  $singular = 'Prato';
+  $plural = 'Pratos';
+
+  $labels = array(
+      'name' => $plural,
+      'singular_name' => $singular,
+      'view_item' => 'Ver ' . $singular,
+      'edit_item' => 'Editar ' . $singular,
+      'new_item' => 'Novo ' . $singular,
+      'add_new_item' => 'Adicionar novo ' . $singular
+  );
+
+  $supports = array(
+      'title',
+      'editor',
+      'thumbnail'
+  );
+
+  $args = array(
+      'labels' => $labels,
+      'description' => $descricao,
+      'public' => true,
+      'menu_icon' => 'dashicons-carrot',
+      'supports' => $supports
+  );
+
+
+  register_post_type( 'prato', $args);    
+}
+
+add_action('init', 'registrar_menu_pratos');
+
+function registrar_menu_bebidas() {
+  $descricao = 'Usado para listar as bebidas servidas no Pipo';
+  $singular = 'Bebida';
+  $plural = 'Bebidas';
+
+  $labels = array(
+      'name' => $plural,
+      'singular_name' => $singular,
+      'view_item' => 'Ver ' . $singular,
+      'edit_item' => 'Editar ' . $singular,
+      'new_item' => 'Novo ' . $singular,
+      'add_new_item' => 'Adicionar novo ' . $singular
+  );
+
+  $supports = array(
+      'title',
+      'editor',
+      'thumbnail'
+  );
+
+  $args = array(
+      'labels' => $labels,
+      'description' => $descricao,
+      'public' => true,
+      'menu_icon' => 'dashicons-media-document',
+      'supports' => $supports
+  );
+
+
+  register_post_type( 'bebida', $args);    
+}
+
+add_action('init', 'registrar_menu_bebidas');
+
+function adicionar_meta_info_preco_menu_bebidas() {
+	add_meta_box(
+		'preco_bebida',
+		'Preço',
+		'preco_view',
+		'bebida',
+		'normal',
+		'high'
+	);
+}
+
+add_action('add_meta_boxes', 'adicionar_meta_info_preco_menu_bebidas');
+
+function adicionar_meta_info_preco_menu_sobremesa() {
+	add_meta_box(
+		'preco_sobremesa',
+		'Preço',
+		'preco_view',
+		'sobremesa',
+		'normal',
+		'high'
+	);
+}
+
+add_action('add_meta_boxes', 'adicionar_meta_info_preco_menu_sobremesa');
+
+function adicionar_meta_info_preco_menu_prato() {
+	add_meta_box(
+		'preco_prato',
+		'Preço',
+		'preco_view',
+		'prato',
+		'normal',
+		'high'
+	);
+}
+
+add_action('add_meta_boxes', 'adicionar_meta_info_preco_menu_prato');
+
+function preco_view( $post ) { 
+    $preco_meta_data = get_post_meta( $post->ID ); 
+    ?>
+	<style>
+		.preco-metabox {
+			display: flex;
+			justify-content: space-between;
+		}
+
+		.preco-metabox-item {
+			flex-basis: 30%;
+
+		}
+
+		.preco-metabox-item label {
+			font-weight: 700;
+			display: block;
+			margin: .5rem 0;
+
+		}
+
+		.input-addon-wrapper {
+			height: 30px;
+			display: flex;
+			align-items: center;
+		}
+
+		.input-addon {
+			display: block;
+			border: 1px solid #CCC;
+			border-bottom-left-radius: 5px;
+			border-top-left-radius: 5px;
+			height: 100%;
+			width: 30px;
+			text-align: center;
+			line-height: 30px;
+			box-sizing: border-box;
+			background-color: #888;
+			color: #FFF;
+		}
+
+		.preco-metabox-input {
+			height: 100%;
+			border: 1px solid #CCC;
+			border-left: none;
+			margin: 0;
+		}
+
+	</style>
+	<div class="preco-metabox">
+		<div class="preco-metabox-item">
+			<label for="preco-preco-input">Preço:</label>
+			<div class="input-addon-wrapper">
+				<span class="input-addon">R$</span>
+				<input id="preco-input" class="preco-metabox-input" type="text" name="preco_id"
+				value="<?= number_format($preco_meta_data['preco_id'][0], 2, ',', '.'); ?>">
+			</div>
+		</div>
+	</div>
+<?php
+}
+
+function salvar_meta_info_preco( $post_id ) {
+	if( isset($_POST['preco_id']) ) {
+		update_post_meta( $post_id, 'preco_id', sanitize_text_field( $_POST['preco_id'] ) );
+	}
+}
+
+add_action('save_post', 'salvar_meta_info_preco');
 
 function my_attachments( $attachments )
 {
@@ -129,7 +340,8 @@ function my_attachments( $attachments )
     'label'         => 'Anexos da pagina',
 
     // all post types to utilize (string|array)
-    'post_type'     => array( 'post','page', 'cardapio', 'programacao', 'depoimentoCliente' ,'depoimentoNoiva'),
+    'post_type'     => array( 'post','page', 'programacao', 'depoimentoCliente' 
+                              ,'depoimentoNoiva', 'bebida', 'prato', 'sobremesa'),
 
     // meta box position (string) (normal, side or advanced)
     'position'      => 'normal',

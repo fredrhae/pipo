@@ -228,7 +228,9 @@ body .btn-outline-secondary-lg-gray:hover {
 	font-size: 4.0rem;
 }
 
-.chamada-nome-vermelho-lg, .chamada-nome-vermelho-pequeno {
+.chamada-nome-vermelho-lg, 
+.chamada-nome-vermelho-pequeno,
+.chamada-nome-vermelho {
 	font-family: GothamBoldRegular, sans-serif;
 	font-weight: bold;
 	color: #D20107;	
@@ -241,6 +243,10 @@ body .btn-outline-secondary-lg-gray:hover {
 
 .chamada-nome-vermelho-pequeno {
 	font-size: 1.0rem;
+}
+
+.chamada-nome-vermelho {
+	font-size: 1.5rem;
 }
 
 .chamada-slogan, .chamada-texto-cinza {
@@ -274,12 +280,19 @@ body .btn-outline-secondary-lg-gray:hover {
 	color: #FFF;
 }
 
-.chamada-nome-verde {
+.chamada-nome-verde, .chamada-nome-verde-pequeno {
 	font-family: GothamBoldRegular, sans-serif;
 	font-weight: bold;
+	color: #6FF000;
+}
+
+.chamada-nome-verde {
 	font-size: 1.5rem;
 	letter-spacing: 0.2rem;
-	color: #6FF000;
+}
+
+.chamada-nome-verde-pequeno {
+	font-size: 1.0rem;
 }
 
 .chamada-principal-branca {
