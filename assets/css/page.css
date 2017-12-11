@@ -1,4 +1,6 @@
-.chamada-principal-page, .chamada-principal-page-gray {
+.chamada-principal-page, 
+.chamada-principal-page-gray ,
+.chamada-secundaria-titulo {
     font-family: SpecialTouch;
 	font-size: 8.5rem;
 	-webkit-font-smoothing: antialiased;
@@ -6,6 +8,10 @@
 
 .chamada-principal-page {
 	color: #ffffff;
+}
+.chamada-secundaria-titulo {
+	color: #ffffff;
+	font-size: 5.5rem;	
 }
 
 .chamada-principal-page-gray {
@@ -112,13 +118,19 @@
 	-webkit-font-smoothing: antialiased;
 }
 
-.hr-gray {
+.hr-gray, .hr-white {
 	width: 100%;
     display: block;
     margin-top: 0.5em;
     margin-bottom: 0.5em;
     margin-left: auto;
     margin-right: auto;
-	border-width: 4px;
-	color: #393737;
+}
+
+.hr-gray {
+	border: 2px solid #393737;
+}
+
+.hr-white {
+	border: 1px solid white;
 }

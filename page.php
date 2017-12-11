@@ -37,7 +37,7 @@ if( have_posts() )
 			}
 			?>
 			<!-- Conteudo principal -->
-			<div class="container-principal" style="background-image: url(<?=$imagem_destacada?>);">
+			<div class="container-principal full-image-background-principal-home" style="background-image: url(<?=$imagem_destacada?>);">
 				<div class="d-flex justify-content-center flex-column" align="center">
 					<div class="col-md-8  align-self-center mt-5">
 						<p class="mx-auto chamada-principal-page mt-5 mb-0"><?=get_the_content()?></p>
@@ -151,7 +151,8 @@ function get_reserva_page() {
 
 function get_programacao_page() {
 	$text_about_schedule = '';
-	$path_picture_schedule = '';				
+	$path_picture_schedule = '';
+	$path_picture_dates = '';					
 	$attachments = new Attachments( 'my_attachments' );
 	if( $attachments->exist() ) :
 		$my_index = 0; // index of text about schedule
@@ -167,8 +168,25 @@ function get_programacao_page() {
 				$path_picture_schedule = $attachments->url( $my_index );
 			endif;									
 		endif;
+
+		$my_index = 2; // index of picture dates
+		if( $attachment = $attachments->get_single( $my_index ) ) :
+			if( $attachments->type($my_index) == 'image') :
+				$path_picture_dates = $attachments->url( $my_index );
+			endif;									
+		endif;
 	endif;	
 	get_section_schedule($text_about_schedule,$path_picture_schedule);
+	?>
+	<div class="d-flex justify-content-center full-image-background my-5" style="background-image: url(<?=$path_picture_dates?>)">
+		<div class="d-flex align-items-center col-md-3 col-sm-2"><hr class="hr-white" /></div>
+		<div class="d-flex align-items-center col-md-3 col-sm-6">
+			<p class="chamada-secundaria-titulo">Datas de eventos</p>
+		</div>
+		<div class="d-flex align-items-center col-md-3 col-sm-2"><hr class="hr-white" /></div>
+	</div>
+	
+	<?php
 	get_section_testemonials_customers();
 	get_section_newsletter();
 }

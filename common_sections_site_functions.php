@@ -37,6 +37,35 @@ if($formularioNewsletterEnviado) {
 	<?php } 
 }
 
+
+function get_section_know_our_gastronomy() {
+    global $home;?>
+    <!-- Secao da gastronomia -->
+    <div class="d-flex justify-content-center flex-row bg-dark mt-3">
+        <div class="col-md-6" align="center">
+            <h1 class="mx-auto chamada-principal-branca mt-5">Conheca nossa</h1>
+            <h1 class="mx-auto chamada-nome-amarelo">GASTRONOMIA</h1>
+            <div class="col-md-8 my-5">
+                <p class="mx-auto chamada-texto-branco">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus commodo lacinia quam. Nulla facilisi. 
+                    Morbi quam dui, sodales a porta eget, suscipit quis lacus. Vestibulum molestie interdum lectus, nec gravida quam varius et. 
+                    Nulla orci purus, aliquam eu feugiat venenatis, placerat ac urna.
+                    <br/>
+                    <br/>
+                    Nulla tellus diam, facilisis placerat dui vitae, hendrerit interdum turpis. Vestibulum accumsan semper pulvinar. Morbi vel lorem a orci 
+                    dignissim aliquet..</p>
+            </div>
+            <div class="col-md-6 my-5">
+                <a class="my-3" href="#" style="text-decoration: none;">
+                    <button type="button" class="btn btn-outline-secondary-lg-yellow btn-block">CONHEÇA NOSSO MENU</button>
+                </a>
+            </div>
+        </div>
+        <div class="col-md-6 full-image-background" style="background-image: url(<?=$home?>/assets/imagens/pages/home/home_chamada_casa.jpg)">
+        </div>
+    </div>
+<?php
+}
+
 function get_section_present_restaurant() {
     global $home;
 ?>

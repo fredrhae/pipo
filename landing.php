@@ -30,7 +30,7 @@ function get_landing_page_buttons_chamada_principal() { ?>
 }
 
 function get_landing_page_body_content() {
-	global $home;	
+	global $home;
 ?>
 	<div class="d-flex justify-content-center flex-row bg-dark py-5" align="center">
 		<div class="col-md-8">
@@ -40,15 +40,26 @@ function get_landing_page_body_content() {
 	<div class="d-flex justify-content-center flex-column mb-5" align="center">
 		<p class="chamada-principal-page-gray">Carinho e dedicacao</p>
 		<div class="col-md-8">
-			<p class="chamada-secundaria-page-gray">Casar com a gente é escolher um dos espaços
-			de maior prestígio social da capital cearense. O dia mais importante da sua vida 
-			pede uma celebração em um ambiente moderno, sofisticado, um espaço de glamour que 
-			poucos têm a oferecer na cidade. Cozinha de alta excelência e expertise internacional
-			são nosso trunfo para servir verdadeiras obras de arte em cor e sabor para seus convidados.
-			Ambiente indoor (salão) e outdoor (jardim) em um mesmo estabelecimento. </p>
+			<?php
+			$text_about_marriages= '';			
+			$attachments = new Attachments( 'my_attachments' );
+			if( $attachments->exist() ) :
+				$my_index = 0; // index of text about marriage
+				if( $attachment = $attachments->get_single( $my_index ) ) :
+					if( $attachments->type($my_index) == 'text') :
+						$text_about_marriages = read_content_from_text_file($attachments->url( $my_index ));
+					endif;						
+				endif;
+			endif;
+			?>
+			<p class="chamada-secundaria-page-gray"><?=$text_about_marriages?></p>
 		</div>
-		<div class="col-md-12 my-5">
-			<p class="chamada-principal-page-gray">O pipo</p>
+		<div class="d-flex justify-content-center my-5">
+			<div class="d-flex align-items-center col-md-3 col-sm-2"><hr class="hr-gray" /></div>
+			<div class="col-md-4 col-sm-6">
+				<p class="chamada-principal-page-gray">O pipo</p>
+			</div>
+			<div class="d-flex align-items-center col-md-3 col-sm-2"><hr class="hr-gray" /></div>
 		</div>
 		<div class="col-md-10">
 			<div class="d-flex justify-content-center flex-row" align="center">
@@ -79,75 +90,9 @@ function get_landing_page_body_content() {
 			</div>
 		</div>
 	</div>
-	<!-- Secao da gastronomia -->
-	<div class="d-flex justify-content-center flex-row bg-dark mt-5">
-		<div class="col-md-6" align="center">
-			<h1 class="mx-auto chamada-principal-branca mt-5">Conheca nossa</h1>
-			<h1 class="mx-auto chamada-nome-amarelo">GASTRONOMIA</h1>
-			<div class="col-md-8 my-5">
-				<p class="mx-auto chamada-texto-branco">No Pipo Restaurante você vai encontrar uma gastronomia autoral,
-				baseada nas experiências que o proprietário Pipo viveu em suas viagens pelo mundo, visitando inúmeros 
-				restaurantes nos 23 países que conheceu (todas indicações do Guia Michelin).
-				<br/>
-				<br/>
-				Preparados pelo chef argentino Diego Gastón Fleitas, nossos pratos combinam nuances marcantes 
-				de impressionar o paladar.</p>
-			</div>
-			<div class="col-md-6 my-5">
-				<a class="my-3" href="#" style="text-decoration: none;">
-					<button type="button" class="btn btn-outline-secondary-lg-yellow btn-block">CONHEÇA NOSSO MENU</button>
-				</a>
-			</div>
-		</div>
-		<div class="col-md-6 full-image-background" style="background-image: url(<?=$home?>/assets/imagens/pages/home/home_chamada_casa.jpg)">
-		</div>
-	</div>
-	<!-- Secao com fotos do cardapio -->
-	<div class="d-flex justify-content-center flex-column my-5" align="center">
-		<div class="col-md-12 my-5">
-			<p class="chamada-principal-page-gray m-0 p-0">Fotos de nossa</p>
-			<p class="pl-5 chamada-orcamento-gray m-0 py-0">GASTRONOMIA</p>
-		</div>
-		<!-- Slider do cardapio -->
-		<div class="d-flex justify-content-center mb-4">
-			<div class="col-md-6">
-				<div id="myCarousel" class="carousel slide multi-item-carousel" data-ride="carousel">
-					<div class="carousel-inner">
-						<?php
-							$attachments = new Attachments( 'my_attachments' );
-							$first_item = true;
-							if( $attachments->exist() ) : ?>
-							<?php while( $attachments->get() ) : 
-								if($first_item == true){?>
-									<div class="carousel-item active">
-								<?php	
-									$first_item = false; 
-								} else { ?>
-									<div class="carousel-item">
-								<?php 											
-								}
-								?>
-									<div class="row py-4">
-										<div class="col-md-12 text-center">
-											<img class="img-responsive" src="<?=$attachments->url()?>" style="max-height:700px;">
-										</div>
-									</div>
-								</div>
-							<?php endwhile; ?>
-						<?php endif; ?>	
-					</div>
-					<a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
-						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-						<span class="sr-only">Previous</span>
-					</a>
-					<a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
-						<span class="carousel-control-next-icon" aria-hidden="true"></span>
-						<span class="sr-only">Next</span>
-					</a>
-				</div>
-			</div>
-		</div>
-	</div>
+	<?php
+	get_section_know_our_gastronomy();
+	?>
 	<!-- Secao de caracteristicas -->
 	<div class="d-flex justify-content-center flex-row">
 		<div class="col-md-6 full-image-background" style="background-image: url(<?=$home?>/assets/imagens/pages/landing/cardapio_exemplo.jpg)">
@@ -268,12 +213,7 @@ function get_landing_page_body_content() {
 	</div>
 
 	<!-- Secao de blog 
-	<div class="d-flex justify-content-center flex-column">
-		<div class="col-md-12" align="center">
-			<h1 class="mx-auto chamada-principal-page-gray">Nosso</h1>
-			<h1 class="mx-auto chamada-secundaria-page-gray">BLOG</h1>		
-		</div>
-	</div>-->
+	-->
 
 	<!-- Secao de FAQs -->
 	<div class="d-flex justify-content-center flex-column py-5" align="center">

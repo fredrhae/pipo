@@ -170,6 +170,25 @@ body .btn-outline-secondary-lg-gray:hover {
     padding-bottom: 56.25%;
 }
 
+
+.image-container {
+	display: inline-block;
+	position: relative;
+	min-height: 100%;
+}
+
+.image-restaurant-bottom, .image-restaurant-top {
+	max-height: 350px;
+}
+
+.image-restaurant-top {
+	position: absolute;
+	right: 40%;
+	top: 40%;
+	width: 100%;
+	max-width:100%;
+}
+
 /* Styles para o item de chamada principal da home*/
 
 .chamada-principal-link, .chamada-secundaria {
@@ -194,25 +213,7 @@ body .btn-outline-secondary-lg-gray:hover {
 	text-decoration:none;	
 }
 
-/* Styles for Home Content */
-
-.image-container {
-	display: inline-block;
-	position: relative;
-	min-height: 100%;
-}
-
-.image-restaurant-bottom, .image-restaurant-top {
-	max-height: 350px;
-}
-
-.image-restaurant-top {
-	position: absolute;
-	right: 40%;
-	top: 40%;
-	width: 100%;
-	max-width:100%;
-}
+/* Styles for text with different size, fonts and colors*/
 
 .chamada-principal-apresentacao, .chamada-apresentacao-pequeno{
 	font-family: SpecialTouch;
@@ -303,6 +304,7 @@ body .btn-outline-secondary-lg-gray:hover {
 }
 
 /* Style for forms and to send email */
+
 .form-nome,
 .form-email,
 .form-telefone,

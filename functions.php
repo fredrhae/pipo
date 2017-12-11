@@ -38,6 +38,41 @@ function enviar_e_checar_email_newsletter($email) {
                 'Email do interessado: ' .  $email . "\n");
 }
 
+
+function registrar_menu_programacao() {
+    $descricao = 'Usado para listar a programação do restaurante Pipo';
+    $singular = 'Programação';
+    $plural = 'Programações';
+  
+    $labels = array(
+        'name' => $plural,
+        'singular_name' => $singular,
+        'view_item' => 'Ver ' . $singular,
+        'edit_item' => 'Editar ' . $singular,
+        'new_item' => 'Novo ' . $singular,
+        'add_new_item' => 'Adicionar nova ' . $singular
+    );
+  
+    $supports = array(
+        'title',
+        'editor',
+        'thumbnail'
+    );
+  
+    $args = array(
+        'labels' => $labels,
+        'description' => $descricao,
+        'public' => true,
+        'menu_icon' => 'dashicons-calendar-alt',
+        'supports' => $supports
+    );
+  
+  
+    register_post_type( 'programacao', $args);    
+}
+  
+  add_action('init', 'registrar_menu_programacao');
+
 function registrar_depoimento_cliente() {
   $descricao = 'Usado para listar os testemunhos de clientes do Pipo';
   $singular = 'Depoimento de Cliente';
@@ -208,6 +243,75 @@ function registrar_menu_bebidas() {
 
 add_action('init', 'registrar_menu_bebidas');
 
+function registrar_menu_entradas() {
+    $descricao = 'Usado para listar as entradas servidas no Pipo';
+    $singular = 'Entrada';
+    $plural = 'Entradas';
+  
+    $labels = array(
+        'name' => $plural,
+        'singular_name' => $singular,
+        'view_item' => 'Ver ' . $singular,
+        'edit_item' => 'Editar ' . $singular,
+        'new_item' => 'Novo ' . $singular,
+        'add_new_item' => 'Adicionar novo ' . $singular
+    );
+  
+    $supports = array(
+        'title',
+        'editor',
+        'thumbnail'
+    );
+  
+    $args = array(
+        'labels' => $labels,
+        'description' => $descricao,
+        'public' => true,
+        'menu_icon' => 'dashicons-post-status',
+        'supports' => $supports
+    );
+  
+  
+    register_post_type( 'entrada', $args);    
+}
+  
+add_action('init', 'registrar_menu_entradas');
+
+
+function registrar_menu_finger_food() {
+    $descricao = 'Usado para listar as finger foods servidas no Pipo';
+    $singular = 'Finger food';
+    $plural = 'Finger foods';
+  
+    $labels = array(
+        'name' => $plural,
+        'singular_name' => $singular,
+        'view_item' => 'Ver ' . $singular,
+        'edit_item' => 'Editar ' . $singular,
+        'new_item' => 'Novo ' . $singular,
+        'add_new_item' => 'Adicionar novo ' . $singular
+    );
+  
+    $supports = array(
+        'title',
+        'editor',
+        'thumbnail'
+    );
+  
+    $args = array(
+        'labels' => $labels,
+        'description' => $descricao,
+        'public' => true,
+        'menu_icon' => 'dashicons-thumbs-up',
+        'supports' => $supports
+    );
+  
+  
+    register_post_type( 'fingerFood', $args);    
+}
+  
+add_action('init', 'registrar_menu_finger_food');
+
 function adicionar_meta_info_preco_menu_bebidas() {
 	add_meta_box(
 		'preco_bebida',
@@ -246,6 +350,32 @@ function adicionar_meta_info_preco_menu_prato() {
 }
 
 add_action('add_meta_boxes', 'adicionar_meta_info_preco_menu_prato');
+
+function adicionar_meta_info_preco_menu_entrada() {
+	add_meta_box(
+		'preco_entrada',
+		'Preço',
+		'preco_view',
+		'entrada',
+		'normal',
+		'high'
+	);
+}
+
+add_action('add_meta_boxes', 'adicionar_meta_info_preco_menu_entrada');
+
+function adicionar_meta_info_preco_menu_finger_food() {
+	add_meta_box(
+		'preco_finger_food',
+		'Preço',
+		'preco_view',
+		'fingerFood',
+		'normal',
+		'high'
+	);
+}
+
+add_action('add_meta_boxes', 'adicionar_meta_info_preco_menu_finger_food');
 
 function preco_view( $post ) { 
     $preco_meta_data = get_post_meta( $post->ID ); 
