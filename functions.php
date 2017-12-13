@@ -447,6 +447,88 @@ function salvar_meta_info_preco( $post_id ) {
 
 add_action('save_post', 'salvar_meta_info_preco');
 
+function adicionar_meta_info_date_programacao() {
+	add_meta_box(
+		'date_programacao',
+		'Data',
+		'date_view',
+		'programacao',
+		'normal',
+		'high'
+	);
+}
+
+add_action('add_meta_boxes', 'adicionar_meta_info_date_programacao');
+
+function date_view( $post ) { 
+    $date_meta_data = get_post_meta( $post->ID ); 
+    ?>
+	<style>
+		.date-metabox {
+			display: flex;
+			justify-content: space-between;
+		}
+
+		.date-metabox-item {
+			flex-basis: 30%;
+
+		}
+
+		.date-metabox-item label {
+			font-weight: 700;
+			display: block;
+			margin: .5rem 0;
+
+		}
+
+		.input-addon-wrapper {
+			height: 30px;
+			display: flex;
+			align-items: center;
+		}
+
+		.input-addon {
+			display: block;
+			border: 1px solid #CCC;
+			border-bottom-left-radius: 5px;
+			border-top-left-radius: 5px;
+			height: 100%;
+			width: 30px;
+			text-align: center;
+			line-height: 30px;
+			box-sizing: border-box;
+			background-color: #888;
+			color: #FFF;
+		}
+
+		.date-metabox-input {
+			height: 100%;
+			border: 1px solid #CCC;
+			border-left: none;
+			margin: 0;
+		}
+
+	</style>
+	<div class="date-metabox">
+		<div class="date-metabox-item">
+			<label for="date-input">Data:</label>
+			<div class="input-addon-wrapper">
+				<input id="date-input" class="date-metabox-input" type="date" name="data_id"
+				value="<?= $date_meta_data['data_id'][0]; ?>">
+			</div>
+		</div>
+	</div>
+<?php
+}
+
+function salvar_meta_info_date( $post_id ) {
+	if( isset($_POST['data_id']) ) {
+		update_post_meta( $post_id, 'data_id', sanitize_text_field( $_POST['data_id'] ) );
+	}
+}
+
+add_action('save_post', 'salvar_meta_info_date');
+
 function my_attachments( $attachments )
 {
   $fields         = array(

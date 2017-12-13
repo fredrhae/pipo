@@ -13,11 +13,11 @@ function get_menu_body_content(){
 		if( $attachment = $attachments->get_single( $my_index ) ) :?>
 		<!-- Secao de menu de pratos -->
 		<div class="d-flex justify-content-center flex-column mt-5" align="center">
-			<p class="mx-auto chamada-principal-apresentacao my-0">Conheca nossos</p>
+			<p class="mx-auto chamada-principal-apresentacao mt-5">Conheca nossos</p>
 			<p class="mx-auto chamada-nome-verde mt-0">PRATOS</p>
 		</div>
-		<div class="d-flex justify-content-center flex-row" style="min-height: 600px;">
-			<div class="col-md-6 col-sm-12" align="center"
+		<div class="d-flex justify-content-center flex-row flex-wrap" style="min-height: 600px;">
+			<div class="col-md-6" align="center"
 				style="background-image: url(<?=$attachments->url( $my_index )?>)";>
 				<div class="d-flex align-items-center h-100">
 					<div class="d-flex flex-column px-5">
@@ -26,7 +26,7 @@ function get_menu_body_content(){
 					</div>
 				</div>
 			</div>
-			<div class="col-md-6 col-sm-12" align="center">
+			<div class="col-md-6" align="center">
 				<!-- Carregamento dos pratos cadastrados -->
 				<?php 
                 $args = array( 'post_type' => 'prato', 'order' => 'ASC' );            
@@ -66,8 +66,8 @@ function get_menu_body_content(){
 		<?php
 		$my_index = 1; // index of text about desserts
 		if( $attachment = $attachments->get_single( $my_index ) ) :?>
-		<div class="d-flex justify-content-center flex-row" style="min-height: 600px;">
-			<div class="col-md-6 col-sm-12" align="center">
+		<div class="d-flex justify-content-center flex-row flex-wrap" style="min-height: 600px;">
+			<div class="col-md-6" align="center">
 				<!-- Carregamento das sobremesas cadastradas -->
 				<?php 
 				$args = array( 'post_type' => 'sobremesa', 'order' => 'ASC' );            
@@ -96,7 +96,7 @@ function get_menu_body_content(){
 				}
 				?>
 			</div>
-			<div class="col-md-6 col-sm-12" align="center"
+			<div class="col-md-6" align="center"
 				style="background-image: url(<?=$attachments->url( $my_index )?>)";>
 				<div class="d-flex align-items-center h-100">
 					<div class="d-flex flex-column px-5">
@@ -116,8 +116,8 @@ function get_menu_body_content(){
 		<?php
 		$my_index = 2; // index of text about drinks
 		if( $attachment = $attachments->get_single( $my_index ) ) :?>
-		<div class="d-flex justify-content-center flex-row" style="min-height: 600px;">
-			<div class="col-md-6 col-sm-12" align="center"
+		<div class="d-flex justify-content-center flex-row flex-wrap" style="min-height: 600px;">
+			<div class="col-md-6" align="center"
 				style="background-image: url(<?=$attachments->url( $my_index )?>)";>
 				<div class="d-flex align-items-center h-100">
 					<div class="d-flex flex-column px-5">
@@ -126,7 +126,7 @@ function get_menu_body_content(){
 					</div>
 				</div>
 			</div>
-			<div class="col-md-6 col-sm-12" align="center">
+			<div class="col-md-6" align="center">
 				<!-- Carregamento das bebidas cadastradas -->
 				<?php 
 				$args = array( 'post_type' => 'bebida', 'order' => 'ASC' );            

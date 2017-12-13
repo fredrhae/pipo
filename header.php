@@ -25,7 +25,7 @@
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container">
             <a class="navbar-brand" href="<?=home_url()?>">
-                <img src="<?=$home?>/assets/imagens/logo_menu.png" width="80" height="70" alt="">
+                <img class="img-responsive w-100 h-100" src="<?=$home?>/assets/imagens/logo_menu.png" width="80" height="70" alt="">
             </a>
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>

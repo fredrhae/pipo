@@ -32,7 +32,7 @@ function get_landing_page_buttons_chamada_principal() { ?>
 function get_landing_page_body_content() {
 	global $home;
 ?>
-	<div class="d-flex justify-content-center flex-row bg-dark py-5" align="center">
+	<div class="d-flex justify-content-center flex-row flex-wrap bg-dark py-5" align="center">
 		<div class="col-md-8">
 			<p class="chamada-secundaria-page">PORQUE CASAR NO PIPO É DIFERENTE?</p>
 		</div>
@@ -62,7 +62,7 @@ function get_landing_page_body_content() {
 			<div class="d-flex align-items-center col-md-3 col-sm-2"><hr class="hr-gray" /></div>
 		</div>
 		<div class="col-md-10">
-			<div class="d-flex justify-content-center flex-row" align="center">
+			<div class="d-flex justify-content-center flex-row flex-wrap" align="center">
 				<div class="d-flex justify-content-center flex-column" align="center">
 					<img class="img-responsive" src="<?=$home?>/assets/imagens/pages/landing/menu.png" style="width: 90px; height: 104px;">						
 					<p class="texto-caracteristicas my-5">CARDÁPIO REQUINTADO</p>
@@ -94,7 +94,7 @@ function get_landing_page_body_content() {
 	get_section_know_our_gastronomy();
 	?>
 	<!-- Secao de caracteristicas -->
-	<div class="d-flex justify-content-center flex-row">
+	<div class="d-flex justify-content-center flex-row flex-wrap">
 		<div class="col-md-6 full-image-background" style="background-image: url(<?=$home?>/assets/imagens/pages/landing/cardapio_exemplo.jpg)">
 		</div>
 		<div class="col-md-6 pl-5 mt-5" align="left">
@@ -123,7 +123,7 @@ function get_landing_page_body_content() {
 			<h1 class="mx-auto chamada-secundaria-page-gray">REALIZADOS</h1>		
 		</div>
 		<div class="col-md-12 my-5" align="center">
-			<div class="d-flex justify-content-center flex-row" align="center">
+			<div class="d-flex justify-content-center flex-row flex-wrap" align="center">
 				<div class="d-flex justify-content-center flex-column px-3" align="center">
 					<img class="img-responsive" src="<?=$home?>/assets/imagens/pages/landing/casal_1.png" style="width: 137px; height: 137px;">						
 					<p class="texto-caracteristicas my-2">LUCIA E DIEGO</p>
@@ -226,14 +226,14 @@ function get_landing_page_body_content() {
 	</div>
 
 	<!-- Secao de reservas -->
-	<div class="d-flex justify-content-center flex-column py-5" align="center">
+	<div class="d-flex justify-content-center flex-column flex-wrap py-5" align="center">
 		<div class="col-md-4 col-sm-6">
 			<p class="mx-auto chamada-orcamento-gray">SOLICITE SEU ORÇAMENTO</p>
 		</div>
 		<div class="col-md-8 col-sm-12">
-			<div class="d-flex justify-content-center flex-row">
+			<div class="d-flex justify-content-center flex-row flex-wrap">
 				<div class="col-md-6 m-0 p-0">
-					<img class="img-responsive" src="<?=$home?>/assets/imagens/pages/landing/noivos_orcamento.png" style="max-height: 360px;">
+					<img class="img-responsive h-100" src="<?=$home?>/assets/imagens/pages/landing/noivos_orcamento.png" style="max-height: 360px;">
 				</div>
 				<div class="col-md-6">
 					<form method="post">

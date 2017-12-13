@@ -150,6 +150,7 @@ function get_reserva_page() {
 }
 
 function get_programacao_page() {
+	global $home; 
 	$text_about_schedule = '';
 	$path_picture_schedule = '';
 	$path_picture_dates = '';					
@@ -178,14 +179,72 @@ function get_programacao_page() {
 	endif;	
 	get_section_schedule($text_about_schedule,$path_picture_schedule);
 	?>
-	<div class="d-flex justify-content-center full-image-background my-5" style="background-image: url(<?=$path_picture_dates?>)">
-		<div class="d-flex align-items-center col-md-3 col-sm-2"><hr class="hr-white" /></div>
-		<div class="d-flex align-items-center col-md-3 col-sm-6">
-			<p class="chamada-secundaria-titulo">Datas de eventos</p>
+	<div class="d-flex justify-content-center flex-column full-image-background" style="background-image: url(<?=$path_picture_dates?>)">
+		<div class="d-flex justify-content-center my-5">
+			<div class="d-flex align-items-center col-md-3 col-sm-2"><hr class="hr-white" /></div>
+			<div class="d-flex align-items-center col-md-3 col-sm-6">
+				<p class="chamada-secundaria-titulo">Datas de eventos</p>
+			</div>
+			<div class="d-flex align-items-center col-md-3 col-sm-2"><hr class="hr-white" /></div>
 		</div>
-		<div class="d-flex align-items-center col-md-3 col-sm-2"><hr class="hr-white" /></div>
+		<!-- Slider com programacoes -->
+		<div class="d-flex justify-content-center mb-4">
+			<div class="col-md-6">
+				<div id="myCarousel" class="carousel slide multi-item-carousel" data-ride="carousel">
+					<ol class="carousel-indicators">
+						<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+						<?php 
+						$count_programacao = wp_count_posts('programacao');
+						for($i = 1; $i < $count_programacao; $i++) {?>
+							<li data-target="#myCarousel" data-slide-to="<?=$i?>"></li>
+						<?php
+						}?>
+					</ol>
+					<div class="carousel-inner">
+						<!-- Carregamento das programacoes cadastradas -->
+						<?php 
+						$args = array( 'post_type' => 'programacao', 'order' => 'ASC' );            
+						$loop = new WP_Query( $args );
+						$firstItem = true;
+						if( $loop->have_posts() ) { 
+							?>
+						<?php while( $loop->have_posts()) {
+							$loop->the_post();
+							$programacao_meta_data = get_post_meta(  get_the_ID() );						
+							$carousel_class = '';
+							if($firstItem){
+								$carousel_class = "carousel-item active";
+								$firstItem = false;
+							} else {
+								$carousel_class = "carousel-item";                         
+							}
+							?>
+							<div class="<?=$carousel_class?>">
+								<div class="d-flex justify-content-center flex-column">
+									<div class="d-flex align-items-center image-container">
+										<img class="d-flex img-responsive" 
+											 src="<?=$home?>/assets/imagens/pages/schedule/calendar.png"
+											 style="min-height: 220px;">
+										<p class="chamada-secundaria-page text-inside-image"> <?= esc_attr( $programacao_meta_data['data_id'][0] ); ?></p>
+									</div>
+								</div>
+							</div>
+							<?php
+							} 
+						} ?>
+					</div>
+					<a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+						<span class="sr-only">Previous</span>
+					</a>
+					<a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+						<span class="carousel-control-next-icon" aria-hidden="true"></span>
+						<span class="sr-only">Next</span>
+					</a>
+				</div>
+			</div>
+		</div>
 	</div>
-	
 	<?php
 	get_section_testemonials_customers();
 	get_section_newsletter();

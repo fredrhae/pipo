@@ -21,18 +21,8 @@ body {
 
 @media (orientation: portrait) {
 	.full {
-	  background-size: 200% auto;
+	  background-size: 100% auto;
 	  background-position: top right;
-	}
-}
-
-@media screen and (max-width: 600px) {
-	#remove-image {
-	  visibility: collapse;
-	}
-
-	#titulo-pipo {
-		font-size: 2.6rem;
 	}
 }
 
@@ -170,23 +160,28 @@ body .btn-outline-secondary-lg-gray:hover {
     padding-bottom: 56.25%;
 }
 
-
 .image-container {
 	display: inline-block;
 	position: relative;
-	min-height: 100%;
+	min-height: 80%;
 }
 
 .image-restaurant-bottom, .image-restaurant-top {
 	max-height: 350px;
+	max-width: 100%;
 }
 
 .image-restaurant-top {
 	position: absolute;
 	right: 40%;
 	top: 40%;
-	width: 100%;
-	max-width:100%;
+}
+
+.text-inside-image {
+	position: absolute;
+	left: 0%;
+	top: 40%;
+	width: 80%;
 }
 
 /* Styles para o item de chamada principal da home*/
@@ -239,7 +234,7 @@ body .btn-outline-secondary-lg-gray:hover {
 }
 
 .chamada-nome-vermelho-lg {
-	font-size: 4.0rem;
+	font-size: 8vw;
 }
 
 .chamada-nome-vermelho-pequeno {
