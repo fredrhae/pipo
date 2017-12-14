@@ -31,6 +31,7 @@ function get_landing_page_buttons_chamada_principal() { ?>
 
 function get_landing_page_body_content() {
 	global $home;
+	$id_galeria = 277;	
 ?>
 	<div class="d-flex justify-content-center flex-row flex-wrap bg-dark py-5" align="center">
 		<div class="col-md-8">
@@ -62,7 +63,7 @@ function get_landing_page_body_content() {
 			<div class="d-flex align-items-center col-md-3 col-sm-2"><hr class="hr-gray" /></div>
 		</div>
 		<div class="col-md-10">
-			<div class="d-flex justify-content-center flex-row flex-wrap" align="center">
+			<div class="d-flex justify-content-center flex-row" align="center">
 				<div class="d-flex justify-content-center flex-column" align="center">
 					<img class="img-responsive" src="<?=$home?>/assets/imagens/pages/landing/menu.png" style="width: 90px; height: 104px;">						
 					<p class="texto-caracteristicas my-5">CARDÁPIO REQUINTADO</p>
@@ -93,6 +94,47 @@ function get_landing_page_body_content() {
 	<?php
 	get_section_know_our_gastronomy();
 	?>
+	<!-- Secao de casamentos realizados -->
+	<div class="d-flex justify-content-center flex-row flex-wrap mb-5">
+		<div class="col-md-12" align="center">
+			<h1 class="mx-auto chamada-principal-page-gray">Fotos de nossa</h1>
+			<h1 class="mx-auto chamada-secundaria-page-gray">GASTRONOMIA</h1>		
+		</div>
+		<div class="d-flex justify-content-center w-100">
+			<div class="btn-group-vertical align-items-center w-25 h-100 mx-5">
+				<form method="post">
+					<button class="btn btn-primary" type="submit" id="entrada" name="fotos_gastronomia" value="entrada" autofocus="true"/>
+						Entradas</button>
+					<button class="btn btn-primary" type="submit" id="finger" name="fotos_gastronomia" value="finger"/>
+						Finger foods</button>
+					<button class="btn btn-primary" type="submit" id="principal" name="fotos_gastronomia" value="principal"/> 
+						Prato principal</button>
+					<button class="btn btn-primary" type="submit" id="sobremesa" name="fotos_gastronomia" value="sobremesa"/> 
+						Sobremesas</button>
+					<button class="btn btn-primary" type="submit" id="bebida" name="fotos_gastronomia" value="bebida"/> 
+						Bebidas</button>
+				</form>
+			</div>
+			<div class="d-flex">
+				<?php				
+					if(array_key_exists('fotos_gastronomia',$_POST)){
+						switch($_POST['fotos_gastronomia']) {
+							case 'entrada':
+								$id_galeria = 277;
+								break;
+							case 'finger':
+								$id_galeria = 274;
+								break;
+							default:
+								$id_galeria = 277;
+								break;
+						}
+					}
+					echo do_shortcode("[foogallery id=" . $id_galeria . "]");
+				?>
+			</div>
+		</div>
+	</div>
 	<!-- Secao de caracteristicas -->
 	<div class="d-flex justify-content-center flex-row flex-wrap">
 		<div class="col-md-6 full-image-background" style="background-image: url(<?=$home?>/assets/imagens/pages/landing/cardapio_exemplo.jpg)">

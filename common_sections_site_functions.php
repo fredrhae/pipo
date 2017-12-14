@@ -41,7 +41,7 @@ if($formularioNewsletterEnviado) {
 function get_section_know_our_gastronomy() {
     global $home;?>
     <!-- Secao da gastronomia -->
-    <div class="d-flex justify-content-center flex-row flex-wrap bg-dark mt-3">
+    <div class="d-flex justify-content-center flex-row flex-wrap bg-dark mt-5">
         <div class="col-md-6" align="center">
             <h1 class="mx-auto chamada-principal-branca mt-5">Conheca nossa</h1>
             <h1 class="mx-auto chamada-nome-amarelo">GASTRONOMIA</h1>
@@ -90,6 +90,7 @@ function get_section_present_restaurant() {
             <img class="image-restaurant-top img-responsive p-4" src="<?=$home?>/assets/imagens/pages/home/vista_restaurante.jpg" alt="">
         </div>
     </div>
+    <div class="row my-5 "></div>
 </div>
 <?php
 }

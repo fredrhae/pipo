@@ -193,17 +193,17 @@ body .btn-outline-secondary-lg-gray:hover {
 
 .chamada-principal-link {
 	font-family: SpecialTouch;
-	font-size: 6.5rem;
+	font-size: 6vw;
 	text-decoration:none;
 }
 
 .chamada-secundaria {
 	font-family: GothamExtraLight, sans-serif;
-	font-size: 1.0rem;	
+	font-size: 1.5vw;	
 }
 
 .chamada-principal-link:hover { 	
-	font-size: 6.5rem;
+	font-size: 6vw;
 	color:rgba(111,255,0,0.80);
 	text-decoration:none;	
 }
@@ -217,11 +217,11 @@ body .btn-outline-secondary-lg-gray:hover {
 }
 
 .chamada-principal-apresentacao {
-	font-size: 5.5rem;
+	font-size: 4vw;
 }
 
 .chamada-apresentacao-pequeno {
-	font-size: 4.0rem;
+	font-size: 2.5vw;
 }
 
 .chamada-nome-vermelho-lg, 
@@ -234,15 +234,15 @@ body .btn-outline-secondary-lg-gray:hover {
 }
 
 .chamada-nome-vermelho-lg {
-	font-size: 8vw;
+	font-size: 6vw;
 }
 
 .chamada-nome-vermelho-pequeno {
-	font-size: 1.0rem;
+	font-size: 1.5vw;
 }
 
 .chamada-nome-vermelho {
-	font-size: 1.5rem;
+	font-size: 2vw;
 }
 
 .chamada-slogan, .chamada-texto-cinza {
@@ -250,13 +250,13 @@ body .btn-outline-secondary-lg-gray:hover {
 }
 
 .chamada-slogan {
-	font-size: 2.2rem;
+	font-size: 1.5vw;
 	color: #555555;
 	font-weight: bold;	
 }
 
 .chamada-texto-cinza {
-	font-size: 1.2rem;
+	font-size: 1.5vw;
 	color: #606060;
 	font-weight: lighter;	
 }
@@ -264,7 +264,7 @@ body .btn-outline-secondary-lg-gray:hover {
 .chamada-nome-amarelo {
 	font-family: GothamBoldRegular, sans-serif;
 	font-weight: bold;
-	font-size: 1.5rem;
+	font-size: 1.5vw;
 	letter-spacing: 0.2rem;
 	color: #FFE000;
 }
