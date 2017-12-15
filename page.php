@@ -114,7 +114,8 @@ function get_section_suggestions() {
                         <input id="form-email" type="email" placeholder="Seu email" name="form-email">
                     </div>
                     <div class="form-sugestao">
-                        <textarea id="form-sugestao" type="text" placeholder="Sua sugestão" name="form-sugestao" class="input w-100 mb-5" rows="10"></textarea>
+						<textarea id="form-sugestao" type="text" style="overflow:hidden"
+						 placeholder="Sua sugestão" name="form-sugestao" class="input w-100 mb-5" rows="10"></textarea>
                     </div>             
                     <button type="submit" class="btn btn-block btn-outline-secondary-lg-gray">RESERVAR</button>
                 </form>
@@ -221,10 +222,9 @@ function get_programacao_page() {
 							?>
 							<div class="<?=$carousel_class?>">
 								<div class="d-flex justify-content-center flex-column">
-									<div class="d-flex align-items-center image-container">
-										<img class="d-flex img-responsive" 
-											 src="<?=$home?>/assets/imagens/pages/schedule/calendar.png"
-											 style="min-height: 220px;">
+									<div class="d-flex justify-content-center">
+										<img class="image-schedule img-responsive" 
+											 src="<?=$home?>/assets/imagens/pages/schedule/calendar.png">
 										<p class="chamada-secundaria-page text-inside-image"> <?= esc_attr( $programacao_meta_data['data_id'][0] ); ?></p>
 									</div>
 								</div>

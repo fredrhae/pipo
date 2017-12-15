@@ -278,7 +278,7 @@ function get_section_testemonials_customers() {?>
         <div class="d-flex justify-content-center mb-4">
             <div class="col-md-6">
                 <div id="myCarousel" class="carousel slide multi-item-carousel" data-ride="carousel">
-                    <ol class="carousel-indicators">
+                    <ol class="carousel-indicators carousel-indicators-testemonials">
                         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
                         <?php 
                         $count_depoimentos = wp_count_posts('depoimentoCliente');

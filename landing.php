@@ -95,27 +95,27 @@ function get_landing_page_body_content() {
 	get_section_know_our_gastronomy();
 	?>
 	<!-- Secao de casamentos realizados -->
-	<div class="d-flex justify-content-center flex-row flex-wrap mb-5">
+	<div class="d-flex justify-content-start flex-row flex-wrap mb-5" id="form-anchor-fotos">
 		<div class="col-md-12" align="center">
 			<h1 class="mx-auto chamada-principal-page-gray">Fotos de nossa</h1>
 			<h1 class="mx-auto chamada-secundaria-page-gray">GASTRONOMIA</h1>		
 		</div>
 		<div class="d-flex justify-content-center w-100">
-			<div class="btn-group-vertical align-items-center w-25 h-100 mx-5">
-				<form method="post">
-					<button class="btn btn-primary" type="submit" id="entrada" name="fotos_gastronomia" value="entrada" autofocus="true"/>
+			<div class="btn-group-vertical h-100 mx-3">
+				<form method="post" action="#form-anchor-fotos">
+					<button class="btn btn-outline-secondary-lg-gray my-2" type="submit" id="entrada" name="fotos_gastronomia" value="entrada"/>
 						Entradas</button>
-					<button class="btn btn-primary" type="submit" id="finger" name="fotos_gastronomia" value="finger"/>
+					<button class="btn btn-outline-secondary-lg-gray my-2" type="submit" id="finger" name="fotos_gastronomia" value="finger"/>
 						Finger foods</button>
-					<button class="btn btn-primary" type="submit" id="principal" name="fotos_gastronomia" value="principal"/> 
+					<button class="btn btn-outline-secondary-lg-gray my-2" type="submit" id="principal" name="fotos_gastronomia" value="principal"/> 
 						Prato principal</button>
-					<button class="btn btn-primary" type="submit" id="sobremesa" name="fotos_gastronomia" value="sobremesa"/> 
+					<button class="btn btn-outline-secondary-lg-gray my-2" type="submit" id="sobremesa" name="fotos_gastronomia" value="sobremesa"/> 
 						Sobremesas</button>
-					<button class="btn btn-primary" type="submit" id="bebida" name="fotos_gastronomia" value="bebida"/> 
+					<button class="btn btn-outline-secondary-lg-gray my-2" type="submit" id="bebida" name="fotos_gastronomia" value="bebida"/> 
 						Bebidas</button>
 				</form>
 			</div>
-			<div class="d-flex">
+			<div class="d-flex col-8">
 				<?php				
 					if(array_key_exists('fotos_gastronomia',$_POST)){
 						switch($_POST['fotos_gastronomia']) {
