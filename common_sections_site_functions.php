@@ -37,14 +37,43 @@ if($formularioNewsletterEnviado) {
 	<?php } 
 }
 
+
+function get_section_know_our_gastronomy() {
+    global $home;?>
+    <!-- Secao da gastronomia -->
+    <div class="d-flex justify-content-center flex-row flex-wrap bg-dark mt-5">
+        <div class="col-md-6" align="center">
+            <h1 class="mx-auto chamada-principal-branca mt-5">Conheca nossa</h1>
+            <h1 class="mx-auto chamada-nome-amarelo">GASTRONOMIA</h1>
+            <div class="col-md-8 my-5">
+                <p class="mx-auto chamada-texto-branco">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus commodo lacinia quam. Nulla facilisi. 
+                    Morbi quam dui, sodales a porta eget, suscipit quis lacus. Vestibulum molestie interdum lectus, nec gravida quam varius et. 
+                    Nulla orci purus, aliquam eu feugiat venenatis, placerat ac urna.
+                    <br/>
+                    <br/>
+                    Nulla tellus diam, facilisis placerat dui vitae, hendrerit interdum turpis. Vestibulum accumsan semper pulvinar. Morbi vel lorem a orci 
+                    dignissim aliquet..</p>
+            </div>
+            <div class="col-md-6 my-5">
+                <a class="my-3" href="#" style="text-decoration: none;">
+                    <button type="button" class="btn btn-outline-secondary-lg-yellow btn-block">CONHEÇA NOSSO MENU</button>
+                </a>
+            </div>
+        </div>
+        <div class="col-md-6 full-image-background" style="background-image: url(<?=$home?>/assets/imagens/pages/home/home_chamada_casa.jpg)">
+        </div>
+    </div>
+<?php
+}
+
 function get_section_present_restaurant() {
     global $home;
 ?>
 <!-- Secao de apresentar o restaurante -->
-<div class="d-flex justify-content-center flex-column my-5" align="center">
-    <div class="col-md-6" align="center">
+<div class="d-flex justify-content-center flex-column flex-wrap my-5" align="center">
+    <div class="d-flex m-5 justify-content-center flex-column" align="center">
         <p class="mx-auto chamada-principal-apresentacao">Seja Bem Vindo ao</p>
-        <p class="mx-auto chamada-nome-vermelho-lg" id="titulo-pipo">PIPO RESTAURANTE</p>
+        <p class="mx-auto chamada-nome-vermelho-lg">PIPO RESTAURANTE</p>
         <p class="mx-auto chamada-slogan">"Vem pro Pipo, aqui é muito mais gostoso!"</p>
         <p class="mx-auto chamada-texto-cinza">Nosso restaurante conta com uma gastronomia autoral, baseada nas experiências e gosto pessoal 
             do proprietário Pipo que decidiu juntar todos os seus hobbies ao construí-lo.
@@ -55,12 +84,13 @@ function get_section_present_restaurant() {
             Restaurante conta com uma arquitetura de linhas retas, moderna e composta principalmente de concreto e vidro,
             tudo sobre um lago em um belíssimo jardim de 2400m².</p>
     </div>
-    <div class="col-md-6 mb-5" align="center">
-        <div class="image-container my-5" style="min-height: 500px;">
-            <img class="image-restaurant-bottom img-responsive p-4" id="remove-image" src="<?=$home?>/assets/imagens/pages/home/fachada_restaurante.jpg" alt="">
-            <img class="image-restaurant-top img-responsive p-4" id="remove-image" src="<?=$home?>/assets/imagens/pages/home/vista_restaurante.jpg" alt="">
+    <div class="d-flex flex-wrap mb-5" align="center">
+        <div class="image-container my-5" style="max-height: 220px;">
+            <img class="image-restaurant-bottom img-responsive p-4"  src="<?=$home?>/assets/imagens/pages/home/fachada_restaurante.jpg" alt="">
+            <img class="image-restaurant-top img-responsive p-4" src="<?=$home?>/assets/imagens/pages/home/vista_restaurante.jpg" alt="">
         </div>
     </div>
+    <div class="row my-5 "></div>
 </div>
 <?php
 }
@@ -68,20 +98,23 @@ function get_section_present_restaurant() {
 function get_section_restaurant_chef($text_about_chef, $path_foto_1, $path_foto_2) {
     global $home;
 ?>
-<div class="d-flex align-items-stretch flex-row bg-dark" style="min-height: 600px;">
-    <div class="col-md-6" align="center">
-        <h1 class="mx-auto chamada-principal-branca mt-5">Conheca nosso</h1>
-        <h1 class="mx-auto chamada-nome-amarelo">CHEF DE COZINHA</h1>
-        <div class="col-md-8 my-5">
-            <p class="mx-auto chamada-texto-branco"><?=$text_about_chef?></p>
+<div class="d-flex align-items-stretch flex-row flex-wrap bg-dark" style="min-height: 600px;">
+    <div class="row">
+        <div class="col-md-6 col-xs-12" align="center">
+            <h1 class="mx-auto chamada-principal-branca mt-5">Conheca nosso</h1>
+            <h1 class="mx-auto chamada-nome-amarelo">CHEF DE COZINHA</h1>
+            <div class="col-md-8 my-5">
+                <p class="mx-auto chamada-texto-branco"><?=$text_about_chef?></p>
+            </div>
+        </div>
+        <div class="col-md-6 col-xs-12" align="center">
+            <div class="image-container">
+                <img class="image-restaurant-bottom img-fluid p-4 m-0 p-0" src="<?=$path_foto_2?>" alt="">
+                <img class="image-restaurant-top img-fluid p-4 m-0 p-0" src="<?=$path_foto_1?>" alt="">
+            </div>
         </div>
     </div>
-    <div class="col-md-6" align="center">
-        <div class="image-container">
-            <img class="image-restaurant-bottom img-responsive p-4" id="remove-image" src="<?=$path_foto_2?>" alt="">
-            <img class="image-restaurant-top img-responsive p-4" id="remove-image" src="<?=$path_foto_1?>" alt="">
-        </div>
-    </div>
+
 </div>
 <?php
 }
@@ -89,7 +122,7 @@ function get_section_restaurant_chef($text_about_chef, $path_foto_1, $path_foto_
 function get_section_schedule($text_about_programacao, $path_picture_schedule) {
     global $home;
 ?>
-<div class="d-flex align-items-stretch flex-row my-5" style="min-height: 600px;">
+<div class="d-flex align-items-stretch flex-row flex-wrap my-5" style="min-height: 600px;">
     <div class="col-md-6" align="center">
         <h1 class="mx-auto chamada-principal-apresentacao mt-5">Conheca nossas</h1>
         <h1 class="mx-auto chamada-nome-vermelho-pequeno">PROGRAMAÇÕES</h1>
@@ -98,7 +131,7 @@ function get_section_schedule($text_about_programacao, $path_picture_schedule) {
         </div>
     </div>
     <div class="col-md-6" align="center">
-        <img class="img-responsive p-4" src="<?=$path_picture_schedule?>" alt="">
+        <img class="img-responsive p-4 w-100 h-100 m-0 p-0" src="<?=$path_picture_schedule?>" alt="">
     </div>
 </div>
 <?php
@@ -248,7 +281,7 @@ function get_section_testemonials_customers() {?>
         <div class="d-flex justify-content-center mb-4">
             <div class="col-md-6">
                 <div id="myCarousel" class="carousel slide multi-item-carousel" data-ride="carousel">
-                    <ol class="carousel-indicators">
+                    <ol class="carousel-indicators carousel-indicators-testemonials">
                         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
                         <?php 
                         $count_depoimentos = wp_count_posts('depoimentoCliente');

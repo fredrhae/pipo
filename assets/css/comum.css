@@ -21,19 +21,23 @@ body {
 
 @media (orientation: portrait) {
 	.full {
-	  background-size: 200% auto;
+	  background-size: 100% auto;
 	  background-position: top right;
 	}
 }
 
-@media screen and (max-width: 600px) {
-	#remove-image {
-	  visibility: collapse;
-	}
+/* iphone */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+	img { max-width: 100%; }
+}
 
-	#titulo-pipo {
-		font-size: 2.6rem;
-	}
+/* ipad */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+	img { max-width: 100%; }
+}
+
+@media print {
+	img { max-width: 100%; }
 }
 
 /* Styles de fonte */
@@ -135,7 +139,7 @@ body .btn-outline-secondary-lg-gray:hover {
 
 /* Styles para posicionamento nas paginas do site */
 .container-principal {
-	min-height: 720px;
+	min-height: 500px;
 	position: relative;
 	opacity: 1.5;	
 }
@@ -170,6 +174,39 @@ body .btn-outline-secondary-lg-gray:hover {
     padding-bottom: 56.25%;
 }
 
+.image-container {
+	display: inline-block;
+	position: relative;
+	min-height: 80%;
+}
+
+.image-restaurant-bottom, .image-restaurant-top {
+	max-height: 350px;
+	max-width: 100%;
+}
+
+.image-restaurant-top {
+	position: absolute;
+	right: 40%;
+	top: 40%;
+}
+
+.image-schedule {
+	position: relative;
+	display: inline-block;	
+	max-height: 350px;
+	min-height: 220px;	
+	max-width: 100%;
+}
+
+.text-inside-image {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+    transform: translate( -50%, -50% );
+    text-align: center;
+}
+
 /* Styles para o item de chamada principal da home*/
 
 .chamada-principal-link, .chamada-secundaria {
@@ -179,40 +216,22 @@ body .btn-outline-secondary-lg-gray:hover {
 
 .chamada-principal-link {
 	font-family: SpecialTouch;
-	font-size: 6.5rem;
+	font-size: 56px;
 	text-decoration:none;
 }
 
 .chamada-secundaria {
 	font-family: GothamExtraLight, sans-serif;
-	font-size: 1.0rem;	
+	font-size: 24px;	
 }
 
 .chamada-principal-link:hover { 	
-	font-size: 6.5rem;
+	font-size: 54px;
 	color:rgba(111,255,0,0.80);
 	text-decoration:none;	
 }
 
-/* Styles for Home Content */
-
-.image-container {
-	display: inline-block;
-	position: relative;
-	min-height: 100%;
-}
-
-.image-restaurant-bottom, .image-restaurant-top {
-	max-height: 350px;
-}
-
-.image-restaurant-top {
-	position: absolute;
-	right: 40%;
-	top: 40%;
-	width: 100%;
-	max-width:100%;
-}
+/* Styles for text with different size, fonts and colors*/
 
 .chamada-principal-apresentacao, .chamada-apresentacao-pequeno{
 	font-family: SpecialTouch;
@@ -221,11 +240,11 @@ body .btn-outline-secondary-lg-gray:hover {
 }
 
 .chamada-principal-apresentacao {
-	font-size: 5.5rem;
+	font-size: 56px;
 }
 
 .chamada-apresentacao-pequeno {
-	font-size: 4.0rem;
+	font-size: 48px;
 }
 
 .chamada-nome-vermelho-lg, 
@@ -238,15 +257,15 @@ body .btn-outline-secondary-lg-gray:hover {
 }
 
 .chamada-nome-vermelho-lg {
-	font-size: 4.0rem;
+	font-size: 32px;
 }
 
 .chamada-nome-vermelho-pequeno {
-	font-size: 1.0rem;
+	font-size: 16px;
 }
 
 .chamada-nome-vermelho {
-	font-size: 1.5rem;
+	font-size: 24px;
 }
 
 .chamada-slogan, .chamada-texto-cinza {
@@ -254,13 +273,13 @@ body .btn-outline-secondary-lg-gray:hover {
 }
 
 .chamada-slogan {
-	font-size: 2.2rem;
+	font-size: 24px;
 	color: #555555;
 	font-weight: bold;	
 }
 
 .chamada-texto-cinza {
-	font-size: 1.2rem;
+	font-size: 16px;
 	color: #606060;
 	font-weight: lighter;	
 }
@@ -268,7 +287,7 @@ body .btn-outline-secondary-lg-gray:hover {
 .chamada-nome-amarelo {
 	font-family: GothamBoldRegular, sans-serif;
 	font-weight: bold;
-	font-size: 1.5rem;
+	font-size: 24px;
 	letter-spacing: 0.2rem;
 	color: #FFE000;
 }
@@ -276,7 +295,7 @@ body .btn-outline-secondary-lg-gray:hover {
 .chamada-texto-branco {
 	font-family: GothamBoldRegular, sans-serif;
 	font-weight: bold;
-	font-size: 1.0rem;
+	font-size: 16px;
 	color: #FFF;
 }
 
@@ -287,22 +306,29 @@ body .btn-outline-secondary-lg-gray:hover {
 }
 
 .chamada-nome-verde {
-	font-size: 1.5rem;
+	font-size: 24px;
 	letter-spacing: 0.2rem;
 }
 
 .chamada-nome-verde-pequeno {
-	font-size: 1.0rem;
+	font-size: 16px;
 }
 
 .chamada-principal-branca {
 	color: #ffffff;
 	-webkit-font-smoothing: antialiased;
 	font-family: SpecialTouch;
-	font-size: 6.5rem;
+	font-size: 48px;
 }
+/* Style for carousel indicators colors 
+
+.carousel-indicators .active{
+    background-color: #D20107;
+}
+*/
 
 /* Style for forms and to send email */
+
 .form-nome,
 .form-email,
 .form-telefone,
@@ -318,7 +344,7 @@ body .btn-outline-secondary-lg-gray:hover {
 .form-pessoas input {
 	width: 100%;
 	display: block;
-	font-size: 1rem;
+	font-size: 12px;
 	padding: .5rem;
 	border: 1px solid #949494;
 	box-sizing: border-box;
