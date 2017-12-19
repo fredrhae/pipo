@@ -29,7 +29,7 @@
                             <button type="button" class="btn btn-outline-secondary btn-block">Faça sua reserva</button>
                         </a>
                         <h4>Siga-nos</h4>
-                        <div class="d-flex justify-content-center flex-row">
+                        <div class="d-flex justify-content-start flex-row">
                             <a class="px-2" href="#">
                                 <img class="img-responsive" src="<?=$home?>/assets/imagens/Facebook.svg" width="30" height="30" alt="">
                             </a>
