@@ -175,20 +175,14 @@ body .btn-outline-secondary-lg-gray:hover {
 }
 
 .image-container {
-	display: inline-block;
+	display: block;
 	position: relative;
 	min-height: 80%;
 }
 
-.image-restaurant-bottom, .image-restaurant-top {
-	max-height: 350px;
+.image-overlay {
+	max-height: 400px;
 	max-width: 100%;
-}
-
-.image-restaurant-top {
-	position: absolute;
-	right: 40%;
-	top: 40%;
 }
 
 .image-schedule {

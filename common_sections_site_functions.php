@@ -71,23 +71,24 @@ function get_section_present_restaurant() {
 ?>
 <!-- Secao de apresentar o restaurante -->
 <div class="d-flex justify-content-center flex-column flex-wrap my-5" align="center">
-    <div class="d-flex m-5 justify-content-center flex-column" align="center">
-        <p class="mx-auto chamada-principal-apresentacao">Seja Bem Vindo ao</p>
-        <p class="mx-auto chamada-nome-vermelho-lg">PIPO RESTAURANTE</p>
-        <p class="mx-auto chamada-slogan">"Vem pro Pipo, aqui é muito mais gostoso!"</p>
-        <p class="mx-auto chamada-texto-cinza">Nosso restaurante conta com uma gastronomia autoral, baseada nas experiências e gosto pessoal 
-            do proprietário Pipo que decidiu juntar todos os seus hobbies ao construí-lo.
-            <br/>
-            <br/>
-            Chef, advogado e empresário. Pipo é apaixonado por arte, música, gastronomia e arquitetura e ama viajar.
-            Visitou os mais diversos restaurantes nos 23 países que conheceu, sempre seguindo o guia Michelin. O Pipo 
-            Restaurante conta com uma arquitetura de linhas retas, moderna e composta principalmente de concreto e vidro,
-            tudo sobre um lago em um belíssimo jardim de 2400m².</p>
+    <div class="row">
+        <div class="d-flex my-5 justify-content-center flex-column" align="center">
+            <h2 class="mx-auto chamada-principal-apresentacao">Seja Bem Vindo ao</h2>
+            <h2 class="mx-auto chamada-nome-vermelho-lg">PIPO RESTAURANTE</h3>
+            <h3 class="mx-auto chamada-slogan my-5">"Vem pro Pipo, aqui é muito mais gostoso!"</h3>
+            <p class="mx-auto chamada-texto-cinza col-md-6 col-xs-8 mt-5">Nosso restaurante conta com uma gastronomia autoral, baseada nas experiências e gosto pessoal 
+                do proprietário Pipo que decidiu juntar todos os seus hobbies ao construí-lo.
+                <br/>
+                <br/>
+                Chef, advogado e empresário. Pipo é apaixonado por arte, música, gastronomia e arquitetura e ama viajar.
+                Visitou os mais diversos restaurantes nos 23 países que conheceu, sempre seguindo o guia Michelin. O Pipo 
+                Restaurante conta com uma arquitetura de linhas retas, moderna e composta principalmente de concreto e vidro,
+                tudo sobre um lago em um belíssimo jardim de 2400m².</p>
+        </div>
     </div>
     <div class="d-flex flex-wrap mb-5" align="center">
         <div class="image-container my-5" style="max-height: 220px;">
-            <img class="image-restaurant-bottom img-responsive p-4"  src="<?=$home?>/assets/imagens/pages/home/fachada_restaurante.jpg" alt="">
-            <img class="image-restaurant-top img-responsive p-4" src="<?=$home?>/assets/imagens/pages/home/vista_restaurante.jpg" alt="">
+            <img class="image-overlay img-fluid p-4"  src="<?=$home?>/assets/imagens/pages/home/fachada_restaurante.png" alt="">
         </div>
     </div>
     <div class="row my-5 "></div>
@@ -95,10 +96,10 @@ function get_section_present_restaurant() {
 <?php
 }
 
-function get_section_restaurant_chef($text_about_chef, $path_foto_1, $path_foto_2) {
+function get_section_restaurant_chef($text_about_chef, $path_foto) {
     global $home;
 ?>
-<div class="d-flex align-items-stretch flex-row flex-wrap bg-dark" style="min-height: 600px;">
+<div class="d-flex align-items-stretch flex-row flex-wrap bg-dark my-5">
     <div class="row">
         <div class="col-md-6 col-xs-12" align="center">
             <h1 class="mx-auto chamada-principal-branca mt-5">Conheca nosso</h1>
@@ -109,8 +110,7 @@ function get_section_restaurant_chef($text_about_chef, $path_foto_1, $path_foto_
         </div>
         <div class="col-md-6 col-xs-12" align="center">
             <div class="image-container">
-                <img class="image-restaurant-bottom img-fluid p-4 m-0 p-0" src="<?=$path_foto_2?>" alt="">
-                <img class="image-restaurant-top img-fluid p-4 m-0 p-0" src="<?=$path_foto_1?>" alt="">
+                <img class="image-overlay img-fluid p-4 m-0 p-0" src="<?=$path_foto?>" alt="">
             </div>
         </div>
     </div>
