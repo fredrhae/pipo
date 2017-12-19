@@ -71,9 +71,9 @@ function get_section_present_restaurant() {
 ?>
 <!-- Secao de apresentar o restaurante -->
 <div class="d-flex justify-content-center flex-column flex-wrap my-5" align="center">
-    <div class="col-6 d-flex flex-wrap " align="center">
+    <div class="d-flex m-5 justify-content-center flex-column" align="center">
         <p class="mx-auto chamada-principal-apresentacao">Seja Bem Vindo ao</p>
-        <p class="mx-auto chamada-nome-vermelho-lg" id="titulo-pipo">PIPO RESTAURANTE</p>
+        <p class="mx-auto chamada-nome-vermelho-lg">PIPO RESTAURANTE</p>
         <p class="mx-auto chamada-slogan">"Vem pro Pipo, aqui é muito mais gostoso!"</p>
         <p class="mx-auto chamada-texto-cinza">Nosso restaurante conta com uma gastronomia autoral, baseada nas experiências e gosto pessoal 
             do proprietário Pipo que decidiu juntar todos os seus hobbies ao construí-lo.
@@ -99,19 +99,22 @@ function get_section_restaurant_chef($text_about_chef, $path_foto_1, $path_foto_
     global $home;
 ?>
 <div class="d-flex align-items-stretch flex-row flex-wrap bg-dark" style="min-height: 600px;">
-    <div class="col-md-6" align="center">
-        <h1 class="mx-auto chamada-principal-branca mt-5">Conheca nosso</h1>
-        <h1 class="mx-auto chamada-nome-amarelo">CHEF DE COZINHA</h1>
-        <div class="col-md-8 my-5">
-            <p class="mx-auto chamada-texto-branco"><?=$text_about_chef?></p>
+    <div class="row">
+        <div class="col-md-6 col-xs-12" align="center">
+            <h1 class="mx-auto chamada-principal-branca mt-5">Conheca nosso</h1>
+            <h1 class="mx-auto chamada-nome-amarelo">CHEF DE COZINHA</h1>
+            <div class="col-md-8 my-5">
+                <p class="mx-auto chamada-texto-branco"><?=$text_about_chef?></p>
+            </div>
+        </div>
+        <div class="col-md-6 col-xs-12" align="center">
+            <div class="image-container">
+                <img class="image-restaurant-bottom img-fluid p-4 m-0 p-0" src="<?=$path_foto_2?>" alt="">
+                <img class="image-restaurant-top img-fluid p-4 m-0 p-0" src="<?=$path_foto_1?>" alt="">
+            </div>
         </div>
     </div>
-    <div class="col-md-6" align="center">
-        <div class="image-container">
-            <img class="image-restaurant-bottom img-responsive p-4 m-0 p-0" src="<?=$path_foto_2?>" alt="">
-            <img class="image-restaurant-top img-responsive p-4 m-0 p-0" src="<?=$path_foto_1?>" alt="">
-        </div>
-    </div>
+
 </div>
 <?php
 }

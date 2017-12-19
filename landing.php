@@ -57,36 +57,51 @@ function get_landing_page_body_content() {
 		</div>
 		<div class="d-flex justify-content-center my-5">
 			<div class="d-flex align-items-center col-md-3 col-sm-2"><hr class="hr-gray" /></div>
-			<div class="col-md-4 col-sm-6">
+			<div class="col-md-4 col-sm-12">
 				<p class="chamada-principal-page-gray">O pipo</p>
 			</div>
 			<div class="d-flex align-items-center col-md-3 col-sm-2"><hr class="hr-gray" /></div>
 		</div>
 		<div class="col-md-10">
-			<div class="d-flex justify-content-center flex-row" align="center">
-				<div class="d-flex justify-content-center flex-column" align="center">
-					<img class="img-responsive" src="<?=$home?>/assets/imagens/pages/landing/menu.png" style="width: 90px; height: 104px;">						
-					<p class="texto-caracteristicas my-5">CARDÁPIO REQUINTADO</p>
-				</div>
-				<div class="d-flex justify-content-center flex-column" align="center">
-					<img class="img-responsive" src="<?=$home?>/assets/imagens/pages/landing/stove.png" style="width: 90px; height: 104px;">						
-					<p class="texto-caracteristicas my-5 w-50">COZINHA DE ALTA QUALIDADE</p>
-				</div>
-				<div class="d-flex justify-content-center flex-column" align="center">
-					<img class="img-responsive" src="<?=$home?>/assets/imagens/pages/landing/percentage.png" style="width: 90px; height: 104px;">						
-					<p class="texto-caracteristicas my-5">ÓTIMO CUSTO BENEFÍCIO</p>
-				</div>
-				<div class="d-flex justify-content-center flex-column" align="center">
-					<img class="img-responsive" src="<?=$home?>/assets/imagens/pages/landing/cooker.png" style="width: 90px; height: 104px;">						
-					<p class="texto-caracteristicas my-5">CHEF INTERNACIONAL</p>
-				</div>
-				<div class="d-flex justify-content-center flex-column" align="center">
-					<img class="img-responsive" src="<?=$home?>/assets/imagens/pages/landing/champagne.png" style="width: 90px; height: 104px;">						
-					<p class="texto-caracteristicas my-5">ESPAÇO SOFISTICADO</p>
-				</div>
-				<div class="d-flex justify-content-center flex-column" align="center">
-					<img class="img-responsive" src="<?=$home?>/assets/imagens/pages/landing/origami-bird.png" style="width: 90px; height: 104px;">						
-					<p class="texto-caracteristicas my-5 w-50">RESTAURANTE-GALERIA DE ARTE</p>
+			<div class="d-flex justify-content-center flex-row flex-wrap" align="center">
+				<div class="row">
+					<div class="col-md-2 col-xs-12">
+						<div class="d-flex justify-content-center flex-column" align="center">
+							<img class="img-fluid" src="<?=$home?>/assets/imagens/pages/landing/menu.png">						
+							<p class="texto-caracteristicas my-5">CARDÁPIO REQUINTADO</p>
+						</div>
+					</div>
+					<div class="col-md-2 col-xs-12">
+						<div class="d-flex justify-content-center flex-column" align="center">
+							<img class="img-fluid" src="<?=$home?>/assets/imagens/pages/landing/stove.png">						
+							<p class="texto-caracteristicas my-5 w-50">COZINHA DE ALTA QUALIDADE</p>
+						</div>
+					</div>
+					<div class="col-md-2 col-xs-12">
+						<div class="d-flex justify-content-center flex-column" align="center">
+							<img class="img-fluid" src="<?=$home?>/assets/imagens/pages/landing/percentage.png">						
+							<p class="texto-caracteristicas my-5">ÓTIMO CUSTO BENEFÍCIO</p>
+						</div>
+					</div>
+					<div class="col-md-2 col-xs-12">
+						<div class="d-flex justify-content-center flex-column" align="center">
+							<img class="img-fluid" src="<?=$home?>/assets/imagens/pages/landing/cooker.png">						
+							<p class="texto-caracteristicas my-5">CHEF INTERNACIONAL</p>
+						</div>
+					</div>
+					<div class="col-md-2 col-xs-12">
+						<div class="d-flex justify-content-center flex-column" align="center">
+							<img class="img-fluid" src="<?=$home?>/assets/imagens/pages/landing/champagne.png">						
+							<p class="texto-caracteristicas my-5">ESPAÇO SOFISTICADO</p>
+						</div>
+					</div>
+					<div class="col-md-2 col-xs-12">
+						<div class="d-flex justify-content-center flex-column" align="center">
+							<img class="img-fluid" src="<?=$home?>/assets/imagens/pages/landing/origami-bird.png">						
+							<p class="texto-caracteristicas my-5 w-50">RESTAURANTE-GALERIA DE ARTE</p>
+						</div>
+					</div>
+
 				</div>
 			</div>
 		</div>

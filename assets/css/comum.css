@@ -26,6 +26,20 @@ body {
 	}
 }
 
+/* iphone */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+	img { max-width: 100%; }
+}
+
+/* ipad */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+	img { max-width: 100%; }
+}
+
+@media print {
+	img { max-width: 100%; }
+}
+
 /* Styles de fonte */
 @font-face {
     font-family: SpecialTouch;
@@ -125,7 +139,7 @@ body .btn-outline-secondary-lg-gray:hover {
 
 /* Styles para posicionamento nas paginas do site */
 .container-principal {
-	min-height: 720px;
+	min-height: 500px;
 	position: relative;
 	opacity: 1.5;	
 }
@@ -202,17 +216,17 @@ body .btn-outline-secondary-lg-gray:hover {
 
 .chamada-principal-link {
 	font-family: SpecialTouch;
-	font-size: 6vw;
+	font-size: 56px;
 	text-decoration:none;
 }
 
 .chamada-secundaria {
 	font-family: GothamExtraLight, sans-serif;
-	font-size: 1.5vw;	
+	font-size: 24px;	
 }
 
 .chamada-principal-link:hover { 	
-	font-size: 6vw;
+	font-size: 54px;
 	color:rgba(111,255,0,0.80);
 	text-decoration:none;	
 }
@@ -226,11 +240,11 @@ body .btn-outline-secondary-lg-gray:hover {
 }
 
 .chamada-principal-apresentacao {
-	font-size: 4.5vw;
+	font-size: 56px;
 }
 
 .chamada-apresentacao-pequeno {
-	font-size: 3vw;
+	font-size: 48px;
 }
 
 .chamada-nome-vermelho-lg, 
@@ -243,15 +257,15 @@ body .btn-outline-secondary-lg-gray:hover {
 }
 
 .chamada-nome-vermelho-lg {
-	font-size: 5vw;
+	font-size: 32px;
 }
 
 .chamada-nome-vermelho-pequeno {
-	font-size: 1.2vw;
+	font-size: 16px;
 }
 
 .chamada-nome-vermelho {
-	font-size: 1.5vw;
+	font-size: 24px;
 }
 
 .chamada-slogan, .chamada-texto-cinza {
@@ -259,13 +273,13 @@ body .btn-outline-secondary-lg-gray:hover {
 }
 
 .chamada-slogan {
-	font-size: 1.5vw;
+	font-size: 24px;
 	color: #555555;
 	font-weight: bold;	
 }
 
 .chamada-texto-cinza {
-	font-size: 1.5vw;
+	font-size: 16px;
 	color: #606060;
 	font-weight: lighter;	
 }
@@ -273,7 +287,7 @@ body .btn-outline-secondary-lg-gray:hover {
 .chamada-nome-amarelo {
 	font-family: GothamBoldRegular, sans-serif;
 	font-weight: bold;
-	font-size: 1.5vw;
+	font-size: 24px;
 	letter-spacing: 0.2rem;
 	color: #FFE000;
 }
@@ -281,7 +295,7 @@ body .btn-outline-secondary-lg-gray:hover {
 .chamada-texto-branco {
 	font-family: GothamBoldRegular, sans-serif;
 	font-weight: bold;
-	font-size: 1.0rem;
+	font-size: 16px;
 	color: #FFF;
 }
 
@@ -292,19 +306,19 @@ body .btn-outline-secondary-lg-gray:hover {
 }
 
 .chamada-nome-verde {
-	font-size: 1.5vw;
+	font-size: 24px;
 	letter-spacing: 0.2rem;
 }
 
 .chamada-nome-verde-pequeno {
-	font-size: 1vw;
+	font-size: 16px;
 }
 
 .chamada-principal-branca {
 	color: #ffffff;
 	-webkit-font-smoothing: antialiased;
 	font-family: SpecialTouch;
-	font-size: 6vw;
+	font-size: 48px;
 }
 /* Style for carousel indicators colors 
 
@@ -330,7 +344,7 @@ body .btn-outline-secondary-lg-gray:hover {
 .form-pessoas input {
 	width: 100%;
 	display: block;
-	font-size: 1rem;
+	font-size: 12px;
 	padding: .5rem;
 	border: 1px solid #949494;
 	box-sizing: border-box;
