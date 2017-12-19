@@ -182,11 +182,11 @@ function get_programacao_page() {
 	?>
 	<div class="d-flex justify-content-center flex-column full-image-background" style="background-image: url(<?=$path_picture_dates?>)">
 		<div class="d-flex justify-content-center my-5">
-			<div class="d-flex align-items-center col-md-3 col-sm-2"><hr class="hr-white" /></div>
-			<div class="d-flex align-items-center col-md-3 col-sm-6">
+			<div class="d-flex align-items-center col-md-3 col-xs-2"><hr class="hr-white" /></div>
+			<div class="d-flex justify-content-center col-md-3 col-xs-6">
 				<p class="chamada-secundaria-titulo">Datas de eventos</p>
 			</div>
-			<div class="d-flex align-items-center col-md-3 col-sm-2"><hr class="hr-white" /></div>
+			<div class="d-flex align-items-center col-md-3 col-xs-2"><hr class="hr-white" /></div>
 		</div>
 		<!-- Slider com programacoes -->
 		<div class="d-flex justify-content-center mb-4">
