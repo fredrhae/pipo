@@ -6,29 +6,29 @@
 ?>
 <!-- Secao inicial da home -->
 <div class="container-principal">
-    <div class="d-flex flex-row">
-        <div class="col-md-3 full-image-background-principal-home" style="background-image: url(<?=$home?>/assets/imagens/pages/home/home_chamada_casa.jpg);
+    <div class="row">
+        <div class="col-md-3 col-xs-12 full-image-background-principal-home" style="background-image: url(<?=$home?>/assets/imagens/pages/home/home_chamada_casa.jpg);
                                                             background-position: center top">
             <div class="vertical-center">
                 <a class="mx-auto chamada-principal-link" href="#">Nossa</a>
                 <h1 class="mx-auto chamada-secundaria" align="right">CASA</h1>
             </div>
         </div>
-        <div class="col-md-3 full-image-background-principal-home" style="background-image: url(<?=$home?>/assets/imagens/pages/home/home_chamada_menus.jpg);
+        <div class="col-md-3 col-xs-12 full-image-background-principal-home" style="background-image: url(<?=$home?>/assets/imagens/pages/home/home_chamada_menus.jpg);
                                                         background-position: center top">
             <div class="vertical-center">
                 <a class="mx-auto chamada-principal-link" href="#">Deliciosos</a>
                 <h1 class="mx-auto chamada-secundaria" align="right">MENUS</h1>
             </div>
         </div>
-        <div class="col-md-3 full-image-background-principal-home" style="background-image: url(<?=$home?>/assets/imagens/pages/home/home_chamada_programacao.jpg);
-                                                background-position: center top">            
+        <div class="col-md-3 col-xs-12 full-image-background-principal-home" style="background-image: url(<?=$home?>/assets/imagens/pages/home/home_chamada_programacao.jpg);
+        <div style="background-color: #ffffff;" class="container-fluid">   background-position: center top">            
             <div class="vertical-center">
                 <a class="mx-auto chamada-principal-link" href="#">Desfrute</a>
                 <h1 class="mx-auto chamada-secundaria" align="right">NOSSA PROGRAMAÇÃO</h1>
             </div>
         </div>
-        <div class="col-md-3 full-image-background-principal-home" style="background-image: url(<?=$home?>/assets/imagens/pages/home/home_chamada_drinks.jpg);
+        <div class="col-md-3 col-xs-12 full-image-background-principal-home" style="background-image: url(<?=$home?>/assets/imagens/pages/home/home_chamada_drinks.jpg);
                                             background-position: right top 40px">            
             <div class="vertical-center">
                 <a class="mx-auto chamada-principal-link" href="#">Saborosos</a>
