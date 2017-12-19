@@ -12,7 +12,7 @@ function get_menu_body_content(){
 		$my_index = 0; // index of text about plates
 		if( $attachment = $attachments->get_single( $my_index ) ) :?>
 		<!-- Secao de menu de pratos -->
-		<div class="d-flex justify-content-center flex-column mt-5" align="center">
+		<div class="d-flex justify-content-center flex-column mt-5" id="pratos-menu-anchor" align="center">
 			<p class="mx-auto chamada-principal-apresentacao mt-5">Conheca nossos</p>
 			<p class="mx-auto chamada-nome-verde mt-0">PRATOS</p>
 		</div>
@@ -109,7 +109,7 @@ function get_menu_body_content(){
 		<?php
 		endif;?>
 		<!-- Secao de menu de bebidas -->
-		<div class="d-flex justify-content-center flex-column" align="center">
+		<div class="d-flex justify-content-center flex-column" id="drinks-menu-anchor" align="center">
 			<p class="mx-auto chamada-principal-apresentacao">Conheca nossos</p>
 			<p class="mx-auto chamada-nome-verde">DRINKS</p>
 		</div>

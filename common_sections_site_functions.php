@@ -56,7 +56,7 @@ function get_section_know_our_gastronomy() {
             </div>
             <div class="col-md-6 my-5">
                 <a class="my-3" href="#" style="text-decoration: none;">
-                    <button type="button" class="btn btn-outline-secondary-lg-yellow btn-block">CONHEÇA NOSSO MENU</button>
+                    <button type="button" href="<?=get_page_link_by_slug('menu')?>#pratos-menu-anchor" class="btn btn-outline-secondary-lg-yellow btn-block">CONHEÇA NOSSO MENU</button>
                 </a>
             </div>
         </div>
@@ -99,7 +99,7 @@ function get_section_present_restaurant() {
 function get_section_restaurant_chef($text_about_chef, $path_foto) {
     global $home;
 ?>
-<div class="d-flex align-items-stretch flex-row flex-wrap bg-dark my-5">
+<div class="d-flex align-items-stretch flex-row flex-wrap bg-dark mb-5">
     <div class="row">
         <div class="col-md-6 col-xs-12" align="center">
             <h1 class="mx-auto chamada-principal-branca mt-5">Conheca nosso</h1>
@@ -122,7 +122,7 @@ function get_section_restaurant_chef($text_about_chef, $path_foto) {
 function get_section_schedule($text_about_programacao, $path_picture_schedule) {
     global $home;
 ?>
-<div class="d-flex align-items-stretch flex-row flex-wrap my-5" style="min-height: 600px;">
+<div class="d-flex align-items-stretch flex-row flex-wrap mb-5" style="min-height: 500px;">
     <div class="col-md-6" align="center">
         <h1 class="mx-auto chamada-principal-apresentacao mt-5">Conheca nossas</h1>
         <h1 class="mx-auto chamada-nome-vermelho-pequeno">PROGRAMAÇÕES</h1>
@@ -131,7 +131,7 @@ function get_section_schedule($text_about_programacao, $path_picture_schedule) {
         </div>
     </div>
     <div class="col-md-6" align="center">
-        <img class="img-responsive p-4 w-100 h-100 m-0 p-0" src="<?=$path_picture_schedule?>" alt="">
+        <img class="img-fluid p-4 w-100 h-100 m-0 p-0" src="<?=$path_picture_schedule?>" alt="">
     </div>
 </div>
 <?php

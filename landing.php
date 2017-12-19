@@ -24,7 +24,7 @@ if($formularioEnviado) {
 
 function get_landing_page_buttons_chamada_principal() { ?>
 	<div class="col-md-8 col-xs-4 mt-5" align="center">
-		<button type="button" class="btn btn-outline-secondary-lg-green btn-block">FAÇA UM ORÇAMENTO</button>
+		<button type="button" href="#orcamento-anchor" class="btn btn-outline-secondary-lg-green btn-block">FAÇA UM ORÇAMENTO</button>
 	</div>
 <?php
 }
@@ -283,7 +283,7 @@ function get_landing_page_body_content() {
 	</div>
 
 	<!-- Secao de reservas -->
-	<div class="d-flex justify-content-center flex-column flex-wrap py-5" align="center">
+	<div class="d-flex justify-content-center flex-column flex-wrap py-5" id="orcamento-anchor" align="center">
 		<div class="col-md-4 col-sm-6">
 			<p class="mx-auto chamada-orcamento-gray">SOLICITE SEU ORÇAMENTO</p>
 		</div>
