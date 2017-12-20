@@ -46,7 +46,7 @@ function get_section_know_our_gastronomy() {
             <h1 class="mx-auto chamada-principal-branca mt-5">Conheca nossa</h1>
             <h1 class="mx-auto chamada-nome-amarelo">GASTRONOMIA</h1>
             <div class="col-md-8 my-5">
-                <p class="mx-auto chamada-texto-branco">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus commodo lacinia quam. Nulla facilisi. 
+                <p class="mx-auto chamada-texto-branco" align="start">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus commodo lacinia quam. Nulla facilisi. 
                     Morbi quam dui, sodales a porta eget, suscipit quis lacus. Vestibulum molestie interdum lectus, nec gravida quam varius et. 
                     Nulla orci purus, aliquam eu feugiat venenatis, placerat ac urna.
                     <br/>
@@ -72,11 +72,11 @@ function get_section_present_restaurant() {
 <!-- Secao de apresentar o restaurante -->
 <div class="d-flex justify-content-center flex-column flex-wrap my-5" align="center">
     <div class="row">
-        <div class="d-flex my-5 justify-content-center flex-column" align="center">
+        <div class="d-flex my-5 mx-5 justify-content-center flex-column" align="center">
             <h2 class="mx-auto chamada-principal-apresentacao">Seja Bem Vindo ao</h2>
             <h2 class="mx-auto chamada-nome-vermelho-lg">PIPO RESTAURANTE</h3>
             <h3 class="mx-auto chamada-slogan my-5">"Vem pro Pipo, aqui é muito mais gostoso!"</h3>
-            <p class="mx-auto chamada-texto-cinza col-md-6 col-xs-8 mt-5">Nosso restaurante conta com uma gastronomia autoral, baseada nas experiências e gosto pessoal 
+            <p class="mx-auto chamada-texto-cinza col-md-6 col-xs-8 mt-5" align="start">Nosso restaurante conta com uma gastronomia autoral, baseada nas experiências e gosto pessoal 
                 do proprietário Pipo que decidiu juntar todos os seus hobbies ao construí-lo.
                 <br/>
                 <br/>
@@ -105,7 +105,7 @@ function get_section_restaurant_chef($text_about_chef, $path_foto) {
             <h1 class="mx-auto chamada-principal-branca mt-5">Conheca nosso</h1>
             <h1 class="mx-auto chamada-nome-amarelo">CHEF DE COZINHA</h1>
             <div class="col-md-8 my-5">
-                <p class="mx-auto chamada-texto-branco"><?=$text_about_chef?></p>
+                <p class="mx-auto chamada-texto-branco" align="start"><?=$text_about_chef?></p>
             </div>
         </div>
         <div class="col-md-6 col-xs-12" align="center">

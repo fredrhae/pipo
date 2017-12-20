@@ -25,8 +25,8 @@
                 </div>
                 <div class="col-md-3 col-xs-12 footer-social animated fadeInDown">
                     <div class="d-flex justify-content-center flex-column" align="center">
-                        <a class="my-3" href="#" style="text-decoration: none">
-                            <button type="button" href="<?=get_page_link_by_slug('reservas')?>" class="btn btn-outline-secondary btn-block">Faça sua reserva</button>
+                        <a class="my-3" href="<?=get_page_link_by_slug('reservas')?>" style="text-decoration: none">
+                            <button type="button" class="btn btn-outline-secondary btn-block">Faça sua reserva</button>
                         </a>
                         <h4>Siga-nos</h4>
                         <div class="d-flex justify-content-start flex-row">
