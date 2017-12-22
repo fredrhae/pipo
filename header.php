@@ -55,7 +55,7 @@
                         </a>
                     </li>
                     <li class="nav-item pl-3">
-                        <a class="my-3" href="<?=get_page_link_by_slug('landing')?>#orcamento-anchor" style="text-decoration: none">
+                        <a class="my-3" href="<?=get_page_link_by_slug('landing')?>" style="text-decoration: none">
                             <button type="button" class="btn btn-outline-header btn-block" style="min-width: 150px">Faça seu evento</button>
                         </a>
                     </li>
