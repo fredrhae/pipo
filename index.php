@@ -46,7 +46,7 @@ get_section_know_our_gastronomy();
 <div class="d-flex justify-content-center flex-column full-image-background pt-5" align="center" style="background-image: url(<?=$home?>/assets/imagens/pages/home/fachada_restaurante_2.jpg);">
     <h1 class="mx-auto chamada-principal-branca">Nossos eventos</h1>
     <h1 class="mx-auto chamada-nome-verde">SEMANAIS OU MENSAIS</h1>
-    <div class="col-md-5 my-5" align="start">
+    <div class="col-md-5 mt-5" align="start">
             <p class="mx-auto chamada-texto-branco">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus commodo lacinia quam. Nulla facilisi. 
                 Morbi quam dui, sodales a porta eget, suscipit quis lacus. Vestibulum molestie interdum lectus, nec gravida quam varius et. 
                 Nulla orci purus, aliquam eu feugiat venenatis, placerat ac urna.
@@ -55,6 +55,12 @@ get_section_know_our_gastronomy();
                 Nulla tellus diam, facilisis placerat dui vitae, hendrerit interdum turpis. Vestibulum accumsan semper pulvinar. Morbi vel lorem a orci 
                 dignissim aliquet..</p>
     </div>
+
+    <div class="col-md-4 col-xs-4 mb-5">
+            <a href="<?=get_page_link_by_slug('programacao')?>" style="text-decoration: none">
+                <button type="submit" class="btn btn-block btn-outline-secondary-lg-green">VEJA NOSSA PROGRAMAÇÃO</button>
+            </a>
+        </div>
 </div>
 <?php
 get_section_testemonials_customers();

@@ -40,3 +40,16 @@
 	text-indent: -9999px;
 	display: block;
 }
+
+.btn-outline-header {
+	border: 2px solid;
+    background-color: #ffffff00;
+    border-color: #C7C7C7;
+	color: #FDFDFD; 
+}
+
+.btn-outline-header:hover {
+    background-color: #ffffff00;
+    border-color: #6FFF00;
+    color: #FDFDFD;
+}

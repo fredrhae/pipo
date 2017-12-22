@@ -8,16 +8,17 @@ $email = $_POST['form-email'];
 $pessoas = $_POST['form-pessoas'];
 $data = $_POST['form-data'];
 $telefone = $_POST['form-telefone'];
+$tipo_evento = $_POST['form-tipo-evento'];
 
 // Formulario newsletter
 $email_newsletter = $_POST['form-email-newsletter'];
 
 $formularioReservaEnviado = isset($nome) && isset($email) 
                          && isset($telefone) && isset($pessoas) 
-                         && isset($data);
+                         && isset($data) && isset($tipo_evento);
                          
 if($formularioReservaEnviado) {
-	$enviou = enviar_e_checar_email_reserva($nome, $email, $telefone, $pessoas, $data);
+	$enviou = enviar_e_checar_email_reserva($nome, $email, $telefone, $pessoas, $data, $tipo_evento);
 
 	if($enviou) { ?>
 		<span class="email-sucesso">Seu e-mail foi enviado com sucesso!</span>
@@ -129,6 +130,9 @@ function get_section_schedule($text_about_programacao, $path_picture_schedule) {
         <div class="col-md-8 my-5">
             <p class="mx-auto chamada-texto-cinza"><?=$text_about_programacao?></p>
         </div>
+        <a class="my-3" href="<?=get_page_link_by_slug('programacao')?>" style="text-decoration: none">
+            <button type="button" class=" col-md-6 btn btn-outline-secondary-lg-gray btn-block">VEJA NOSSA PROGRAMAÇÃO</button>
+        </a>
     </div>
     <div class="col-md-6" align="center">
         <img class="img-fluid p-4 w-100 h-100 m-0 p-0" src="<?=$path_picture_schedule?>" alt="">
@@ -176,7 +180,14 @@ function get_section_restaurant_reservation() {
                     </div>
                     <div class="form-pessoas">
                         <input id="form-pessoas" type="number" min="2" max="50" value="2" placeholder="Número de pessoas" name="form-number">
-                    </div>                
+                    </div>
+                    <div class="form-tipo-evento">
+						<select id="form-tipo-evento" name="form-tipo-evento">
+							<option value="casamento">Casamento</option>
+							<option value="aniversario">Aniversário</option>
+							<option value="formatura">Formatura</option>
+						</select>
+					</div>             
                     <button type="submit" class="btn btn-block btn-outline-secondary-lg-gray">RESERVAR</button>
                 </form>
             </div>

@@ -38,26 +38,25 @@
                     <li class="nav-item px-1">
                         <a class="nav-link" href="<?=get_page_link_by_slug('sobre')?>">SOBRE NÓS</a>
                     </li>
-                    <li class="nav-item px-1">
-                        <a class="nav-link" href="<?=get_page_link_by_slug('landing')?>">NOSSOS EVENTOS</a>
+                    <li class="nav-item pl-3">
+                        <a class="my-3" href="<?=get_page_link_by_slug('programacao')?>" style="text-decoration: none">
+                            <button type="button" class="btn btn-outline-header btn-block">Programação</button>
+                        </a>
                     </li>
-                    <li class="nav-item px-1">
+                    <li class="nav-item pl-3 pr-1">
                         <a class="nav-link" href="<?=get_page_link_by_slug('menu')?>">MENU</a>
                     </li>
                     <li class="nav-item px-1">
                         <a class="nav-link" href="<?=get_page_link_by_slug('contatos')?>">CONTATOS</a>
                     </li>
-                    <li class="nav-item px-1">
-                        <a class="nav-link" href="<?=get_page_link_by_slug('programacao')?>">PROGRAMAÇÃO</a>
-                    </li>
                     <li class="nav-item pl-3">
                         <a class="my-3" href="<?=get_page_link_by_slug('reservas')?>" style="text-decoration: none">
-                            <button type="button" class="btn btn-outline-secondary btn-block">Reservas</button>
+                            <button type="button" class="btn btn-outline-header btn-block">Reservas</button>
                         </a>
                     </li>
                     <li class="nav-item pl-3">
                         <a class="my-3" href="<?=get_page_link_by_slug('landing')?>#orcamento-anchor" style="text-decoration: none">
-                            <button type="button" class="btn btn-outline-secondary btn-block" style="min-width: 150px">Faça seu evento</button>
+                            <button type="button" class="btn btn-outline-header btn-block" style="min-width: 150px">Faça seu evento</button>
                         </a>
                     </li>
                     <!--
