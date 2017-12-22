@@ -7,11 +7,12 @@ $email = $_POST['form-email'];
 $pessoas = $_POST['form-pessoas'];
 $data = $_POST['form-data'];
 $telefone = $_POST['form-telefone'];
+$tipo_evento = $_POST['form-tipo-evento'];
 
-$formularioEnviado = isset($nome) && isset($email) && isset($telefone);
+$formularioEnviado = isset($nome) && isset($email) && isset($telefone) && isset($pessoas) && isset($data) && isset($tipo_evento);
 
 if($formularioEnviado) {
-	$enviou = enviar_e_checar_email_reserva($nome, $email, $telefone, $pessoas, $data);
+	$enviou = enviar_e_checar_email_reserva($nome, $email, $telefone, $pessoas, $data, $tipo_evento);
 
 	if($enviou) { ?>
 		<span class="email-sucesso">Sua intenção de reserva foi registrada com sucesso!
@@ -164,14 +165,14 @@ function get_landing_page_body_content() {
 		</div>
 	</div>
 	<!-- Secao de caracteristicas -->
-	<div class="d-flex justify-content-center flex-row flex-wrap">
+	<div class="d-flex justify-content-center flex-row flex-wrap mb-5">
 		<div class="col-md-6 full-image-background" style="background-image: url(<?=$home?>/assets/imagens/pages/landing/cardapio_exemplo.jpg); min-height: 600px;">
 		</div>
 		<div class="col-md-6 pl-5 mt-5" align="left">
 			<ul class="lista-vantagens">
 			    <!-- Carregamento das vantagens -->
 				<?php 
-                $args = array( 'post_type' => 'vantagem', 'order' => 'ASC' );            
+                $args = array( 'post_type' => 'vantagem', 'posts_per_page' => -1, 'order' => 'ASC');            
                 $loop = new WP_Query( $args );
                 if( $loop->have_posts() ) {
                     ?>
@@ -320,7 +321,14 @@ function get_landing_page_body_content() {
 						</div>
 						<div class="form-pessoas">
 							<input id="form-pessoas" type="number" min="2" max="200" value="2" placeholder="Número de pessoas" name="form-number">
-						</div>                
+						</div>
+						<div class="form-tipo-evento">
+							<select id="form-tipo-evento" name="form-tipo-evento">
+								<option value="casamento">Casamento</option>
+								<option value="aniversario">Aniversário</option>
+								<option value="formatura">Formatura</option>
+							</select>
+						</div>          
 						<button type="submit" class="btn btn-block btn-outline-secondary-lg-gray">ENVIAR</button>
 					</form>
 				</div>

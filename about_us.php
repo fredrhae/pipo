@@ -26,7 +26,7 @@ function get_about_us_body_content() {
 	?>
 	<div class="d-flex justify-content-center flex-column my-5" align="center">
 		<div class="col-md-6 my-5" align="center">
-			<p class="mx-auto chamada-principal-apresentacao mt-5">Conheca</p>
+			<p class="mx-auto chamada-principal-apresentacao mt-5">Conheça</p>
 			<p class="mx-auto chamada-nome-vermelho-pequeno">POR DENTRO</p>
 		</div>
 		<div class="col-md-12">

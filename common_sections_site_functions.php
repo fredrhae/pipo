@@ -41,9 +41,9 @@ if($formularioNewsletterEnviado) {
 function get_section_know_our_gastronomy() {
     global $home;?>
     <!-- Secao da gastronomia -->
-    <div class="d-flex justify-content-center flex-row flex-wrap bg-dark mt-5">
+    <div class="d-flex justify-content-center flex-row flex-wrap bg-dark my-5">
         <div class="col-md-6" align="center">
-            <h1 class="mx-auto chamada-principal-branca mt-5">Conheca nossa</h1>
+            <h1 class="mx-auto chamada-principal-branca mt-5">Conheça nossa</h1>
             <h1 class="mx-auto chamada-nome-amarelo">GASTRONOMIA</h1>
             <div class="col-md-8 my-5">
                 <p class="mx-auto chamada-texto-branco" align="start">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus commodo lacinia quam. Nulla facilisi. 
@@ -102,7 +102,7 @@ function get_section_restaurant_chef($text_about_chef, $path_foto) {
 <div class="d-flex align-items-stretch flex-row flex-wrap bg-dark mb-5">
     <div class="row">
         <div class="col-md-6 col-xs-12" align="center">
-            <h1 class="mx-auto chamada-principal-branca mt-5">Conheca nosso</h1>
+            <h1 class="mx-auto chamada-principal-branca mt-5">Conheça nosso</h1>
             <h1 class="mx-auto chamada-nome-amarelo">CHEF DE COZINHA</h1>
             <div class="col-md-8 my-5">
                 <p class="mx-auto chamada-texto-branco" align="start"><?=$text_about_chef?></p>
@@ -124,7 +124,7 @@ function get_section_schedule($text_about_programacao, $path_picture_schedule) {
 ?>
 <div class="d-flex align-items-stretch flex-row flex-wrap mb-5" style="min-height: 500px;">
     <div class="col-md-6" align="center">
-        <h1 class="mx-auto chamada-principal-apresentacao mt-5">Conheca nossas</h1>
+        <h1 class="mx-auto chamada-principal-apresentacao mt-5">Conheça nossas</h1>
         <h1 class="mx-auto chamada-nome-vermelho-pequeno">PROGRAMAÇÕES</h1>
         <div class="col-md-8 my-5">
             <p class="mx-auto chamada-texto-cinza"><?=$text_about_programacao?></p>

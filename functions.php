@@ -17,13 +17,14 @@ function get_page_link_by_slug($pageSlug) {
     return get_permalink($page->ID);
 }
 
-function enviar_e_checar_email_reserva($nome, $email, $telefone, $pessoas, $data) {
+function enviar_e_checar_email_reserva($nome, $email, $telefone, $pessoas, $data, $tipo_evento) {
     return wp_mail( 'fredrhae@gmail.com', 'Reserva restaurante', 
                   'Nome: ' . $nome . "\n" .
                   'Email: ' .  $email . "\n" .
                   'Telefone: ' . $telefone . "\n" .
                   'Data do evento: ' . $data . "\n" .
-                  'Quantidade de Pessoas: ' . $pessoas . "\n");
+                  'Quantidade de Pessoas: ' . $pessoas . "\n" . 
+                  'Tipo de evento: ' . $tipo_evento . "\n");
 }
 
 function enviar_e_checar_sugestao($nome, $email, $sugestao) {

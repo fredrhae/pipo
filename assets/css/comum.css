@@ -40,10 +40,9 @@ body {
 	img { max-width: 100%; }
 }
 
-/* Styles de fonte */
 @font-face {
-    font-family: SpecialTouch;
-	src: url(../fonts/Special-Touch.ttf);
+    font-family: GreatVibes;
+	src: url(../fonts/GreatVibes-Regular.ttf);
 	font-weight: normal;
 }
 
@@ -209,7 +208,7 @@ body .btn-outline-secondary-lg-gray:hover {
 }
 
 .chamada-principal-link {
-	font-family: SpecialTouch;
+	font-family: GreatVibes;
 	font-size: 56px;
 	text-decoration:none;
 }
@@ -228,7 +227,7 @@ body .btn-outline-secondary-lg-gray:hover {
 /* Styles for text with different size, fonts and colors*/
 
 .chamada-principal-apresentacao, .chamada-apresentacao-pequeno{
-	font-family: SpecialTouch;
+	font-family: GreatVibes;
 	text-decoration:none;
 	color: #515151;	
 }
@@ -311,7 +310,7 @@ body .btn-outline-secondary-lg-gray:hover {
 .chamada-principal-branca {
 	color: #ffffff;
 	-webkit-font-smoothing: antialiased;
-	font-family: SpecialTouch;
+	font-family: GreatVibes;
 	font-size: 48px;
 }
 /* Style for carousel indicators colors 
@@ -327,7 +326,8 @@ body .btn-outline-secondary-lg-gray:hover {
 .form-email,
 .form-telefone,
 .form-data,
-.form-pessoas {
+.form-pessoas,
+.form-tipo-evento {
 	margin: 1rem 0;
 }
 
@@ -335,7 +335,8 @@ body .btn-outline-secondary-lg-gray:hover {
 .form-email input,
 .form-telefone input,
 .form-data input,
-.form-pessoas input {
+.form-pessoas input,
+.form-tipo-evento select{
 	width: 100%;
 	display: block;
 	font-size: 12px;

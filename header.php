@@ -32,26 +32,33 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item px-3">
+                    <li class="nav-item px-1">
                         <a class="nav-link" href="<?=home_url()?>">HOME</a>
                     </li>
-                    <li class="nav-item px-3">
+                    <li class="nav-item px-1">
                         <a class="nav-link" href="<?=get_page_link_by_slug('sobre')?>">SOBRE NÓS</a>
                     </li>
-                    <li class="nav-item px-3">
+                    <li class="nav-item px-1">
                         <a class="nav-link" href="<?=get_page_link_by_slug('landing')?>">NOSSOS EVENTOS</a>
                     </li>
-                    <li class="nav-item px-3">
-                        <a class="nav-link" href="<?=get_page_link_by_slug('reservas')?>">RESERVAS</a>
-                    </li>
-                    <li class="nav-item px-3">
+                    <li class="nav-item px-1">
                         <a class="nav-link" href="<?=get_page_link_by_slug('menu')?>">MENU</a>
                     </li>
-                    <li class="nav-item px-3">
+                    <li class="nav-item px-1">
+                        <a class="nav-link" href="<?=get_page_link_by_slug('contatos')?>">CONTATOS</a>
+                    </li>
+                    <li class="nav-item px-1">
                         <a class="nav-link" href="<?=get_page_link_by_slug('programacao')?>">PROGRAMAÇÃO</a>
                     </li>
-                    <li class="nav-item px-3">
-                        <a class="nav-link" href="<?=get_page_link_by_slug('contatos')?>">CONTATOS</a>
+                    <li class="nav-item pl-3">
+                        <a class="my-3" href="<?=get_page_link_by_slug('reservas')?>" style="text-decoration: none">
+                            <button type="button" class="btn btn-outline-secondary btn-block">Reservas</button>
+                        </a>
+                    </li>
+                    <li class="nav-item pl-3">
+                        <a class="my-3" href="<?=get_page_link_by_slug('landing')?>#orcamento-anchor" style="text-decoration: none">
+                            <button type="button" class="btn btn-outline-secondary btn-block" style="min-width: 150px">Faça seu evento</button>
+                        </a>
                     </li>
                     <!--
                     <li class="nav-item">
