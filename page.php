@@ -86,7 +86,7 @@ function get_section_suggestions() {
     global $home; ?>
     <!-- Secao de sugestoes -->
     <div class="d-flex justify-content-center flex-column mt-5 py-5" align="center">
-        <p class="mx-auto chamada-principal-apresentacao">Sugestoes</p>
+        <p class="mx-auto chamada-principal-apresentacao">Sugestões</p>
         <p class="mx-auto chamada-nome-vermelho-pequeno">OU DÚVIDAS</p>
     </div>
     <div class="d-flex justify-content-center flex-column mb-5" align="center">

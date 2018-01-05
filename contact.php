@@ -23,8 +23,7 @@ function get_contact_body_content(){
 		endif;
 	endif;				
 	$text_about_chef = '';
-	$path_foto_1 = '';
-	$path_foto_2 = '';
+	$path_foto = '';
 	$attachments = new Attachments( 'my_attachments' );
 	if( $attachments->exist() ) :
 		$my_index = 0; // index of text about chef
@@ -36,18 +35,12 @@ function get_contact_body_content(){
 		$my_index = 1; // index of picture chef 1
 		if( $attachment = $attachments->get_single( $my_index ) ) :
 			if( $attachments->type($my_index) == 'image') :
-				$path_foto_1 = $attachments->url( $my_index );
-			endif;									
-		endif;
-		$my_index = 2; // index of picture chef 2
-		if( $attachment = $attachments->get_single( $my_index ) ) :
-			if( $attachments->type($my_index) == 'image') :
-				$path_foto_2 = $attachments->url( $my_index );
+				$path_foto = $attachments->url( $my_index );
 			endif;									
 		endif;
 	endif;
 
-	get_section_restaurant_chef($text_about_chef, $path_foto_1, $path_foto_2);
+	get_section_restaurant_chef($text_about_chef, $path_foto);
 	get_section_suggestions();
 	get_section_newsletter();
 }

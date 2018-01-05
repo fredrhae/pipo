@@ -32,26 +32,30 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item px-3">
-                        <a class="nav-link" href="<?=home_url()?>">HOME</a>
+                    <li class="nav-item px-2">
+                        <a class="nav-link" href="<?=home_url()?>">Home</a>
                     </li>
-                    <li class="nav-item px-3">
-                        <a class="nav-link" href="<?=get_page_link_by_slug('sobre')?>">SOBRE NÓS</a>
+                    <li class="nav-item px-2">
+                        <a class="nav-link" href="<?=get_page_link_by_slug('sobre')?>">Sobre nós</a>
                     </li>
-                    <li class="nav-item px-3">
-                        <a class="nav-link" href="<?=get_page_link_by_slug('landing')?>">NOSSOS EVENTOS</a>
+                    <li class="nav-item px-2">
+                        <a class="nav-link" href="<?=get_page_link_by_slug('programacao')?>">Programação</a>
                     </li>
-                    <li class="nav-item px-3">
-                        <a class="nav-link" href="<?=get_page_link_by_slug('reservas')?>">RESERVAS</a>
+                    <li class="nav-item px-2">
+                        <a class="nav-link" href="<?=get_page_link_by_slug('menu')?>">Menu</a>
                     </li>
-                    <li class="nav-item px-3">
-                        <a class="nav-link" href="<?=get_page_link_by_slug('menu')?>">MENU</a>
+                    <li class="nav-item pl-2 pr-5">
+                        <a class="nav-link" href="<?=get_page_link_by_slug('contatos')?>">Contatos</a>
                     </li>
-                    <li class="nav-item px-3">
-                        <a class="nav-link" href="<?=get_page_link_by_slug('programacao')?>">PROGRAMAÇÃO</a>
+                    <li class="nav-item pl-5">
+                        <a class="my-3" href="<?=get_page_link_by_slug('reservas')?>" style="text-decoration: none">
+                            <button type="button" class="btn btn-outline-header btn-block">Reservas</button>
+                        </a>
                     </li>
-                    <li class="nav-item px-3">
-                        <a class="nav-link" href="<?=get_page_link_by_slug('contatos')?>">CONTATOS</a>
+                    <li class="nav-item pl-3">
+                        <a class="my-3" href="<?=get_page_link_by_slug('landing')?>" style="text-decoration: none">
+                            <button type="button" class="btn btn-outline-header btn-block" style="min-width: 150px">Faça seu evento</button>
+                        </a>
                     </li>
                     <!--
                     <li class="nav-item">

@@ -12,8 +12,8 @@ function get_menu_body_content(){
 		$my_index = 0; // index of text about plates
 		if( $attachment = $attachments->get_single( $my_index ) ) :?>
 		<!-- Secao de menu de pratos -->
-		<div class="d-flex justify-content-center flex-column mt-5" align="center">
-			<p class="mx-auto chamada-principal-apresentacao mt-5">Conheca nossos</p>
+		<div class="d-flex justify-content-center flex-column mt-5" id="pratos-menu-anchor" align="center">
+			<p class="mx-auto chamada-principal-apresentacao mt-5">Conheça nossos</p>
 			<p class="mx-auto chamada-nome-verde mt-0">PRATOS</p>
 		</div>
 		<div class="d-flex justify-content-center flex-row flex-wrap" style="min-height: 600px;">
@@ -60,7 +60,7 @@ function get_menu_body_content(){
 		endif;?>
 		<!-- Secao de menu de sobremesas -->
 		<div class="d-flex justify-content-center flex-column" align="center">
-			<p class="mx-auto chamada-principal-apresentacao">Conheca nossas</p>
+			<p class="mx-auto chamada-principal-apresentacao">Conheça nossas</p>
 			<p class="mx-auto chamada-nome-vermelho">SOBREMESAS</p>
 		</div>
 		<?php
@@ -109,8 +109,8 @@ function get_menu_body_content(){
 		<?php
 		endif;?>
 		<!-- Secao de menu de bebidas -->
-		<div class="d-flex justify-content-center flex-column" align="center">
-			<p class="mx-auto chamada-principal-apresentacao">Conheca nossos</p>
+		<div class="d-flex justify-content-center flex-column" id="drinks-menu-anchor" align="center">
+			<p class="mx-auto chamada-principal-apresentacao">Conheça nossos</p>
 			<p class="mx-auto chamada-nome-verde">DRINKS</p>
 		</div>
 		<?php

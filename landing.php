@@ -7,11 +7,12 @@ $email = $_POST['form-email'];
 $pessoas = $_POST['form-pessoas'];
 $data = $_POST['form-data'];
 $telefone = $_POST['form-telefone'];
+$tipo_evento = $_POST['form-tipo-evento'];
 
-$formularioEnviado = isset($nome) && isset($email) && isset($telefone);
+$formularioEnviado = isset($nome) && isset($email) && isset($telefone) && isset($pessoas) && isset($data) && isset($tipo_evento);
 
 if($formularioEnviado) {
-	$enviou = enviar_e_checar_email_reserva($nome, $email, $telefone, $pessoas, $data);
+	$enviou = enviar_e_checar_email_reserva($nome, $email, $telefone, $pessoas, $data, $tipo_evento);
 
 	if($enviou) { ?>
 		<span class="email-sucesso">Sua intenção de reserva foi registrada com sucesso!
@@ -24,14 +25,16 @@ if($formularioEnviado) {
 
 function get_landing_page_buttons_chamada_principal() { ?>
 	<div class="col-md-8 col-xs-4 mt-5" align="center">
-		<button type="button" class="btn btn-outline-secondary-lg-green btn-block">FAÇA UM ORÇAMENTO</button>
+		<a href="#orcamento-anchor" style="text-decoration: none">
+			<button type="button" class="btn btn-outline-secondary-lg-green btn-block">FAÇA UM ORÇAMENTO</button>
+		</a>
 	</div>
 <?php
 }
 
 function get_landing_page_body_content() {
 	global $home;
-	$id_galeria = 277;	
+	$id_galeria = 284;	
 ?>
 	<div class="d-flex justify-content-center flex-row flex-wrap bg-dark py-5" align="center">
 		<div class="col-md-8">
@@ -53,7 +56,7 @@ function get_landing_page_body_content() {
 				endif;
 			endif;
 			?>
-			<p class="chamada-secundaria-page-gray"><?=$text_about_marriages?></p>
+			<p class="chamada-secundaria-page-gray" align="start"><?=$text_about_marriages?></p>
 		</div>
 		<div class="d-flex justify-content-center my-5">
 			<div class="d-flex align-items-center col-md-3 col-sm-2"><hr class="hr-gray" /></div>
@@ -116,60 +119,70 @@ function get_landing_page_body_content() {
 			<h1 class="mx-auto chamada-secundaria-page-gray">GASTRONOMIA</h1>		
 		</div>
 		<div class="d-flex justify-content-center w-100">
-			<div class="btn-group-vertical h-100 mx-3">
-				<form method="post" action="#form-anchor-fotos">
-					<button class="btn btn-outline-secondary-lg-gray my-2" type="submit" id="entrada" name="fotos_gastronomia" value="entrada"/>
-						Entradas</button>
-					<button class="btn btn-outline-secondary-lg-gray my-2" type="submit" id="finger" name="fotos_gastronomia" value="finger"/>
-						Finger foods</button>
-					<button class="btn btn-outline-secondary-lg-gray my-2" type="submit" id="principal" name="fotos_gastronomia" value="principal"/> 
-						Prato principal</button>
-					<button class="btn btn-outline-secondary-lg-gray my-2" type="submit" id="sobremesa" name="fotos_gastronomia" value="sobremesa"/> 
-						Sobremesas</button>
-					<button class="btn btn-outline-secondary-lg-gray my-2" type="submit" id="bebida" name="fotos_gastronomia" value="bebida"/> 
-						Bebidas</button>
-				</form>
-			</div>
-			<div class="d-flex col-8">
-				<?php				
-					if(array_key_exists('fotos_gastronomia',$_POST)){
-						switch($_POST['fotos_gastronomia']) {
-							case 'entrada':
-								$id_galeria = 277;
-								break;
-							case 'finger':
-								$id_galeria = 274;
-								break;
-							default:
-								$id_galeria = 277;
-								break;
-						}
-					}
-					echo do_shortcode("[foogallery id=" . $id_galeria . "]");
-				?>
+			<div class="row"><!--
+				<div class="btn-group-vertical h-100 mx-3 col-md-3 col-xs-12">
+					<form method="post" action="#form-anchor-fotos">
+						<button class="btn btn-outline-secondary-lg-gray my-2" type="submit" id="entrada" name="fotos_gastronomia" value="entrada"/>
+							Entradas</button>
+						<button class="btn btn-outline-secondary-lg-gray my-2" type="submit" id="finger" name="fotos_gastronomia" value="finger"/>
+							Finger foods</button>
+						<button class="btn btn-outline-secondary-lg-gray my-2" type="submit" id="principal" name="fotos_gastronomia" value="principal"/> 
+							Prato principal</button>
+						<button class="btn btn-outline-secondary-lg-gray my-2" type="submit" id="sobremesa" name="fotos_gastronomia" value="sobremesa"/> 
+							Sobremesas</button>
+						<button class="btn btn-outline-secondary-lg-gray my-2" type="submit" id="bebida" name="fotos_gastronomia" value="bebida"/> 
+							Bebidas</button>
+					</form>
+				</div>-->
+				<div class="col-md-12 col-xs-12">
+					<?php
+						/*
+						if(array_key_exists('fotos_gastronomia',$_POST)){
+							switch($_POST['fotos_gastronomia']) {
+								case 'entrada':
+									$id_galeria = 284;
+									break;
+								case 'finger':
+									$id_galeria = 274;
+									break;
+								default:
+									$id_galeria = 277;
+									break;
+							}
+						}*/
+						?>
+						<div class="d-flex justify-content-center flex-row flex-wrap">
+							<?php 
+							echo do_shortcode("[foogallery-album id=85]");
+							echo do_shortcode("[foogallery-album id=88]");
+							echo do_shortcode("[foogallery-album id=87]");
+							echo do_shortcode("[foogallery-album id=89]");
+							echo do_shortcode("[foogallery-album id=90]");
+							?>
+						</div>
+				</div>
 			</div>
 		</div>
 	</div>
 	<!-- Secao de caracteristicas -->
-	<div class="d-flex justify-content-center flex-row flex-wrap">
-		<div class="col-md-6 full-image-background" style="background-image: url(<?=$home?>/assets/imagens/pages/landing/cardapio_exemplo.jpg)">
+	<div class="d-flex justify-content-center flex-row flex-wrap mb-5">
+		<div class="col-md-6 full-image-background" style="background-image: url(<?=$home?>/assets/imagens/pages/landing/cardapio_exemplo.jpg); min-height: 600px;">
 		</div>
 		<div class="col-md-6 pl-5 mt-5" align="left">
 			<ul class="lista-vantagens">
-				<li><p class="lista-vantagens-texto">Menu requintado</p></li>
-				<li><p class="lista-vantagens-texto">Chef Internacional</p></li>
-				<li><p class="lista-vantagens-texto">Jantar/almoço farto</p></li>
-				<li><p class="lista-vantagens-texto">Ótimo custo-benefício</p></li>
-				<li><p class="lista-vantagens-texto">Espaço decorado com obras de arte</p></li>
-				<li><p class="lista-vantagens-texto">Arquitetura moderna</p></li>
-				<li><p class="lista-vantagens-texto">Lounge interno</p></li>
-				<li><p class="lista-vantagens-texto">2 horas de piano ao vivo</p></li>
-				<li><p class="lista-vantagens-texto">Jardim de 2.400 m²</p></li>
-				<li><p class="lista-vantagens-texto">Estacionamento</p></li>
-				<li><p class="lista-vantagens-texto">Seguranças</p></li>
-				<li><p class="lista-vantagens-texto">Rampas de acessibilidade</p></li>
-				<li><p class="lista-vantagens-texto">Toaletes acessíveis</p></li>
-				<li><p class="lista-vantagens-texto">Wi-Fi</p></li>				
+			    <!-- Carregamento das vantagens -->
+				<?php 
+                $args = array( 'post_type' => 'vantagem', 'posts_per_page' => -1, 'order' => 'ASC');            
+                $loop = new WP_Query( $args );
+                if( $loop->have_posts() ) {
+                    ?>
+					<?php while( $loop->have_posts()) {
+						$loop->the_post();?>
+						<li><p class="lista-vantagens-texto"><?=the_title();?></p></li>
+					<?php
+					}
+				}
+				?>			
 			</ul>
 		</div>
 	</div>
@@ -277,13 +290,13 @@ function get_landing_page_body_content() {
 		<div class="col-md-4 col-sm-6">
 			<p class="mx-auto chamada-faqs-gray">FAQ'S</p>
 		</div>
-		<div class="col-md-8">
+		<div class="col-md-8" align="start">
 			<?php echo do_shortcode("[hrf_faqs]"); ?>
 		</div>
 	</div>
 
 	<!-- Secao de reservas -->
-	<div class="d-flex justify-content-center flex-column flex-wrap py-5" align="center">
+	<div class="d-flex justify-content-center flex-column flex-wrap py-5" id="orcamento-anchor" align="center">
 		<div class="col-md-4 col-sm-6">
 			<p class="mx-auto chamada-orcamento-gray">SOLICITE SEU ORÇAMENTO</p>
 		</div>
@@ -308,7 +321,14 @@ function get_landing_page_body_content() {
 						</div>
 						<div class="form-pessoas">
 							<input id="form-pessoas" type="number" min="2" max="200" value="2" placeholder="Número de pessoas" name="form-number">
-						</div>                
+						</div>
+						<div class="form-tipo-evento">
+							<select id="form-tipo-evento" name="form-tipo-evento">
+								<option value="casamento">Casamento</option>
+								<option value="aniversario">Aniversário</option>
+								<option value="formatura">Formatura</option>
+							</select>
+						</div>          
 						<button type="submit" class="btn btn-block btn-outline-secondary-lg-gray">ENVIAR</button>
 					</form>
 				</div>

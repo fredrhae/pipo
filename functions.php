@@ -17,13 +17,14 @@ function get_page_link_by_slug($pageSlug) {
     return get_permalink($page->ID);
 }
 
-function enviar_e_checar_email_reserva($nome, $email, $telefone, $pessoas, $data) {
+function enviar_e_checar_email_reserva($nome, $email, $telefone, $pessoas, $data, $tipo_evento) {
     return wp_mail( 'fredrhae@gmail.com', 'Reserva restaurante', 
                   'Nome: ' . $nome . "\n" .
                   'Email: ' .  $email . "\n" .
                   'Telefone: ' . $telefone . "\n" .
                   'Data do evento: ' . $data . "\n" .
-                  'Quantidade de Pessoas: ' . $pessoas . "\n");
+                  'Quantidade de Pessoas: ' . $pessoas . "\n" . 
+                  'Tipo de evento: ' . $tipo_evento . "\n");
 }
 
 function enviar_e_checar_sugestao($nome, $email, $sugestao) {
@@ -277,7 +278,6 @@ function registrar_menu_entradas() {
   
 add_action('init', 'registrar_menu_entradas');
 
-
 function registrar_menu_finger_food() {
     $descricao = 'Usado para listar as finger foods servidas no Pipo';
     $singular = 'Finger food';
@@ -311,6 +311,40 @@ function registrar_menu_finger_food() {
 }
   
 add_action('init', 'registrar_menu_finger_food');
+
+function registrar_lista_vantagens_landing() {
+    $descricao = 'Usado para registrar as vantagens de casar no Pipo';
+    $singular = 'Vantagem';
+    $plural = 'Vantagens';
+  
+    $labels = array(
+        'name' => $plural,
+        'singular_name' => $singular,
+        'view_item' => 'Ver ' . $singular,
+        'edit_item' => 'Editar ' . $singular,
+        'new_item' => 'Novo ' . $singular,
+        'add_new_item' => 'Adicionar novo ' . $singular
+    );
+  
+    $supports = array(
+        'title',
+        'editor',
+        'thumbnail'
+    );
+  
+    $args = array(
+        'labels' => $labels,
+        'description' => $descricao,
+        'public' => true,
+        'menu_icon' => 'dashicons-welcome-write-blog',
+        'supports' => $supports
+    );
+  
+  
+    register_post_type( 'vantagem', $args);    
+}
+  
+add_action('init', 'registrar_lista_vantagens_landing');
 
 function adicionar_meta_info_preco_menu_bebidas() {
 	add_meta_box(

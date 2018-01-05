@@ -40,10 +40,9 @@ body {
 	img { max-width: 100%; }
 }
 
-/* Styles de fonte */
 @font-face {
-    font-family: SpecialTouch;
-	src: url(../fonts/Special-Touch.ttf);
+    font-family: GreatVibes;
+	src: url(../fonts/GreatVibes-Regular.ttf);
 	font-weight: normal;
 }
 
@@ -160,7 +159,7 @@ body .btn-outline-secondary-lg-gray:hover {
 }
 
 .full-image-background-principal-home {
-	min-height: 700px;
+	min-height: 500px;
 }
 
 .full-image-background {
@@ -175,20 +174,14 @@ body .btn-outline-secondary-lg-gray:hover {
 }
 
 .image-container {
-	display: inline-block;
+	display: block;
 	position: relative;
 	min-height: 80%;
 }
 
-.image-restaurant-bottom, .image-restaurant-top {
-	max-height: 350px;
+.image-overlay {
+	max-height: 400px;
 	max-width: 100%;
-}
-
-.image-restaurant-top {
-	position: absolute;
-	right: 40%;
-	top: 40%;
 }
 
 .image-schedule {
@@ -215,7 +208,7 @@ body .btn-outline-secondary-lg-gray:hover {
 }
 
 .chamada-principal-link {
-	font-family: SpecialTouch;
+	font-family: GreatVibes;
 	font-size: 56px;
 	text-decoration:none;
 }
@@ -234,7 +227,7 @@ body .btn-outline-secondary-lg-gray:hover {
 /* Styles for text with different size, fonts and colors*/
 
 .chamada-principal-apresentacao, .chamada-apresentacao-pequeno{
-	font-family: SpecialTouch;
+	font-family: GreatVibes;
 	text-decoration:none;
 	color: #515151;	
 }
@@ -294,7 +287,6 @@ body .btn-outline-secondary-lg-gray:hover {
 
 .chamada-texto-branco {
 	font-family: GothamBoldRegular, sans-serif;
-	font-weight: bold;
 	font-size: 16px;
 	color: #FFF;
 }
@@ -317,7 +309,7 @@ body .btn-outline-secondary-lg-gray:hover {
 .chamada-principal-branca {
 	color: #ffffff;
 	-webkit-font-smoothing: antialiased;
-	font-family: SpecialTouch;
+	font-family: GreatVibes;
 	font-size: 48px;
 }
 /* Style for carousel indicators colors 
@@ -333,7 +325,8 @@ body .btn-outline-secondary-lg-gray:hover {
 .form-email,
 .form-telefone,
 .form-data,
-.form-pessoas {
+.form-pessoas,
+.form-tipo-evento {
 	margin: 1rem 0;
 }
 
@@ -341,7 +334,8 @@ body .btn-outline-secondary-lg-gray:hover {
 .form-email input,
 .form-telefone input,
 .form-data input,
-.form-pessoas input {
+.form-pessoas input,
+.form-tipo-evento select{
 	width: 100%;
 	display: block;
 	font-size: 12px;
