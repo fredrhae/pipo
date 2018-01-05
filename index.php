@@ -43,7 +43,7 @@ get_section_know_our_gastronomy();
 ?>
 
 <!-- Secao de eventos -->
-<div class="d-flex justify-content-center flex-column full-image-background pt-5" align="center" style="background-image: url(<?=$home?>/assets/imagens/pages/home/fachada_restaurante_2.jpg);">
+<div class="d-flex justify-content-center flex-column full-image-background mt-0 pt-5" align="center" style="background-image: url(<?=$home?>/assets/imagens/pages/home/fachada_restaurante_2.jpg);">
     <h1 class="mx-auto chamada-principal-branca">Nossos eventos</h1>
     <h1 class="mx-auto chamada-nome-verde">SEMANAIS OU MENSAIS</h1>
     <div class="col-md-5 mt-5" align="start">

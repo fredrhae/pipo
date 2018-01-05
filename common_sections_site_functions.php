@@ -42,7 +42,7 @@ if($formularioNewsletterEnviado) {
 function get_section_know_our_gastronomy() {
     global $home;?>
     <!-- Secao da gastronomia -->
-    <div class="d-flex justify-content-center flex-row flex-wrap bg-dark my-5">
+    <div class="d-flex justify-content-center flex-row flex-wrap bg-dark mt-5">
         <div class="col-md-6" align="center">
             <h1 class="mx-auto chamada-principal-branca mt-5">Conheça nossa</h1>
             <h1 class="mx-auto chamada-nome-amarelo">GASTRONOMIA</h1>
@@ -130,9 +130,18 @@ function get_section_schedule($text_about_programacao, $path_picture_schedule) {
         <div class="col-md-8 my-5">
             <p class="mx-auto chamada-texto-cinza"><?=$text_about_programacao?></p>
         </div>
-        <a class="my-3" href="<?=get_page_link_by_slug('programacao')?>" style="text-decoration: none">
-            <button type="button" class=" col-md-6 btn btn-outline-secondary-lg-gray btn-block">VEJA NOSSA PROGRAMAÇÃO</button>
-        </a>
+        <?php 
+        global $post;
+        $post_slug=$post->post_name;
+        if($post_slug != 'programacao') 
+        {
+        ?>
+            <a class="my-3" href="<?=get_page_link_by_slug('programacao')?>" style="text-decoration: none">
+                <button type="button" class=" col-md-6 btn btn-outline-secondary-lg-gray btn-block">VEJA NOSSA PROGRAMAÇÃO</button>
+            </a>
+        <?php
+        }
+        ?>
     </div>
     <div class="col-md-6" align="center">
         <img class="img-fluid p-4 w-100 h-100 m-0 p-0" src="<?=$path_picture_schedule?>" alt="">
