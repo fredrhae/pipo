@@ -273,8 +273,9 @@ body .btn-outline-secondary-lg-gray:hover {
 
 .chamada-texto-cinza {
 	font-size: 16px;
+	font-family: GothamLight, sans-serif;
 	color: #606060;
-	font-weight: lighter;	
+	font-weight: bolder;	
 }
 
 .chamada-nome-amarelo {
@@ -286,9 +287,10 @@ body .btn-outline-secondary-lg-gray:hover {
 }
 
 .chamada-texto-branco {
-	font-family: GothamBoldRegular, sans-serif;
+	font-family: GothamLight, sans-serif;
 	font-size: 16px;
 	color: #FFF;
+	font-weight: bolder;
 }
 
 .chamada-nome-verde, .chamada-nome-verde-pequeno {
