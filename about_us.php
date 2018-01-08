@@ -4,7 +4,7 @@ require_once('common_sections_site_functions.php');
 $home = get_template_directory_uri();
 
 function get_about_us_body_content() {
-	get_section_present_restaurant();
+	get_template_part('/templates/present-restaurant');
 	$text_about_chef = '';
 	$path_foto = '';
 	$attachments = new Attachments( 'my_attachments' );

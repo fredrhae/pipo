@@ -4,7 +4,7 @@ require_once('common_sections_site_functions.php');
 $home = get_template_directory_uri();
 
 function get_menu_body_content(){
-    get_section_present_restaurant();
+	get_template_part('/templates/present-restaurant');
 	?>
 	<?php
 	$attachments = new Attachments( 'my_attachments' );
@@ -18,7 +18,7 @@ function get_menu_body_content(){
 		</div>
 		<div class="d-flex justify-content-center flex-row flex-wrap" style="min-height: 600px;">
 			<div class="col-md-6" align="center"
-				style="background-image: url(<?=$attachments->url( $my_index )?>)";>
+				style="background-image: url(<?=$attachments->url( $my_index )?>); background-size: cover";>
 				<div class="d-flex align-items-center h-100">
 					<div class="d-flex flex-column px-5">
 						<p class="chamada-principal-menu my-5"><?=$attachments->field( 'title', $my_index );?></p>
@@ -97,7 +97,7 @@ function get_menu_body_content(){
 				?>
 			</div>
 			<div class="col-md-6" align="center"
-				style="background-image: url(<?=$attachments->url( $my_index )?>)";>
+				style="background-image: url(<?=$attachments->url( $my_index )?>) ; background-size: cover";>
 				<div class="d-flex align-items-center h-100">
 					<div class="d-flex flex-column px-5">
 						<p class="chamada-principal-menu my-5"><?=$attachments->field( 'title', $my_index );?></p>
@@ -118,7 +118,7 @@ function get_menu_body_content(){
 		if( $attachment = $attachments->get_single( $my_index ) ) :?>
 		<div class="d-flex justify-content-center flex-row flex-wrap" style="min-height: 600px;">
 			<div class="col-md-6" align="center"
-				style="background-image: url(<?=$attachments->url( $my_index )?>)";>
+				style="background-image: url(<?=$attachments->url( $my_index )?>) ; background-size: cover";>
 				<div class="d-flex align-items-center h-100">
 					<div class="d-flex flex-column px-5">
 						<p class="chamada-principal-menu my-5"><?=$attachments->field( 'title', $my_index );?></p>

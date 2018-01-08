@@ -38,7 +38,7 @@
     </div>
 </div>
 <?php 
-get_section_present_restaurant();
+get_template_part('/templates/present-restaurant');
 get_section_know_our_gastronomy();
 ?>
 

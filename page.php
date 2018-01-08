@@ -8,6 +8,8 @@ require_once('about_us.php');
 require_once('common_sections_site_functions.php');
 $home = get_template_directory_uri();
 
+$restaurant_pages = array('landing','sobre','reservas','contatos','menu','programacao');
+
 // Formulario sugestao
 $nome = $_POST['form-nome'];
 $email = $_POST['form-email'];
@@ -30,30 +32,32 @@ if( have_posts() )
 		while( have_posts() ) 
 		{
 			the_post(); 
-			if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
-				$imagem_destacada = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
-			} else {
-				$imagem_destacada = $home . '/assets/imagens/background-default.jpg';
-			}
-			?>
-			<!-- Conteudo principal -->
-			<div class="container-principal full-image-background-principal-home" style="background-image: url(<?=$imagem_destacada?>);">
-				<div class="d-flex justify-content-center flex-column" align="center">
-					<div class="col-md-8  align-self-center mt-5">
-						<p class="mx-auto chamada-principal-page mt-5 mb-0"><?=get_the_content()?></p>
-					<?php 
-					if(is_page('landing')) 
-					{
-					?>
-						<p class="mx-auto pl-5 chamada-secundaria-page">INESQUECÍVEIS AQUI</p>
-						<?php 						
-						get_landing_page_buttons_chamada_principal();
-					}
-					?>
+			if(in_array($post->post_name,$restaurant_pages)){
+				if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
+					$imagem_destacada = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
+				} else {
+					$imagem_destacada = $home . '/assets/imagens/background-default.jpg';
+				}
+				?>
+				<!-- Conteudo principal -->
+				<div class="container-principal full-image-background-principal-home" style="background-image: url(<?=$imagem_destacada?>);">
+					<div class="d-flex justify-content-center flex-column" align="center">
+						<div class="col-md-8  align-self-center mt-5">
+							<p class="mx-auto chamada-principal-page mt-5 mb-0"><?=get_the_content()?></p>
+						<?php 
+						if(is_page('landing')) 
+						{
+						?>
+							<p class="mx-auto pl-5 chamada-secundaria-page">INESQUECÍVEIS AQUI</p>
+							<?php 						
+							get_landing_page_buttons_chamada_principal();
+						}
+						?>
+						</div>
 					</div>
 				</div>
-			</div>
 			<?php
+			}
 			global $post;
 			$post_slug=$post->post_name;
 			switch ($post_slug) {
@@ -144,7 +148,7 @@ function get_reserva_page() {
 			endif;									
 		endif;
 	endif;				
-	get_section_present_restaurant();
+	get_template_part('/templates/present-restaurant');
 	get_section_restaurant_reservation_without_background();
 	get_section_schedule($text_about_schedule, $path_picture_schedule);
 	get_section_newsletter();
@@ -249,4 +253,3 @@ function get_programacao_page() {
 	get_section_testemonials_customers();
 	get_section_newsletter();
 }
-?>

@@ -2,7 +2,7 @@
 <html>
 <head>
     <?php $home = get_template_directory_uri();?>
-    <meta charset="utf-8"/>
+    <meta charset="<?php bloginfo( 'charset' ); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Singular Automacoes">
     <meta name="author" content="Frederico Rhae">
@@ -43,24 +43,21 @@
                     </li>
                     <li class="nav-item px-2">
                         <a class="nav-link" href="<?=get_page_link_by_slug('menu')?>">Menu</a>
-                    </li>
+                    </li><!--
+                    <li class="nav-item px-2">
+                        <a class="nav-link" href="<?=get_page_link_by_slug('blog')?>">Blog</a>
+                    </li>-->
                     <li class="nav-item pl-2 pr-5">
                         <a class="nav-link" href="<?=get_page_link_by_slug('contatos')?>">Contatos</a>
                     </li>
-                    <li class="nav-item pl-5">
-                        <a class="my-3" href="<?=get_page_link_by_slug('reservas')?>" style="text-decoration: none">
+                    <li class="row nav-item">
+                        <a class="col-md-6 col-xs-8 my-3" href="<?=get_page_link_by_slug('reservas')?>" style="text-decoration: none">
                             <button type="button" class="btn btn-outline-header btn-block">Reservas</button>
                         </a>
-                    </li>
-                    <li class="nav-item pl-3">
-                        <a class="my-3" href="<?=get_page_link_by_slug('landing')?>" style="text-decoration: none">
+                        <a class="col-md-6 col-xs-8 my-3" href="<?=get_page_link_by_slug('landing')?>" style="text-decoration: none">
                             <button type="button" class="btn btn-outline-header btn-block" style="min-width: 150px">Faça seu evento</button>
                         </a>
                     </li>
-                    <!--
-                    <li class="nav-item">
-                        <a class="nav-link" href="<?=get_page_link_by_slug('blog')?>">BLOG</a>
-                    </li>-->
                 </ul>
             </div>
         </div>

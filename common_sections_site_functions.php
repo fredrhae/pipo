@@ -101,7 +101,7 @@ function get_section_restaurant_chef($text_about_chef, $path_foto) {
     global $home;
 ?>
 <div class="d-flex align-items-stretch flex-row flex-wrap bg-dark mb-5">
-    <div class="row">
+    <div class="row mx-0">
         <div class="col-md-6 col-xs-12" align="center">
             <h1 class="mx-auto chamada-principal-branca mt-5">Conheça nosso</h1>
             <h1 class="mx-auto chamada-nome-amarelo">CHEF DE COZINHA</h1>
