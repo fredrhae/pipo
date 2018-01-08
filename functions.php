@@ -142,73 +142,175 @@ function registrar_depoimento_noiva() {
 
 add_action('init', 'registrar_depoimento_noiva');
 
+function registrar_menu_entradas() {
+    $descricao = 'Usado para listar as entradas servidas no Pipo';
+    $singular = 'Entrada';
+    $plural = 'Entradas';
+  
+    $labels = array(
+        'name' => $plural,
+        'singular_name' => $singular,
+        'view_item' => 'Ver ' . $singular,
+        'edit_item' => 'Editar ' . $singular,
+        'new_item' => 'Novo ' . $singular,
+        'add_new_item' => 'Adicionar novo ' . $singular
+    );
+  
+    $supports = array(
+        'title',
+        'editor',
+        'thumbnail'
+    );
+  
+    $args = array(
+        'labels' => $labels,
+        'description' => $descricao,
+        'public' => true,
+        'menu_icon' => 'dashicons-post-status',
+        'supports' => $supports
+    );
+  
+  
+    register_post_type( 'entrada', $args);    
+}
+
+add_action('init', 'registrar_menu_entradas');
+
+function registrar_menu_pratos_tinto() {
+    $descricao = 'Usado para listar os pratos que harmonizam com vinho tinto do Pipo';
+    $singular = 'Prato vinho tinto';
+    $plural = 'Pratos vinho tinto';
+  
+    $labels = array(
+        'name' => $plural,
+        'singular_name' => $singular,
+        'view_item' => 'Ver ' . $singular,
+        'edit_item' => 'Editar ' . $singular,
+        'new_item' => 'Novo ' . $singular,
+        'add_new_item' => 'Adicionar novo ' . $singular
+    );
+  
+    $supports = array(
+        'title',
+        'editor',
+        'thumbnail'
+    );
+  
+    $args = array(
+        'labels' => $labels,
+        'description' => $descricao,
+        'public' => true,
+        'menu_icon' => 'dashicons-carrot',
+        'supports' => $supports
+    );
+  
+  
+    register_post_type( 'pratoTinto', $args);    
+}
+
+add_action('init', 'registrar_menu_pratos_tinto');  
+
+function registrar_menu_pratos_branco() {
+    $descricao = 'Usado para listar os pratos que harmonizam com vinho branco/rosé do Pipo';
+    $singular = 'Prato vinho branco';
+    $plural = 'Pratos vinho branco';
+  
+    $labels = array(
+        'name' => $plural,
+        'singular_name' => $singular,
+        'view_item' => 'Ver ' . $singular,
+        'edit_item' => 'Editar ' . $singular,
+        'new_item' => 'Novo ' . $singular,
+        'add_new_item' => 'Adicionar novo ' . $singular
+    );
+  
+    $supports = array(
+        'title',
+        'editor',
+        'thumbnail'
+    );
+  
+    $args = array(
+        'labels' => $labels,
+        'description' => $descricao,
+        'public' => true,
+        'menu_icon' => 'dashicons-visibility',
+        'supports' => $supports
+    );
+  
+  
+    register_post_type( 'pratoBranco', $args);    
+}
+
+add_action('init', 'registrar_menu_pratos_branco');  
+
+function registrar_menu_pratos_infantis() {
+    $descricao = 'Usado para listar os pratos infantis servidos no Pipo';
+    $singular = 'Prato infantil';
+    $plural = 'Pratos infantis';
+  
+    $labels = array(
+        'name' => $plural,
+        'singular_name' => $singular,
+        'view_item' => 'Ver ' . $singular,
+        'edit_item' => 'Editar ' . $singular,
+        'new_item' => 'Novo ' . $singular,
+        'add_new_item' => 'Adicionar novo ' . $singular
+    );
+  
+    $supports = array(
+        'title',
+        'editor',
+        'thumbnail'
+    );
+  
+    $args = array(
+        'labels' => $labels,
+        'description' => $descricao,
+        'public' => true,
+        'menu_icon' => 'dashicons-star-filled',
+        'supports' => $supports
+    );
+  
+  
+    register_post_type( 'pratoInfantil', $args);    
+}
+  
+add_action('init', 'registrar_menu_pratos_infantis');
+
 function registrar_menu_sobremesas() {
-  $descricao = 'Usado para listar as sobremesas do Pipo';
-  $singular = 'Sobremesa';
-  $plural = 'Sobremesas';
-
-  $labels = array(
-      'name' => $plural,
-      'singular_name' => $singular,
-      'view_item' => 'Ver ' . $singular,
-      'edit_item' => 'Editar ' . $singular,
-      'new_item' => 'Novo ' . $singular,
-      'add_new_item' => 'Adicionar nova ' . $singular
-  );
-
-  $supports = array(
-      'title',
-      'editor',
-      'thumbnail'
-  );
-
-  $args = array(
-      'labels' => $labels,
-      'description' => $descricao,
-      'public' => true,
-      'menu_icon' => 'dashicons-clipboard',
-      'supports' => $supports
-  );
-
-
-  register_post_type( 'sobremesa', $args);    
+    $descricao = 'Usado para listar as sobremesas do Pipo';
+    $singular = 'Sobremesa';
+    $plural = 'Sobremesas';
+  
+    $labels = array(
+        'name' => $plural,
+        'singular_name' => $singular,
+        'view_item' => 'Ver ' . $singular,
+        'edit_item' => 'Editar ' . $singular,
+        'new_item' => 'Novo ' . $singular,
+        'add_new_item' => 'Adicionar nova ' . $singular
+    );
+  
+    $supports = array(
+        'title',
+        'editor',
+        'thumbnail'
+    );
+  
+    $args = array(
+        'labels' => $labels,
+        'description' => $descricao,
+        'public' => true,
+        'menu_icon' => 'dashicons-clipboard',
+        'supports' => $supports
+    );
+  
+  
+    register_post_type( 'sobremesa', $args);    
 }
-
+  
 add_action('init', 'registrar_menu_sobremesas');
-
-function registrar_menu_pratos() {
-  $descricao = 'Usado para listar os pratos do Pipo';
-  $singular = 'Prato';
-  $plural = 'Pratos';
-
-  $labels = array(
-      'name' => $plural,
-      'singular_name' => $singular,
-      'view_item' => 'Ver ' . $singular,
-      'edit_item' => 'Editar ' . $singular,
-      'new_item' => 'Novo ' . $singular,
-      'add_new_item' => 'Adicionar novo ' . $singular
-  );
-
-  $supports = array(
-      'title',
-      'editor',
-      'thumbnail'
-  );
-
-  $args = array(
-      'labels' => $labels,
-      'description' => $descricao,
-      'public' => true,
-      'menu_icon' => 'dashicons-carrot',
-      'supports' => $supports
-  );
-
-
-  register_post_type( 'prato', $args);    
-}
-
-add_action('init', 'registrar_menu_pratos');
 
 function registrar_menu_bebidas() {
   $descricao = 'Usado para listar as bebidas servidas no Pipo';
@@ -243,40 +345,6 @@ function registrar_menu_bebidas() {
 }
 
 add_action('init', 'registrar_menu_bebidas');
-
-function registrar_menu_entradas() {
-    $descricao = 'Usado para listar as entradas servidas no Pipo';
-    $singular = 'Entrada';
-    $plural = 'Entradas';
-  
-    $labels = array(
-        'name' => $plural,
-        'singular_name' => $singular,
-        'view_item' => 'Ver ' . $singular,
-        'edit_item' => 'Editar ' . $singular,
-        'new_item' => 'Novo ' . $singular,
-        'add_new_item' => 'Adicionar novo ' . $singular
-    );
-  
-    $supports = array(
-        'title',
-        'editor',
-        'thumbnail'
-    );
-  
-    $args = array(
-        'labels' => $labels,
-        'description' => $descricao,
-        'public' => true,
-        'menu_icon' => 'dashicons-post-status',
-        'supports' => $supports
-    );
-  
-  
-    register_post_type( 'entrada', $args);    
-}
-  
-add_action('init', 'registrar_menu_entradas');
 
 function registrar_menu_finger_food() {
     $descricao = 'Usado para listar as finger foods servidas no Pipo';
@@ -372,19 +440,6 @@ function adicionar_meta_info_preco_menu_sobremesa() {
 
 add_action('add_meta_boxes', 'adicionar_meta_info_preco_menu_sobremesa');
 
-function adicionar_meta_info_preco_menu_prato() {
-	add_meta_box(
-		'preco_prato',
-		'Preço',
-		'preco_view',
-		'prato',
-		'normal',
-		'high'
-	);
-}
-
-add_action('add_meta_boxes', 'adicionar_meta_info_preco_menu_prato');
-
 function adicionar_meta_info_preco_menu_entrada() {
 	add_meta_box(
 		'preco_entrada',
@@ -397,6 +452,45 @@ function adicionar_meta_info_preco_menu_entrada() {
 }
 
 add_action('add_meta_boxes', 'adicionar_meta_info_preco_menu_entrada');
+
+function adicionar_meta_info_preco_menu_prato_tinto() {
+	add_meta_box(
+		'preco_prato_tinto',
+		'Preço',
+		'preco_view',
+		'pratoTinto',
+		'normal',
+		'high'
+	);
+}
+
+add_action('add_meta_boxes', 'adicionar_meta_info_preco_menu_prato_tinto');
+
+function adicionar_meta_info_preco_menu_prato_branco() {
+	add_meta_box(
+		'preco_prato_branco',
+		'Preço',
+		'preco_view',
+		'pratoBranco',
+		'normal',
+		'high'
+	);
+}
+
+add_action('add_meta_boxes', 'adicionar_meta_info_preco_menu_prato_branco');
+
+function adicionar_meta_info_preco_menu_prato_infantil() {
+	add_meta_box(
+		'preco_prato_infantil',
+		'Preço',
+		'preco_view',
+		'pratoInfantil',
+		'normal',
+		'high'
+	);
+}
+
+add_action('add_meta_boxes', 'adicionar_meta_info_preco_menu_prato_infantil');
 
 function adicionar_meta_info_preco_menu_finger_food() {
 	add_meta_box(
