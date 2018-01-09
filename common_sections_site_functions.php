@@ -72,7 +72,7 @@ function get_section_present_restaurant() {
 ?>
 <!-- Secao de apresentar o restaurante -->
 <div class="d-flex justify-content-center flex-column flex-wrap my-5" align="center">
-    <div class="row">
+    <div class="row mx-0">
         <div class="d-flex my-5 mx-5 justify-content-center flex-column" align="center">
             <h2 class="mx-auto chamada-principal-apresentacao">Seja Bem Vindo ao</h2>
             <h2 class="mx-auto chamada-nome-vermelho-lg">PIPO RESTAURANTE</h3>
@@ -92,7 +92,7 @@ function get_section_present_restaurant() {
             <img class="image-overlay img-fluid p-4"  src="<?=$home?>/assets/imagens/pages/home/fachada_restaurante.png" alt="">
         </div>
     </div>
-    <div class="row my-5 "></div>
+    <div class="row mx-0 my-5 "></div>
 </div>
 <?php
 }
@@ -291,7 +291,7 @@ function get_section_testemonials_customers() {?>
     <!-- Secao de testemunhos -->
     <div class="container my-5">
         <!-- Titulo testemunhos -->
-        <div class="row">
+        <div class="row mx-0">
             <div class="col-md-12" align="center">
                 <h1 class="mx-auto chamada-apresentacao-pequeno">O que nosso cliente</h1>
                 <h1 class="mx-auto chamada-nome-vermelho-pequeno">TEM A DIZER:</h1>		
@@ -329,7 +329,7 @@ function get_section_testemonials_customers() {?>
                             }
                             ?>
                             <div class="<?=$carousel_class?>">
-                                <div class="row py-4">
+                                <div class="row mx-0 py-4">
                                     <div class="col-sm-4 text-center">
                                         <img class="img-circle" src="<?=the_post_thumbnail_url()?>" style="width: 150px;height:150px;">
                                     </div>

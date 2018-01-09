@@ -6,7 +6,7 @@
 ?>
 <!-- Secao inicial da home -->
 <div class="container-principal">
-    <div class="row">
+    <div class="row mx-0">
         <div class="col-md-3 col-xs-12 full-image-background-principal-home" style="background-image: url(<?=$home?>/assets/imagens/pages/home/home_chamada_casa.jpg);
                                                             background-position: center top">
             <div class="vertical-center">

@@ -41,8 +41,8 @@ function get_landing_page_body_content() {
 			<p class="chamada-secundaria-page">PORQUE CASAR NO PIPO É DIFERENTE?</p>
 		</div>
 	</div>
-	<div class="d-flex justify-content-center flex-column mb-5" align="center">
-		<p class="chamada-principal-page-gray">Carinho e dedicacao</p>
+	<div class="d-flex justify-content-center flex-column my-5" align="center">
+		<p class="chamada-principal-page-gray">Carinho e dedicação</p>
 		<div class="col-md-8">
 			<?php
 			$text_about_marriages= '';			
@@ -67,7 +67,7 @@ function get_landing_page_body_content() {
 		</div>
 		<div class="col-md-10">
 			<div class="d-flex justify-content-center flex-row flex-wrap" align="center">
-				<div class="row">
+				<div class="row mx-0">
 					<div class="col-md-2 col-xs-12">
 						<div class="d-flex justify-content-center flex-column" align="center">
 							<img class="img-fluid" src="<?=$home?>/assets/imagens/pages/landing/menu.png">						
@@ -113,13 +113,13 @@ function get_landing_page_body_content() {
 	get_section_know_our_gastronomy();
 	?>
 	<!-- Secao de casamentos realizados -->
-	<div class="d-flex justify-content-start flex-row flex-wrap mb-5" id="form-anchor-fotos">
+	<div class="d-flex justify-content-start flex-row flex-wrap mt-5" id="form-anchor-fotos">
 		<div class="col-md-12" align="center">
 			<h1 class="mx-auto chamada-principal-page-gray">Fotos de nossa</h1>
-			<h1 class="mx-auto chamada-secundaria-page-gray">GASTRONOMIA</h1>		
+			<h1 class="mx-auto chamada-nome-gray-pequeno">GASTRONOMIA</h1>		
 		</div>
 		<div class="d-flex justify-content-center w-100">
-			<div class="row"><!--
+			<div class="row mx-0"><!--
 				<div class="btn-group-vertical h-100 mx-3 col-md-3 col-xs-12">
 					<form method="post" action="#form-anchor-fotos">
 						<button class="btn btn-outline-secondary-lg-gray my-2" type="submit" id="entrada" name="fotos_gastronomia" value="entrada"/>
@@ -164,6 +164,10 @@ function get_landing_page_body_content() {
 			</div>
 		</div>
 	</div>
+	<!-- Secao de casamentos caracteristicas -->
+	<div class="d-flex justify-content-center my-5" align="center">
+		<h1 class="mx-auto chamada-principal-page-gray">Tudo que sua festa merece!</h1>
+	</div>
 	<!-- Secao de caracteristicas -->
 	<div class="d-flex justify-content-center flex-row flex-wrap mb-5">
 		<div class="col-md-6 full-image-background" style="background-image: url(<?=$home?>/assets/imagens/pages/landing/cardapio_exemplo.jpg); min-height: 600px;">
@@ -190,7 +194,7 @@ function get_landing_page_body_content() {
 	<div class="d-flex justify-content-center flex-column">
 		<div class="col-md-12" align="center">
 			<h1 class="mx-auto chamada-principal-page-gray">Casamentos</h1>
-			<h1 class="mx-auto chamada-secundaria-page-gray">REALIZADOS</h1>		
+			<h1 class="mx-auto chamada-nome-gray-pequeno">REALIZADOS</h1>		
 		</div>
 		<div class="col-md-12 my-5" align="center">
 			<div class="d-flex justify-content-center flex-row flex-wrap" align="center">
@@ -217,7 +221,7 @@ function get_landing_page_body_content() {
 	<!-- Secao de testemunhos -->
 	<div class="container my-5">
 		<!-- Titulo testemunhos -->
-		<div class="row">
+		<div class="row mx-0">
 			<div class="col-md-12" align="center">
 				<h1 class="mx-auto chamada-apresentacao-pequeno">O que nossas noivas</h1>
 				<h1 class="mx-auto chamada-nome-vermelho-pequeno">TEM A DIZER:</h1>		
@@ -255,7 +259,7 @@ function get_landing_page_body_content() {
                             }
                             ?>
                             <div class="<?=$carousel_class?>">
-                                <div class="row py-4">
+                                <div class="row mx-0 py-4">
                                     <div class="col-sm-4 text-center">
                                         <img class="img-circle" src="<?=the_post_thumbnail_url()?>" style="width: 150px;height:150px;">
                                     </div>
