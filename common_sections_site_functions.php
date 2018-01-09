@@ -128,7 +128,7 @@ function get_section_schedule($text_about_programacao, $path_picture_schedule) {
         <h1 class="mx-auto chamada-principal-apresentacao mt-5">Conheça nossas</h1>
         <h1 class="mx-auto chamada-nome-vermelho-pequeno">PROGRAMAÇÕES</h1>
         <div class="col-md-8 my-5">
-            <p class="mx-auto chamada-texto-cinza"><?=$text_about_programacao?></p>
+            <p class="mx-auto chamada-texto-cinza" align="start"><?=$text_about_programacao?></p>
         </div>
         <?php 
         global $post;
@@ -208,7 +208,7 @@ function get_section_restaurant_reservation() {
 function get_section_restaurant_reservation_without_background() {
     global $home; ?>
     <!-- Secao de reservas -->
-    <div class="d-flex justify-content-center flex-column mt-5 py-5" align="center">
+    <div id="reserva-anchor" class="d-flex justify-content-center flex-column mt-5 py-5" align="center">
         <p class="mx-auto chamada-principal-apresentacao">Fazer uma</p>
         <p class="mx-auto chamada-nome-vermelho-pequeno">RESERVA</p>
     </div>

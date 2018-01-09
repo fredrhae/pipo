@@ -38,7 +38,7 @@ function get_menu_body_content(){
 					<?php while( $loop->have_posts()) {
 						$loop->the_post();
 						$bebida_meta_data = get_post_meta(  get_the_ID() );?>
-						<div class="d-flex flex-column">
+						<div class="d-flex flex-column mt-3">
 							<div class="d-flex justify-content-between flex-row" align="start">
 								<div class="mx-2">
 									<p class="chamada-principal-item-menu"><?php the_title(); ?></p>
@@ -79,7 +79,7 @@ function get_menu_body_content(){
                 	<?php while( $loop->have_posts()) {
 						$loop->the_post();
 						$bebida_meta_data = get_post_meta(  get_the_ID() );?>
-						<div class="d-flex flex-column">
+						<div class="d-flex flex-column mt-3">
 							<div class="d-flex justify-content-between flex-row" align="start">
 								<div class="mx-2">
 									<p class="chamada-principal-item-menu"><?php the_title(); ?></p>
@@ -138,7 +138,7 @@ function get_menu_body_content(){
                 	<?php while( $loop->have_posts()) {
 						$loop->the_post();
 						$bebida_meta_data = get_post_meta(  get_the_ID() );?>
-						<div class="d-flex flex-column">
+						<div class="d-flex flex-column mt-3">
 							<div class="d-flex justify-content-between flex-row" align="start">
 								<div class="mx-2">
 									<p class="chamada-principal-item-menu"><?php the_title(); ?></p>
@@ -180,7 +180,7 @@ function get_menu_body_content(){
 					<?php while( $loop->have_posts()) {
 						$loop->the_post();
 						$bebida_meta_data = get_post_meta(  get_the_ID() );?>
-						<div class="d-flex flex-column">
+						<div class="d-flex flex-column mt-3">
 							<div class="d-flex justify-content-between flex-row" align="start">
 								<div class="mx-2">
 									<p class="chamada-principal-item-menu"><?php the_title(); ?></p>
@@ -240,7 +240,7 @@ function get_menu_body_content(){
 					<?php while( $loop->have_posts()) {
 						$loop->the_post();
 						$bebida_meta_data = get_post_meta(  get_the_ID() );?>
-						<div class="d-flex flex-column">
+						<div class="d-flex flex-column mt-3">
 							<div class="d-flex justify-content-between flex-row" align="start">
 								<div class="mx-2">
 									<p class="chamada-principal-item-menu"><?php the_title(); ?></p>
