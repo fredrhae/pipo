@@ -50,7 +50,7 @@
                     <li class="nav-item pl-2 pr-5">
                         <a class="nav-link" href="<?=get_page_link_by_slug('contatos')?>">Contatos</a>
                     </li>
-                    <li class="row nav-item">
+                    <li class="row mx-0 nav-item">
                         <a class="col-md-6 col-xs-8 my-3" href="<?=get_page_link_by_slug('reservas')?>" style="text-decoration: none">
                             <button type="button" class="btn btn-outline-header btn-block">Reservas</button>
                         </a>

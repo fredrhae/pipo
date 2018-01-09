@@ -23,7 +23,7 @@
 .chamada-orcamento-gray,
 .chamada-principal-menu,
 .chamada-secundaria-menu {
-	font-family: GothamBoldRegular, sans-serif;
+	font-family: GothamLight, sans-serif;
 	font-size: 16px;
 	-webkit-font-smoothing: antialiased;
 }
@@ -42,6 +42,14 @@
 	font-weight: bold;
 	-webkit-font-smoothing: antialiased;
 	color: #8C8989
+}
+
+.chamada-nome-gray-pequeno {
+	font-family: GothamBoldRegular, sans-serif;
+	font-size: 16px;
+    font-weight: bold;
+    color: #393737;
+    letter-spacing: 0.1rem;
 }
 
 .lista-vantagens-texto {

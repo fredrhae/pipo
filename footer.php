@@ -3,7 +3,7 @@
     </footer>
     <div class="footer-bs py-5 bg-dark">
         <div class="d-flex justify-content-center flex-row flex-wrap">
-            <div class="row">
+            <div class="row mx-0">
                 <div class="col-md-3 col-xs-12 footer-brand animated fadeInLeft">
                     <p style="">Chef, advogado e empresário. Pipo é apaixonado por arte, música, gastronomia, arquitetura e ama viajar. 
                         Visitou os mais diversos restaurantes nos 23 países que conheceu, sempre seguindo o guia Michelin.
