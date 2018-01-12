@@ -43,17 +43,19 @@ get_section_know_our_gastronomy();
 ?>
 
 <!-- Secao de eventos -->
-<div class="d-flex justify-content-center flex-column full-image-background mt-0 pt-5" align="center" style="background-image: url(<?=$home?>/assets/imagens/pages/home/fachada_restaurante_2.jpg);">
+<div class="d-flex justify-content-center flex-column full-image-background mt-0 pt-5" 
+    align="center" style="background-image: url(<?=$home?>/assets/imagens/pages/home/fachada_restaurante_2.jpg);">
     <h1 class="mx-auto chamada-principal-branca">Nossos eventos</h1>
     <h1 class="mx-auto chamada-nome-verde">SEMANAIS OU MENSAIS</h1>
     <div class="col-md-5 mt-5" align="start">
-            <p class="mx-auto chamada-texto-branco">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus commodo lacinia quam. Nulla facilisi. 
-                Morbi quam dui, sodales a porta eget, suscipit quis lacus. Vestibulum molestie interdum lectus, nec gravida quam varius et. 
-                Nulla orci purus, aliquam eu feugiat venenatis, placerat ac urna.
+            <p class="mx-auto chamada-texto-branco">Nossa programação conta com eventos semanais e mensais, que vão desde
+             a música ao vivo com ênfase nas apresentações de violino, piano e jazz, até grandes exibições de Ópera.             
+             Se você tiver sorte, poderá até assistir a uma apresentação do próprio Pipo, que é tenor e canta músicas clássicas, 
+             boleros espanhóis, músicas francesa e italiana. A casa aposta nos clássicos para tornar as refeições sempre agradáveis.
                 <br/>
                 <br/>
-                Nulla tellus diam, facilisis placerat dui vitae, hendrerit interdum turpis. Vestibulum accumsan semper pulvinar. Morbi vel lorem a orci 
-                dignissim aliquet..</p>
+                A programação geralmente é organizada pelo renomado maestro Gladson Carvalho, da Orquestra Filarmônica do Ceará. 
+                Vem pro Pipo, aqui é muito mais gostoso!</p>
     </div>
 
     <div class="col-md-4 col-xs-4 mb-5">

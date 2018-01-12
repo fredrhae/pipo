@@ -47,13 +47,15 @@ function get_section_know_our_gastronomy() {
             <h1 class="mx-auto chamada-principal-branca mt-5">Conheça nossa</h1>
             <h1 class="mx-auto chamada-nome-amarelo">GASTRONOMIA</h1>
             <div class="col-md-8 my-5">
-                <p class="mx-auto chamada-texto-branco" align="start">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus commodo lacinia quam. Nulla facilisi. 
-                    Morbi quam dui, sodales a porta eget, suscipit quis lacus. Vestibulum molestie interdum lectus, nec gravida quam varius et. 
-                    Nulla orci purus, aliquam eu feugiat venenatis, placerat ac urna.
-                    <br/>
-                    <br/>
-                    Nulla tellus diam, facilisis placerat dui vitae, hendrerit interdum turpis. Vestibulum accumsan semper pulvinar. Morbi vel lorem a orci 
-                    dignissim aliquet..</p>
+                <p class="mx-auto chamada-texto-branco" align="start">O cardápio é um tanto variado. Um toque peculiar,
+                que faz toda a diferença são os ingredientes naturais como: pescados e frutos do mar, que ganham maior 
+                destaque no Menu. Temperos puros e leves ganham a prioridade na Gastronomia da casa, visando a utilização 
+                máxima das riquezas da terra.
+                <br/>
+                <br/>
+                Venha conhecer a nossa casa, será um prazer lhe servir as mais deliciosas opções, que vão desde o famoso
+                Filé Mignon com Risoto de Mel e Parmesão, ao delicioso Tagliatelle com Camarões Grelhados e Abobrinha.
+                Vem pro Pipo Restaurante, aqui é muito mais gostoso!</p>
             </div>
             <div class="col-md-6 my-5">
                 <a class="my-3" href="#" style="text-decoration: none;">
