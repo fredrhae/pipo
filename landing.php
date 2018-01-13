@@ -237,11 +237,11 @@ function get_landing_page_body_content() {
                             } 
                         } ?>
 					</div>
-					<a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+					<a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev" style="transform: translate(60%,0%);">
 						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
 						<span class="sr-only">Previous</span>
 					</a>
-					<a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+					<a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next" style="transform: translate(60%,0%);">
 						<span class="carousel-control-next-icon" aria-hidden="true"></span>
 						<span class="sr-only">Next</span>
 					</a>
