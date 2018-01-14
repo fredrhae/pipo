@@ -113,7 +113,7 @@ function get_landing_page_body_content() {
 	get_section_know_our_gastronomy();
 	?>
 	<!-- Secao de casamentos realizados -->
-	<div class="d-flex justify-content-start flex-row flex-wrap mb-5" id="form-anchor-fotos">
+	<div class="d-flex justify-content-start flex-row flex-wrap my-5" id="form-anchor-fotos">
 		<div class="col-md-12" align="center">
 			<h1 class="mx-auto chamada-principal-page-gray">Fotos de nossa</h1>
 			<h1 class="mx-auto chamada-secundaria-page-gray">GASTRONOMIA</h1>		
@@ -149,6 +149,7 @@ function get_landing_page_body_content() {
 						<li><p class="lista-vantagens-texto"><?=the_title();?></p></li>
 					<?php
 					}
+					wp_reset_query();
 				}
 				?>			
 			</ul>
