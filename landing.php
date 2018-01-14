@@ -171,10 +171,7 @@ function get_landing_page_body_content() {
 						?>
 						<div class="d-flex justify-content-center flex-row flex-wrap">
 							<?php 
-							echo do_shortcode("[foogallery-album id=285]");
-							echo do_shortcode("[foogallery-album id=285]");
-							echo do_shortcode("[foogallery-album id=285]");
-							echo do_shortcode("[foogallery-album id=285]");
+							echo do_shortcode("[foogallery-album id=199]");
 							?>
 						</div>
 				</div>

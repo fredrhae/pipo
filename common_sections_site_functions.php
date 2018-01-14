@@ -317,8 +317,7 @@ function get_section_testemonials_customers() {?>
                         $loop = new WP_Query( $args );
                         $firstItem = true;
                         if( $loop->have_posts() ) { 
-                            ?>
-                        <?php while( $loop->have_posts()) {
+                            while( $loop->have_posts()) {
                             $loop->the_post();
                             $carousel_class = '';
                             if($firstItem){
