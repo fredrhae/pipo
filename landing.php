@@ -126,10 +126,6 @@ function get_landing_page_body_content() {
 						<div class="d-flex justify-content-center flex-row flex-wrap">
 							<?php 
 							echo do_shortcode("[foogallery-album id=85]");
-							echo do_shortcode("[foogallery-album id=88]");
-							echo do_shortcode("[foogallery-album id=87]");
-							echo do_shortcode("[foogallery-album id=89]");
-							echo do_shortcode("[foogallery-album id=90]");
 							?>
 						</div>
 				</div>
@@ -171,7 +167,7 @@ function get_landing_page_body_content() {
 						?>
 						<div class="d-flex justify-content-center flex-row flex-wrap">
 							<?php 
-							echo do_shortcode("[foogallery-album id=199]");
+							echo do_shortcode("[foogallery-album id=285]");
 							?>
 						</div>
 				</div>
