@@ -2,7 +2,7 @@
 $home = get_template_directory_uri();
 ?>
 <!-- Secao de apresentar o restaurante -->
-<div class="d-flex justify-content-center flex-column flex-wrap my-5" align="center">
+<div class="d-flex justify-content-center flex-column flex-wrap mt-5" align="center">
     <div class="row mx-0">
         <div class="d-flex my-5 mx-5 justify-content-center flex-column" align="center">
             <h2 class="mx-auto chamada-principal-apresentacao">Seja Bem Vindo ao</h2>
@@ -18,10 +18,10 @@ $home = get_template_directory_uri();
                 tudo sobre um lago em um belíssimo jardim de 2400m².</p>
         </div>
     </div>
-    <div class="d-flex flex-wrap mb-5" align="center">
+    <div class="d-flex flex-wrap mb-2" align="center">
         <div class="image-container my-5" style="max-height: 220px;">
             <img class="image-overlay img-fluid p-4"  src="<?=$home?>/assets/imagens/pages/home/fachada_restaurante.png" alt="">
         </div>
     </div>
-    <div class="row my-5 "></div>
+    <div class="row mx-0 my-5 "></div>
 </div>

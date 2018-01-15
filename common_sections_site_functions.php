@@ -47,13 +47,15 @@ function get_section_know_our_gastronomy() {
             <h1 class="mx-auto chamada-principal-branca mt-5">Conheça nossa</h1>
             <h1 class="mx-auto chamada-nome-amarelo">GASTRONOMIA</h1>
             <div class="col-md-8 my-5">
-                <p class="mx-auto chamada-texto-branco" align="start">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus commodo lacinia quam. Nulla facilisi. 
-                    Morbi quam dui, sodales a porta eget, suscipit quis lacus. Vestibulum molestie interdum lectus, nec gravida quam varius et. 
-                    Nulla orci purus, aliquam eu feugiat venenatis, placerat ac urna.
-                    <br/>
-                    <br/>
-                    Nulla tellus diam, facilisis placerat dui vitae, hendrerit interdum turpis. Vestibulum accumsan semper pulvinar. Morbi vel lorem a orci 
-                    dignissim aliquet..</p>
+                <p class="mx-auto chamada-texto-branco" align="start">O cardápio é um tanto variado. Um toque peculiar,
+                que faz toda a diferença são os ingredientes naturais como: pescados e frutos do mar, que ganham maior 
+                destaque no Menu. Temperos puros e leves ganham a prioridade na Gastronomia da casa, visando a utilização 
+                máxima das riquezas da terra.
+                <br/>
+                <br/>
+                Venha conhecer a nossa casa, será um prazer lhe servir as mais deliciosas opções, que vão desde o famoso
+                Filé Mignon com Risoto de Mel e Parmesão, ao delicioso Tagliatelle com Camarões Grelhados e Abobrinha.
+                Vem pro Pipo Restaurante, aqui é muito mais gostoso!</p>
             </div>
             <div class="col-md-6 my-5">
                 <a class="my-3" href="#" style="text-decoration: none;">
@@ -72,7 +74,7 @@ function get_section_present_restaurant() {
 ?>
 <!-- Secao de apresentar o restaurante -->
 <div class="d-flex justify-content-center flex-column flex-wrap my-5" align="center">
-    <div class="row">
+    <div class="row mx-0">
         <div class="d-flex my-5 mx-5 justify-content-center flex-column" align="center">
             <h2 class="mx-auto chamada-principal-apresentacao">Seja Bem Vindo ao</h2>
             <h2 class="mx-auto chamada-nome-vermelho-lg">PIPO RESTAURANTE</h3>
@@ -92,7 +94,7 @@ function get_section_present_restaurant() {
             <img class="image-overlay img-fluid p-4"  src="<?=$home?>/assets/imagens/pages/home/fachada_restaurante.png" alt="">
         </div>
     </div>
-    <div class="row my-5 "></div>
+    <div class="row mx-0 my-5 "></div>
 </div>
 <?php
 }
@@ -101,7 +103,7 @@ function get_section_restaurant_chef($text_about_chef, $path_foto) {
     global $home;
 ?>
 <div class="d-flex align-items-stretch flex-row flex-wrap bg-dark mb-5">
-    <div class="row mx-0">
+    <div class="row mx-0 mt-5">
         <div class="col-md-6 col-xs-12" align="center">
             <h1 class="mx-auto chamada-principal-branca mt-5">Conheça nosso</h1>
             <h1 class="mx-auto chamada-nome-amarelo">CHEF DE COZINHA</h1>
@@ -111,7 +113,7 @@ function get_section_restaurant_chef($text_about_chef, $path_foto) {
         </div>
         <div class="col-md-6 col-xs-12" align="center">
             <div class="image-container">
-                <img class="image-overlay img-fluid p-4 m-0 p-0" src="<?=$path_foto?>" alt="">
+                <img class="image-overlay img-fluid p-4 mx-0 mt-5 p-0" src="<?=$path_foto?>" alt="">
             </div>
         </div>
     </div>
@@ -128,7 +130,7 @@ function get_section_schedule($text_about_programacao, $path_picture_schedule) {
         <h1 class="mx-auto chamada-principal-apresentacao mt-5">Conheça nossas</h1>
         <h1 class="mx-auto chamada-nome-vermelho-pequeno">PROGRAMAÇÕES</h1>
         <div class="col-md-8 my-5">
-            <p class="mx-auto chamada-texto-cinza"><?=$text_about_programacao?></p>
+            <p class="mx-auto chamada-texto-cinza" align="start"><?=$text_about_programacao?></p>
         </div>
         <?php 
         global $post;
@@ -208,7 +210,7 @@ function get_section_restaurant_reservation() {
 function get_section_restaurant_reservation_without_background() {
     global $home; ?>
     <!-- Secao de reservas -->
-    <div class="d-flex justify-content-center flex-column mt-5 py-5" align="center">
+    <div id="reserva-anchor" class="d-flex justify-content-center flex-column mt-5 py-5" align="center">
         <p class="mx-auto chamada-principal-apresentacao">Fazer uma</p>
         <p class="mx-auto chamada-nome-vermelho-pequeno">RESERVA</p>
     </div>
@@ -291,7 +293,7 @@ function get_section_testemonials_customers() {?>
     <!-- Secao de testemunhos -->
     <div class="container my-5">
         <!-- Titulo testemunhos -->
-        <div class="row">
+        <div class="row mx-0">
             <div class="col-md-12" align="center">
                 <h1 class="mx-auto chamada-apresentacao-pequeno">O que nosso cliente</h1>
                 <h1 class="mx-auto chamada-nome-vermelho-pequeno">TEM A DIZER:</h1>		
@@ -328,9 +330,9 @@ function get_section_testemonials_customers() {?>
                             }
                             ?>
                             <div class="<?=$carousel_class?>">
-                                <div class="row py-4">
+                                <div class="row mx-0 py-4">
                                     <div class="col-sm-4 text-center">
-                                        <img class="img-circle" src="<?=the_post_thumbnail_url()?>" style="width: 150px;height:150px;">
+                                        <img class="img-circle" src="<?=the_post_thumbnail_url()?>" style="width: 150px;height:150px;border-radius:50%">
                                     </div>
                                     <div class="col-sm-8">
                                         <p class="mx-auto chamada-texto-cinza"><?=the_content();?></p>

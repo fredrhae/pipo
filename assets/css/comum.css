@@ -196,7 +196,7 @@ body .btn-outline-secondary-lg-gray:hover {
 	position: absolute;
 	left: 50%;
 	top: 50%;
-    transform: translate( -50%, -50% );
+    transform: translate( -50%, -400% );
     text-align: center;
 }
 
@@ -255,6 +255,7 @@ body .btn-outline-secondary-lg-gray:hover {
 
 .chamada-nome-vermelho-pequeno {
 	font-size: 16px;
+	min-width: 140px;
 }
 
 .chamada-nome-vermelho {
@@ -306,6 +307,7 @@ body .btn-outline-secondary-lg-gray:hover {
 
 .chamada-nome-verde-pequeno {
 	font-size: 16px;
+	min-width: 140px;
 }
 
 .chamada-principal-branca {

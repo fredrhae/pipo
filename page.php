@@ -232,12 +232,21 @@ function get_programacao_page() {
 										<p class="chamada-secundaria-page text-inside-image"> <?= esc_attr( $programacao_meta_data['data_id'][0] ); ?></p>
 									</div>
 								</div>
+								<div class="d-flex justify-content-center flex-column" align="start">
+										<span class="chamada-texto-branco mt-3"><?=the_title();?></span>
+										<span class="chamada-texto-branco mt-3"><?=the_content();?></span>
+								</div>
+								<div class="d-flex justify-content-center">
+									<a class="my-3" href="<?=get_page_link_by_slug('reservas')?>#reserva-anchor" style="text-decoration: none">
+										<button class="btn btn-block btn-outline-secondary-lg-green" style="min-width: 200px;">RESERVAR</button>
+									</a>
+								</div>
 							</div>
 							<?php
 							} 
 						} ?>
 					</div>
-					<a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev" style="transform: translate(60%,0%);">
+					<a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev" style="transform: translate(-60%,0%);">
 						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
 						<span class="sr-only">Previous</span>
 					</a>
