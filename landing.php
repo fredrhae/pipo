@@ -119,45 +119,13 @@ function get_landing_page_body_content() {
 			<h1 class="mx-auto chamada-nome-gray-pequeno">GASTRONOMIA</h1>		
 		</div>
 		<div class="d-flex justify-content-center w-100">
-			<div class="row mx-0"><!--
-				<div class="btn-group-vertical h-100 mx-3 col-md-3 col-xs-12">
-					<form method="post" action="#form-anchor-fotos">
-						<button class="btn btn-outline-secondary-lg-gray my-2" type="submit" id="entrada" name="fotos_gastronomia" value="entrada"/>
-							Entradas</button>
-						<button class="btn btn-outline-secondary-lg-gray my-2" type="submit" id="finger" name="fotos_gastronomia" value="finger"/>
-							Finger foods</button>
-						<button class="btn btn-outline-secondary-lg-gray my-2" type="submit" id="principal" name="fotos_gastronomia" value="principal"/> 
-							Prato principal</button>
-						<button class="btn btn-outline-secondary-lg-gray my-2" type="submit" id="sobremesa" name="fotos_gastronomia" value="sobremesa"/> 
-							Sobremesas</button>
-						<button class="btn btn-outline-secondary-lg-gray my-2" type="submit" id="bebida" name="fotos_gastronomia" value="bebida"/> 
-							Bebidas</button>
-					</form>
-				</div>-->
+			<div class="row mx-0">
 				<div class="col-md-12 col-xs-12">
 					<?php
-						/*
-						if(array_key_exists('fotos_gastronomia',$_POST)){
-							switch($_POST['fotos_gastronomia']) {
-								case 'entrada':
-									$id_galeria = 284;
-									break;
-								case 'finger':
-									$id_galeria = 274;
-									break;
-								default:
-									$id_galeria = 277;
-									break;
-							}
-						}*/
 						?>
 						<div class="d-flex justify-content-center flex-row flex-wrap">
 							<?php 
 							echo do_shortcode("[foogallery-album id=85]");
-							echo do_shortcode("[foogallery-album id=88]");
-							echo do_shortcode("[foogallery-album id=87]");
-							echo do_shortcode("[foogallery-album id=89]");
-							echo do_shortcode("[foogallery-album id=90]");
 							?>
 						</div>
 				</div>
@@ -185,6 +153,7 @@ function get_landing_page_body_content() {
 						<li><p class="lista-vantagens-texto"><?=the_title();?></p></li>
 					<?php
 					}
+					wp_reset_query();
 				}
 				?>			
 			</ul>
@@ -196,23 +165,16 @@ function get_landing_page_body_content() {
 			<h1 class="mx-auto chamada-principal-page-gray">Casamentos</h1>
 			<h1 class="mx-auto chamada-nome-gray-pequeno">REALIZADOS</h1>		
 		</div>
-		<div class="col-md-12 my-5" align="center">
-			<div class="d-flex justify-content-center flex-row flex-wrap" align="center">
-				<div class="d-flex justify-content-center flex-column px-3" align="center">
-					<img class="img-responsive" src="<?=$home?>/assets/imagens/pages/landing/casal_1.png" style="width: 137px; height: 137px;">						
-					<p class="texto-caracteristicas my-2">LUCIA E DIEGO</p>
-				</div>
-				<div class="d-flex justify-content-center flex-column px-3" align="center">
-					<img class="img-responsive" src="<?=$home?>/assets/imagens/pages/landing/casal_2.png" style="width: 137px; height: 137px;">						
-					<p class="texto-caracteristicas my-2">ARTHUR E ALANA</p>
-				</div>
-				<div class="d-flex justify-content-center flex-column px-3" align="center">
-					<img class="img-responsive" src="<?=$home?>/assets/imagens/pages/landing/casal_3.png" style="width: 137px; height: 137px;">						
-					<p class="texto-caracteristicas my-2">JOÃO E NATÁLIA</p>
-				</div>
-				<div class="d-flex justify-content-center flex-column px-3" align="center">
-					<img class="img-responsive" src="<?=$home?>/assets/imagens/pages/landing/casal_4.png" style="width: 137px; height: 137px;">						
-					<p class="texto-caracteristicas my-2">MARCOS E BETE</p>
+		<div class="d-flex justify-content-center w-100">
+			<div class="row mx-0">
+				<div class="col-md-12 col-xs-12">
+					<?php
+						?>
+						<div class="d-flex justify-content-center flex-row flex-wrap">
+							<?php 
+							echo do_shortcode("[foogallery-album id=199]");
+							?>
+						</div>
 				</div>
 			</div>
 		</div>
@@ -273,11 +235,11 @@ function get_landing_page_body_content() {
                             } 
                         } ?>
 					</div>
-					<a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev" style="transform: translate(-50%,0%);">
+					<a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev" style="transform: translate(60%,0%);">
 						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
 						<span class="sr-only">Previous</span>
 					</a>
-					<a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next" style="transform: translate(50%,0%);">
+					<a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next" style="transform: translate(60%,0%);">
 						<span class="carousel-control-next-icon" aria-hidden="true"></span>
 						<span class="sr-only">Next</span>
 					</a>
