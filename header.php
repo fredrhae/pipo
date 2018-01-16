@@ -54,7 +54,7 @@
                         <a class="col-md-6 col-xs-8 my-3" href="<?=get_page_link_by_slug('reservas')?>" style="text-decoration: none">
                             <button type="button" class="btn btn-outline-header btn-block">Reservas</button>
                         </a>
-                        <a class="col-md-6 col-xs-8 my-3" href="<?=get_page_link_by_slug('landing')?>" style="text-decoration: none">
+                        <a class="col-md-6 col-xs-8 my-3" href="<?=get_page_link_by_slug('casamento-em-fortaleza')?>" style="text-decoration: none">
                             <button type="button" class="btn btn-outline-header btn-block" style="min-width: 150px">Faça seu evento</button>
                         </a>
                     </li>

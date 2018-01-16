@@ -8,7 +8,9 @@ require_once('about_us.php');
 require_once('common_sections_site_functions.php');
 $home = get_template_directory_uri();
 
-$restaurant_pages = array('landing','sobre','reservas','contatos','menu','programacao');
+$restaurant_pages = array('casamento-em-fortaleza','sobre',
+						'reservas','contatos','menu',
+						'programacao');
 
 // Formulario sugestao
 $nome = $_POST['form-nome'];
@@ -45,7 +47,7 @@ if( have_posts() )
 						<div class="col-md-8  align-self-center mt-5">
 							<p class="mx-auto chamada-principal-page mt-5 mb-0"><?=get_the_content()?></p>
 						<?php 
-						if(is_page('landing')) 
+						if($post->post_name === 'casamento-em-fortaleza') 
 						{
 						?>
 							<p class="mx-auto pl-5 chamada-secundaria-page">INESQUECÍVEIS AQUI</p>
@@ -58,10 +60,8 @@ if( have_posts() )
 				</div>
 			<?php
 			}
-			global $post;
-			$post_slug=$post->post_name;
-			switch ($post_slug) {
-				case 'landing':
+			switch ($post->post_name) {
+				case 'casamento-em-fortaleza':
 					get_landing_page_body_content(); 
 					break;
 				case 'sobre':
