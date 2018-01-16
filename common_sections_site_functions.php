@@ -58,8 +58,8 @@ function get_section_know_our_gastronomy() {
                 Vem pro Pipo Restaurante, aqui é muito mais gostoso!</p>
             </div>
             <div class="col-md-6 my-5">
-                <a class="my-3" href="#" style="text-decoration: none;">
-                    <button type="button" href="<?=get_page_link_by_slug('menu')?>#pratos-menu-anchor" class="btn btn-outline-secondary-lg-yellow btn-block">CONHEÇA NOSSO MENU</button>
+                <a class="my-3" href="<?=get_page_link_by_slug('menu')?>#pratos-menu-anchor" style="text-decoration: none;">
+                    <button type="button" class="btn btn-outline-secondary-lg-yellow btn-block">CONHEÇA NOSSO MENU</button>
                 </a>
             </div>
         </div>

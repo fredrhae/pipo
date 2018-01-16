@@ -13,7 +13,7 @@ function get_titulo() {
 }
 
 function get_page_link_by_slug($pageSlug) {
-    $page = get_page_by_title($pageSlug);
+    $page = get_page_by_path($pageSlug);
     return get_permalink($page->ID);
 }
 

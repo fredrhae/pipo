@@ -17,10 +17,9 @@
                         <li><a href="<?=get_page_link_by_slug('blog')?>">Blog</a></li>-->
                         <li><a href="<?=get_page_link_by_slug('programacao')?>">Nossa Programação</a></li>
                         <li><a href="<?=get_page_link_by_slug('contatos')?>">Fale Conosco</a></li>
-                        <li><a href="<?=get_page_link_by_slug('reservas')?>">Faça sua reserva</a></li>
                         <li><a href="<?=get_page_link_by_slug('sobre')?>">Sobre Nós</a></li>
                         <li><a href="<?=get_page_link_by_slug('menu')?>">Nosso Menu</a></li>
-                        <li><a href="<?=get_page_link_by_slug('landing')?>">Faça seu evento</a></li>
+                        <li><a href="<?=get_page_link_by_slug('casamento-em-fortaleza')?>">Faça seu evento</a></li>
                     </ul>
                 </div>
                 <div class="col-md-3 col-xs-12 footer-social animated fadeInDown">
