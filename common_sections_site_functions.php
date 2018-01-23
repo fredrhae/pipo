@@ -161,19 +161,26 @@ function get_section_restaurant_reservation() {
     </div>
     <div class="d-flex justify-content-center flex-column mb-5" align="center">
             <?php
-                if($formularioEnviado) {
-                    $enviou = enviar_e_checar_email_reserva($nome, $email, $telefone, $pessoas, $data);
-                    if($enviou) { ?>
-                        <span class="email-sucesso">Sua intenção de reserva foi registrada com sucesso!
-                            Em breve entraremos em contato.
-                        </span>
-                    <?php 
-                    } else {
-                    ?>
-                        <span class="email-fracasso">Desculpe, ocorreu um erro, sua intenção de reserva não foi feita!</span>
-                    <?php 
-                    }
+            if(isset($_POST["form-nome"]) && isset($_POST['form-email']) && isset($_POST['form-telefone']) 
+            && isset($_POST['form-pessoas']) && isset($_POST['form-data']) && isset($_POST['form-tipo-evento'])) {
+                // Formulario contato
+                $nome = sanitize_text_field( $_POST['form-nome']);
+                $email = sanitize_email( $_POST['form-email']);
+                $telefone = sanitize_text_field( $_POST['form-telefone']);
+                $pessoas = sanitize_text_field( $_POST['form-pessoas']);
+                $data = $_POST['form-data'];
+                $tipo_evento = $_POST['form-tipo-evento'];
+                $enviou = enviar_e_checar_email_reserva($nome, $email, $telefone, $pessoas, $data, $tipo_evento);
+                if($enviou) { ?>
+                    <span class="email-sucesso">Sua intenção de reserva foi registrada com sucesso. Em breve entraremos
+                    em contato.</span>
+                <?php 
+                } else {
+                ?>
+                    <span class="email-fracasso">Desculpe, ocorreu um erro, sua intenção de reserva não foi feita!</span>
+                <?php 
                 }
+            }
             ?>
             <div class="col-md-4" align="center">
                 <form method="post">
@@ -184,13 +191,13 @@ function get_section_restaurant_reservation() {
                         <input id="form-email" type="email" placeholder="Seu email" name="form-email">
                     </div>
                     <div class="form-telefone">
-                        <input id="form-telefone" type="telefone" placeholder="Seu telefone" name="form-telefone">
+                        <input id="form-telefone" type="number" placeholder="Seu telefone" name="form-telefone">
                     </div>
                     <div class="form-data">
                         <input id="form-data" type="datetime-local" placeholder="Data da reserva" name="form-data">
                     </div>
                     <div class="form-pessoas">
-                        <input id="form-pessoas" type="number" min="2" max="50" value="2" placeholder="Número de pessoas" name="form-number">
+                        <input id="form-pessoas" type="number" min="2" max="50" value="2" placeholder="Número de pessoas" name="form-pessoas">
                     </div>
                     <div class="form-tipo-evento">
 						<select id="form-tipo-evento" name="form-tipo-evento">
@@ -216,37 +223,51 @@ function get_section_restaurant_reservation_without_background() {
     </div>
     <div class="d-flex justify-content-center flex-column mb-5" align="center">
             <?php
-                if($formularioEnviado) {
-                    $enviou = enviar_e_checar_email_reserva($nome, $email, $telefone, $pessoas, $data);
-                    if($enviou) { ?>
-                        <span class="email-sucesso">Sua intenção de reserva foi registrada com sucesso!
-                            Em breve entraremos em contato.
-                        </span>
-                    <?php 
-                    } else {
-                    ?>
-                        <span class="email-fracasso">Desculpe, ocorreu um erro, sua intenção de reserva não foi feita!</span>
-                    <?php 
-                    }
+            if(isset( $_POST["form-nome-2"]) && isset($_POST['form-email-2']) && isset($_POST['form-telefone-2']) 
+                && isset($_POST['form-pessoas-2']) && isset($_POST['form-data-2']) && isset($_POST['form-tipo-evento-2'])) {
+                // Formulario contato
+                $nome = sanitize_text_field( $_POST['form-nome-2']);
+                $email = sanitize_email( $_POST['form-email-2']);
+                $telefone = sanitize_text_field( $_POST['form-telefone-2']);
+                $pessoas = sanitize_text_field( $_POST['form-pessoas-2']);
+                $data = $_POST['form-data-2'];
+                $tipo_evento = $_POST['form-tipo-evento-2'];
+                $enviou = enviar_e_checar_email_reserva($nome, $email, $telefone, $pessoas, $data, $tipo_evento);
+                if($enviou) { ?>
+                    <span class="email-sucesso">Sua intenção de reserva foi registrada com sucesso. Em breve entraremos
+                    em contato.</span>
+                <?php 
+                } else {
+                ?>
+                    <span class="email-fracasso">Desculpe, ocorreu um erro, sua intenção de reserva não foi feita!</span>
+                <?php 
                 }
+            }
             ?>
             <div class="col-md-4" align="center">
                 <form method="post">
                     <div class="form-nome">
-                        <input id="form-nome" type="nome" placeholder="Seu nome" name="form-nome">
+                        <input id="form-nome-2" type="nome" placeholder="Seu nome" name="form-nome-2">
                     </div>
                     <div class="form-email">
-                        <input id="form-email" type="email" placeholder="Seu email" name="form-email">
+                        <input id="form-email-2" type="email" placeholder="Seu email" name="form-email-2">
                     </div>
                     <div class="form-telefone">
-                        <input id="form-telefone" type="telefone" placeholder="Seu telefone" name="form-telefone">
+                        <input id="form-telefone-2" type="number" placeholder="Seu telefone" name="form-telefone-2">
                     </div>
                     <div class="form-data">
-                        <input id="form-data" type="datetime-local" placeholder="Data da reserva" name="form-data">
+                        <input id="form-data-2" type="datetime-local" placeholder="Data da reserva" name="form-data-2">
                     </div>
                     <div class="form-pessoas">
-                        <input id="form-pessoas" type="number" min="2" max="50" value="2" placeholder="Número de pessoas" name="form-number">
-                    </div>                
+                        <input id="form-pessoas-2" type="number" min="2" max="50" value="2" placeholder="Número de pessoas" name="form-pessoas-2">
+                    </div>  
+                    <div class="form-tipo-evento">
+						<select id="form-tipo-evento-2" name="form-tipo-evento-2">
+							<option value="casamento">Casamento</option>
+							<option value="aniversario">Aniversário</option>
+							<option value="formatura">Formatura</option>
+						</select>
+					</div>              
                     <button type="submit" class="btn btn-block btn-outline-secondary-lg-gray">RESERVAR</button>
                 </form>
             </div>
@@ -258,23 +279,30 @@ function get_section_restaurant_reservation_without_background() {
 function get_section_newsletter() {
     global $home;
     ?>
+    <div class="d-flex justify-content-center flex-column" align="center">
+    <?php
+    if(isset( $_POST["form-email-newsletter"])) {
+        // Formulario contato
+        $email = sanitize_email( $_POST['form-email-newsletter']);
+        $enviou = enviar_e_checar_email_newsletter($email);
+        if($enviou) { ?>
+            <span class="email-sucesso">Seu e-mail foi cadastrado com sucesso!</span>
+        <?php 
+        } else {
+        ?>
+            <span class="email-fracasso">Desculpe, ocorreu um erro, seu e-mail não foi cadastrado!</span>
+        <?php 
+        }
+    }
+    ?>
+    </div>
     <!-- Secao de newsletter -->
-    <div class="d-flex justify-content-center flex-column py-5" align="center" style="background-color: #545252">
+    <div class="d-flex justify-content-center flex-column py-5" id="anchor-newsletter" align="center" style="background-color: #545252">
         <h1 class="mx-auto chamada-principal-branca">Acompanhe nossas</h1>
         <h1 class="mx-auto chamada-nome-verde">NOVIDADES:</h1>
         <p class="mx-auto chamada-texto-branco">Assine nossa newsletter e fique por dentro de 
             todas as novidades da Pipo Restaurante</p>
         <div class="d-flex justify-content-center flex-column">
-            <?php
-            if($formularioNewsletterEnviado) {
-                $enviou = enviar_e_checar_email_newsletter($email);
-                if($enviou) { ?>
-                    <span class="email-sucesso">Seu e-mail foi cadastrado com sucesso!</span>
-                <?php } else { ?>
-                    <span class="email-fracasso">Desculpe, ocorreu um erro, seu e-mail não foi cadastrado!</span>
-                <?php } 
-            }
-            ?>
             </div>
             <div class="col-md-4" align="center">
                 <form method="post">

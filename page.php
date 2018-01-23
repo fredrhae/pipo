@@ -109,6 +109,24 @@ function get_section_suggestions() {
                     }
                 }
             ?>
+			<?php
+            if(isset( $_POST['form-nome']) && isset($_POST['form-email']) && isset($_POST['form-sugestao'])) {
+                // Formulario contato
+                $nome = sanitize_text_field( $_POST['form-nome']);
+                $email = sanitize_email( $_POST['form-email']);
+                $sugestao = sanitize_text_field( $_POST['form-sugestao']);
+                $enviou = enviar_e_checar_sugestao($nome, $email, $sugestao);
+                if($enviou) { ?>
+                    <span class="email-sucesso">Sua sugestão foi registrada com sucesso! Iremos avaliar e levar em consideração, 
+					para melhorarmos.</span>
+                <?php 
+                } else {
+                ?>
+                    <span class="email-fracasso">Desculpe, ocorreu um erro, sua sugestão não foi registrada!</span>
+                <?php 
+                }
+            }
+            ?>
             <div class="col-md-4" align="center">
                 <form method="post">
                     <div class="form-nome">
