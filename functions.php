@@ -18,7 +18,7 @@ function get_page_link_by_slug($pageSlug) {
 }
 
 function enviar_e_checar_email_reserva($nome, $email, $telefone, $pessoas, $data, $tipo_evento) {
-    return wp_mail( sanitize_email('fredrhae@gmail.com'), 'Reserva restaurante', 
+    return wp_mail( sanitize_email('pipoearte@gmail.com'), 'Reserva restaurante', 
                   'Nome: ' . $nome . "\n" .
                   'Email: ' .  $email . "\n" .
                   'Telefone: ' . $telefone . "\n" .
@@ -28,7 +28,7 @@ function enviar_e_checar_email_reserva($nome, $email, $telefone, $pessoas, $data
 }
 
 function enviar_e_checar_sugestao($nome, $email, $sugestao) {
-  return wp_mail(  sanitize_email('fredrhae@gmail.com'), 'Fale conosco', 
+  return wp_mail(  sanitize_email('pipoearte@gmail.com'), 'Fale conosco', 
                 'Nome: ' . $nome . "\n" .
                 'Email: ' .  $email . "\n" .
                 'Sugestão: ' . $sugestao . "\n");
@@ -36,7 +36,7 @@ function enviar_e_checar_sugestao($nome, $email, $sugestao) {
 
 function enviar_e_checar_email_newsletter($email) {
     
-  return wp_mail( sanitize_email('fredrhae@gmail.com'), 'Assinatura newsletter', 
+  return wp_mail( sanitize_email('pipoearte@gmail.com'), 'Assinatura newsletter', 
                 'Email do interessado: ' .  $email . "\n");
 }
 
